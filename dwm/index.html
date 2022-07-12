@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="dwm window manager"/>
+<meta name="twitter:description" content="Tiling window manager that sucks less"/>
+
+    <meta property="og:title" content="dwm window manager" />
+<meta property="og:description" content="Tiling window manager that sucks less" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/dwm/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-09-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-11T00:00:00+00:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/dwm/">
+    
+    <title>
+  dwm window manager · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/dwm/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">dwm window manager</h1>
+        </div>
+        <div class="description">
+          <span class="title">Tiling window manager that sucks less</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2019-09-11T00:00:00Z'>
+                September 11, 2019
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              1 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="whats-dwm">What&rsquo;s <strong>DWM</strong>?</h2>
+<p><a href="https://dwm.suckless.org" target="_blank" >DWM</a>
+ is a Tiling window manager by <a href="https://suckless.org/" target="_blank" >Suckless
+community</a>
+.</p>
+<h3 id="installation">Installation</h3>
+<p>You can install <strong>dwm</strong> by using your distribution package maangers. But as
+<strong>dwm</strong> is configured by hand before compilation, so it&rsquo;s recommended you clone
+its repository, configure and then compile it for your system. I have a
+<a href="https://gitlab.com/Abdullah/dwm.git" target="_blank" >fork</a>
+ which you may like.</p>
+<h2 id="configuration">Configuration</h2>
+<p>In the root directory, there is a file <strong>config.h</strong>. You can edit it how you
+like. After editing run <strong>make</strong> and then as root (if you wanna install
+as system-wide) or copy the <strong>dwm</strong> executable file to your path.</p>
+<p>Let&rsquo;s take a look at my fork compiled <strong>dwm</strong>.</p>
+<p>The default Modifier is Super Key (Windows key on most laptops). You can change it to Alt key or whatever you like.  From now on I&rsquo;m using Mod for super key.</p>
+<p>Let&rsquo;s open a window. The first window will always be in full screen.</p>
+<p><img src="https://abdullah.solutions/images/dwm-default.jpeg" alt=""></p>
+<p>Let&rsquo;s add more windows. I&rsquo;ll introduce you some terms used in Window Managers.
+The larger area is called Master. When you open new windows, the first window is pushed to stack area. Take a look at this screenshot.</p>
+<p><img src="https://abdullah.solutions/images/dwm-2.jpeg" alt=""></p>
+<p>Add another terminal window.</p>
+<p><img src="https://abdullah.solutions/images/dwm-3.jpeg" alt=""></p>
+<p>If you wanna move the window in stack area to come back in Master area,
+just focus it with <!-- raw HTML omitted -->Mod + j/k<!-- raw HTML omitted --> and then press <!-- raw HTML omitted -->Mod + Shift +
+Return<!-- raw HTML omitted -->.</p>
+<p><img src="https://abdullah.solutions/images/dwm-move.jpeg" alt=""></p>
+<p>You can resize the increase/decrease Master area with <!-- raw HTML omitted -->Mod + h/l<!-- raw HTML omitted -->.</p>
+<p><img src="https://abdullah.solutions/images/dwm-resize.jpeg" alt=""></p>
+<p>For now, it&rsquo;s enough for you to get started. I&rsquo;ll update it soon. In sha
+Allah.</p>
+<p>Here is a demonstration video.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/QweZB60EG4g" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

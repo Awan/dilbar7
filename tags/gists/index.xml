@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gists on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/gists/</link>
+    <description>Recent content in gists on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/gists/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create/paste snippets from Terminal</title>
+      <link>https://abdullah.solutions/gists/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/gists/</guid>
+      <description>What&amp;rsquo;s snippet/gist? gist is a piece of code or maybe some important text shared on Github or Gitlab . It&amp;rsquo;s actually a git repository so you can clone it, work on it locally and push changes.
+Share gists from Terminal There are multiple programs available in many distributions for this purpose. You just have to find it. On Arch Linux , you can install gist .
+Here is how it works in terminal.</description>
+    </item>
+    
+  </channel>
+</rss>

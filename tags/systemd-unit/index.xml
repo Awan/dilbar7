@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>systemd unit on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/systemd-unit/</link>
+    <description>Recent content in systemd unit on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/systemd-unit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automate the boring stuff of wallpapers with systemd</title>
+      <link>https://abdullah.solutions/wallpaper-automation/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/wallpaper-automation/</guid>
+      <description>So assuming you&amp;rsquo;re not using a DE and don&amp;rsquo;t wanna install a tool which comes with a lot of dependencies just to automate the boring stuf of changing wallpapers (root window of Xorg). I wrote a simple Python program which you can use as systemd unit too.
+Clone the repository or download/copy the beautify.py if you don&amp;rsquo;t want systemd part. I&amp;rsquo;d recommend ~/bin for such executable scripts. You can execute it from .</description>
+    </item>
+    
+  </channel>
+</rss>

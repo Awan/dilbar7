@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rdp on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/rdp/</link>
+    <description>Recent content in rdp on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/rdp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminal Sharing service</title>
+      <link>https://abdullah.solutions/tmate/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tmate/</guid>
+      <description>What&amp;rsquo;s tmate? On *nix systems, sometimes we need support. And geeks don&amp;rsquo;t like GUI apps just to have your system in front of them, at least I don&amp;rsquo;t like that 😉
+tmate is terminal sharing software you can use it to connect with your friends and you both work from there. It&amp;rsquo;s available in many distributions repos and in case you aren&amp;rsquo;t lucky enough, you can compile it from source or there are pre-compiled binaries there in their Github page.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>workflow on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/workflow/</link>
+    <description>Recent content in workflow on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jun 2020 19:02:44 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BSPWM</title>
+      <link>https://abdullah.solutions/bspwm/</link>
+      <pubDate>Mon, 01 Jun 2020 19:02:44 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/bspwm/</guid>
+      <description>BSPWM BSPWM is a tiling window manager that represents windows as the leaves of a full binary tree. It has support for EWMH and multihead.
+Installation bspwm is available in almost all major distributions. If you can&amp;rsquo;t find it in your OS, clone the repository and build it.
+Configuration bspwm uses sxhkd for keyboard shortcuts. It has no other way to handle with keyboard input and instead provides bspc program as its interface.</description>
+    </item>
+    
+  </channel>
+</rss>

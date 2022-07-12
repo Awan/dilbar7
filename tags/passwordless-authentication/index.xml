@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>passwordless authentication on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/passwordless-authentication/</link>
+    <description>Recent content in passwordless authentication on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 Oct 2020 13:45:06 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/passwordless-authentication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH Passwordless Authentication</title>
+      <link>https://abdullah.solutions/ssh-passwordless-authentication/</link>
+      <pubDate>Tue, 06 Oct 2020 13:45:06 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/ssh-passwordless-authentication/</guid>
+      <description>SSH login without password? Yeah you heard it right. Today I&amp;rsquo;m going to teach you how you can enable passwordless authentication in ssh.
+You can login to your linux servers without password. How? Keep reading&amp;hellip;
+Edit the SSH main configuration file.
+$ sudo vi /etc/ssh/sshd_config ... PubkeyAuthentication yes ... Edit this line. If you see no, change it to yes. If this line is commented out, uncomment it.
+Restart ssh.</description>
+    </item>
+    
+  </channel>
+</rss>

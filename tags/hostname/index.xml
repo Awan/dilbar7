@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hostname on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/hostname/</link>
+    <description>Recent content in hostname on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 13:26:14 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/hostname/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to set FQDN in Linux</title>
+      <link>https://abdullah.solutions/fqdn/</link>
+      <pubDate>Sun, 21 Jun 2020 13:26:14 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/fqdn/</guid>
+      <description>What is FQDN? FQDN stands for Fully Qualified Domain Name. It&amp;rsquo;s complete domain name for a computer or host on the internet. FQDN is made of two things: hostname and domain name.
+Let me give you an example for demonstration.
+FQDN for my mail server is myemailserver.abdullah.today.
+The hostname is myemailserver. The domain is abdullah.today.
+Requirements You will need:
+IP Address Hostname FQDN Edit hosts file Edit the /etc/hosts file and append this like this.</description>
+    </item>
+    
+  </channel>
+</rss>

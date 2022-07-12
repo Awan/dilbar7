@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to install fonts in Linux"/>
+<meta name="twitter:description" content="Fonts"/>
+
+    <meta property="og:title" content="How to install fonts in Linux" />
+<meta property="og:description" content="Fonts" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/fonts/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-09-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-18T00:00:00+00:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/fonts/">
+    
+    <title>
+  How to install fonts in Linux · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/fonts/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">How to install fonts in Linux</h1>
+        </div>
+        <div class="description">
+          <span class="title">Fonts</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2019-09-18T00:00:00Z'>
+                September 18, 2019
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              3 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <p>I have been using different distributions in my machines. A term which is called in our linux community <!-- raw HTML omitted -->distrohopping<!-- raw HTML omitted -->.
+On different distributions/machines, it&rsquo;s pain to collect packages you can&rsquo;t live without. For me and maybe for you too, the fonts are the part of OS which at least I care about the most.</p>
+<h2 id="fonts-path">Fonts path</h2>
+<p>Different linux distributions package fonts in with different names. So I decided to add the fonts to my dotfiles. And yeah now I&rsquo;m happy. On any new machine/installation, I don&rsquo;t need to install those fonts.</p>
+<p>Here is the path I have added the fonts which almost all distributions accept today. And it&rsquo;s easy to maintain them too.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls ~/.local/share/fonts
+</span></span><span style="display:flex;"><span> awesome                                  Tamzen7x13b.pt3
+</span></span><span style="display:flex;"><span> brands                                   Tamzen7x13b.ttf
+</span></span><span style="display:flex;"><span> DejaVuMathTeXGyre.ttf                    Tamzen7x13r-13.fnt
+</span></span><span style="display:flex;"><span> DejaVuSans-BoldOblique.ttf               Tamzen7x13r.afm
+</span></span><span style="display:flex;"><span> DejaVuSans-Bold.ttf                      Tamzen7x13r.bdf
+</span></span><span style="display:flex;"><span> DejaVuSansCondensed-BoldOblique.ttf      Tamzen7x13r.dfont
+</span></span><span style="display:flex;"><span> DejaVuSansCondensed-Bold.ttf             Tamzen7x13r.pcf
+</span></span><span style="display:flex;"><span> DejaVuSansCondensed-Oblique.ttf          Tamzen7x13r.png
+</span></span><span style="display:flex;"><span> DejaVuSansCondensed.ttf                  Tamzen7x13r.pt3
+</span></span><span style="display:flex;"><span> DejaVuSans-ExtraLight.ttf                Tamzen7x13r.ttf
+</span></span><span style="display:flex;"><span> DejaVuSansMono-BoldOblique.ttf           Tamzen7x14b-14.fnt
+</span></span><span style="display:flex;"><span> DejaVuSansMono-Bold.ttf                  Tamzen7x14b.afm
+</span></span><span style="display:flex;"><span> DejaVuSansMono-Oblique.ttf               Tamzen7x14b.bdf
+</span></span><span style="display:flex;"><span> DejaVuSansMono.ttf                       Tamzen7x14b.dfont
+</span></span><span style="display:flex;"><span> DejaVuSans-Oblique.ttf                   Tamzen7x14b.pcf
+</span></span><span style="display:flex;"><span> DejaVuSans.ttf                           Tamzen7x14b.png
+</span></span><span style="display:flex;"><span> DejaVuSerif-BoldItalic.ttf               Tamzen7x14b.pt3
+</span></span><span style="display:flex;"><span> DejaVuSerif-Bold.ttf                     Tamzen7x14b.ttf
+</span></span><span style="display:flex;"><span> DejaVuSerifCondensed-BoldItalic.ttf      Tamzen7x14r-14.fnt
+</span></span><span style="display:flex;"><span> DejaVuSerifCondensed-Bold.ttf            Tamzen7x14r.afm
+</span></span><span style="display:flex;"><span> DejaVuSerifCondensed-Italic.ttf          Tamzen7x14r.bdf
+</span></span><span style="display:flex;"><span> DejaVuSerifCondensed.ttf                 Tamzen7x14r.dfont
+</span></span><span style="display:flex;"><span> DejaVuSerif-Italic.ttf                   Tamzen7x14r.pcf
+</span></span><span style="display:flex;"><span> DejaVuSerif.ttf                          Tamzen7x14r.png
+</span></span><span style="display:flex;"><span> devicons-regular.sh                      Tamzen7x14r.pt3
+</span></span><span style="display:flex;"><span> devicons-regular.ttf                     Tamzen7x14r.ttf
+</span></span><span style="display:flex;"><span> DroidSansFallbackFull.ttf                Tamzen8x15b-15.fnt
+</span></span><span style="display:flex;"><span><span style="color:#b83838">&#39;Font Awesome 5 Brands-Regular-400.otf&#39;</span>   Tamzen8x15b.afm
+</span></span><span style="display:flex;"><span><span style="color:#b83838">&#39;Font Awesome 5 Free-Regular-400.otf&#39;</span>     Tamzen8x15b.bdf
+</span></span><span style="display:flex;"><span><span style="color:#b83838">&#39;Font Awesome 5 Free-Solid-900.otf&#39;</span>       Tamzen8x15b.dfont
+</span></span><span style="display:flex;"><span> fontawesome-regular.sh                   Tamzen8x15b.pcf
+</span></span><span style="display:flex;"><span> fontawesome-regular.ttf                  Tamzen8x15b.png
+</span></span><span style="display:flex;"><span> fontawesome-webfont.ttf                  Tamzen8x15b.pt3
+</span></span><span style="display:flex;"><span> fonts.dir                                Tamzen8x15b.ttf
+</span></span><span style="display:flex;"><span> Lato-BlackItalic.ttf                     Tamzen8x15r-15.fnt
+</span></span><span style="display:flex;"><span> Lato-Black.ttf                           Tamzen8x15r.afm
+</span></span><span style="display:flex;"><span> Lato-BoldItalic.ttf                      Tamzen8x15r.bdf
+</span></span><span style="display:flex;"><span> Lato-Bold.ttf                            Tamzen8x15r.dfont
+</span></span><span style="display:flex;"><span> Lato-HairlineItalic.ttf                  Tamzen8x15r.pcf
+</span></span><span style="display:flex;"><span> Lato-Hairline.ttf                        Tamzen8x15r.png
+</span></span><span style="display:flex;"><span> Lato-HeavyItalic.ttf                     Tamzen8x15r.pt3
+</span></span><span style="display:flex;"><span> Lato-Heavy.ttf                           Tamzen8x15r.ttf
+</span></span><span style="display:flex;"><span> Lato-Italic.ttf                          Tamzen8x16b-16.fnt
+</span></span><span style="display:flex;"><span> Lato-LightItalic.ttf                     Tamzen8x16b.afm
+</span></span><span style="display:flex;"><span> Lato-Light.ttf                           Tamzen8x16b.bdf
+</span></span><span style="display:flex;"><span> Lato-MediumItalic.ttf                    Tamzen8x16b.dfont
+</span></span><span style="display:flex;"><span> Lato-Medium.ttf                          Tamzen8x16b.pcf
+</span></span><span style="display:flex;"><span> Lato-Regular.ttf                         Tamzen8x16b.png
+</span></span><span style="display:flex;"><span> Lato-SemiboldItalic.ttf                  Tamzen8x16b.pt3
+</span></span><span style="display:flex;"><span> Lato-Semibold.ttf                        Tamzen8x16b.ttf
+</span></span><span style="display:flex;"><span> Lato-ThinItalic.ttf                      Tamzen8x16r-16.fnt
+</span></span><span style="display:flex;"><span> Lato-Thin.ttf                            Tamzen8x16r.afm
+</span></span><span style="display:flex;"><span> LiberationMono-BoldItalic.ttf            Tamzen8x16r.bdf
+</span></span><span style="display:flex;"><span> LiberationMono-Bold.ttf                  Tamzen8x16r.dfont
+</span></span><span style="display:flex;"><span> LiberationMono-Italic.ttf                Tamzen8x16r.pcf
+</span></span><span style="display:flex;"><span> LiberationMono-Regular.ttf               Tamzen8x16r.png
+</span></span><span style="display:flex;"><span> LiberationSans-BoldItalic.ttf            Tamzen8x16r.pt3
+</span></span><span style="display:flex;"><span> LiberationSans-Bold.ttf                  Tamzen8x16r.ttf
+</span></span><span style="display:flex;"><span> LiberationSans-Italic.ttf                TamzenForPowerline10x20b-20.fnt
+</span></span><span style="display:flex;"><span> LiberationSansNarrow-BoldItalic.ttf      TamzenForPowerline10x20b.afm
+</span></span><span style="display:flex;"><span> LiberationSansNarrow-Bold.ttf            TamzenForPowerline10x20b.bdf
+</span></span><span style="display:flex;"><span> LiberationSansNarrow-Italic.ttf          TamzenForPowerline10x20b.dfont
+</span></span><span style="display:flex;"><span> LiberationSansNarrow-Regular.ttf         TamzenForPowerline10x20b.pcf
+</span></span><span style="display:flex;"><span> LiberationSans-Regular.ttf               TamzenForPowerline10x20b.png
+</span></span><span style="display:flex;"><span> LiberationSerif-BoldItalic.ttf           TamzenForPowerline10x20b.pt3
+</span></span><span style="display:flex;"><span> LiberationSerif-Bold.ttf                 TamzenForPowerline10x20r-20.fnt
+</span></span><span style="display:flex;"><span> LiberationSerif-Italic.ttf               TamzenForPowerline10x20r.afm
+</span></span><span style="display:flex;"><span> LiberationSerif-Regular.ttf              TamzenForPowerline10x20r.bdf
+</span></span><span style="display:flex;"><span> NafeesWeb.ttf                            TamzenForPowerline10x20r.dfont
+</span></span><span style="display:flex;"><span> NotoMono-Regular.ttf                     TamzenForPowerline10x20r.pcf
+</span></span><span style="display:flex;"><span> octicons-regular.sh                      TamzenForPowerline10x20r.png
+</span></span><span style="display:flex;"><span> octicons-regular.ttf                     TamzenForPowerline10x20r.pt3
+</span></span><span style="display:flex;"><span> pomicons-regular.sh                      TamzenForPowerline5x9b-9.fnt
+</span></span><span style="display:flex;"><span> pomicons-regular.ttf                     TamzenForPowerline5x9b.afm
+</span></span><span style="display:flex;"><span> Powerline10x20.bdf                       TamzenForPowerline5x9b.bdf
+</span></span><span style="display:flex;"><span> Powerline5x9.bdf                         TamzenForPowerline5x9b.dfont
+</span></span><span style="display:flex;"><span> Powerline6x12.bdf                        TamzenForPowerline5x9b.pcf
+</span></span><span style="display:flex;"><span> Powerline7x13.bdf                        TamzenForPowerline5x9b.png
+</span></span><span style="display:flex;"><span> Powerline7x14.bdf                        TamzenForPowerline5x9b.pt3
+</span></span><span style="display:flex;"><span> Powerline8x15.bdf                        TamzenForPowerline5x9r-9.fnt
+</span></span><span style="display:flex;"><span> Powerline8x16.bdf                        TamzenForPowerline5x9r.afm
+</span></span><span style="display:flex;"><span> regular                                  TamzenForPowerline5x9r.bdf
+</span></span><span style="display:flex;"><span> siji.pcf                                 TamzenForPowerline5x9r.dfont
+</span></span><span style="display:flex;"><span> solid                                    TamzenForPowerline5x9r.pcf
+</span></span><span style="display:flex;"><span> Symbola_Hinted.ttf                       TamzenForPowerline5x9r.png
+</span></span><span style="display:flex;"><span> Symbola.ttf                              TamzenForPowerline5x9r.pt3
+</span></span><span style="display:flex;"><span> Tamsyn10x20b.pcf                         TamzenForPowerline6x12b-12.fnt
+</span></span><span style="display:flex;"><span> Tamsyn10x20b.psf.gz                      TamzenForPowerline6x12b.afm
+</span></span><span style="display:flex;"><span> Tamsyn10x20r.pcf                         TamzenForPowerline6x12b.bdf
+</span></span><span style="display:flex;"><span> Tamsyn10x20r.psf.gz                      TamzenForPowerline6x12b.dfont
+</span></span><span style="display:flex;"><span> Tamsyn5x9b.pcf                           TamzenForPowerline6x12b.pcf
+</span></span><span style="display:flex;"><span> Tamsyn5x9b.psf.gz                        TamzenForPowerline6x12b.png
+</span></span><span style="display:flex;"><span> Tamsyn5x9r.pcf                           TamzenForPowerline6x12b.pt3
+</span></span><span style="display:flex;"><span> Tamsyn5x9r.psf.gz                        TamzenForPowerline6x12r-12.fnt
+</span></span><span style="display:flex;"><span> Tamsyn6x12b.pcf                          TamzenForPowerline6x12r.afm
+</span></span><span style="display:flex;"><span> Tamsyn6x12b.psf.gz                       TamzenForPowerline6x12r.bdf
+</span></span><span style="display:flex;"><span> Tamsyn6x12r.pcf                          TamzenForPowerline6x12r.dfont
+</span></span><span style="display:flex;"><span> Tamsyn6x12r.psf.gz                       TamzenForPowerline6x12r.pcf
+</span></span><span style="display:flex;"><span> Tamsyn7x13b.pcf                          TamzenForPowerline6x12r.png
+</span></span><span style="display:flex;"><span> Tamsyn7x13b.psf.gz                       TamzenForPowerline6x12r.pt3
+</span></span><span style="display:flex;"><span> Tamsyn7x13r.pcf                          TamzenForPowerline7x13b-13.fnt
+</span></span><span style="display:flex;"><span> Tamsyn7x13r.psf.gz                       TamzenForPowerline7x13b.afm
+</span></span><span style="display:flex;"><span> Tamsyn7x14b.pcf                          TamzenForPowerline7x13b.bdf
+</span></span><span style="display:flex;"><span> Tamsyn7x14b.psf.gz                       TamzenForPowerline7x13b.dfont
+</span></span><span style="display:flex;"><span> Tamsyn7x14r.pcf                          TamzenForPowerline7x13b.pcf
+</span></span><span style="display:flex;"><span> Tamsyn7x14r.psf.gz                       TamzenForPowerline7x13b.png
+</span></span><span style="display:flex;"><span> Tamsyn8x15b.pcf                          TamzenForPowerline7x13b.pt3
+</span></span><span style="display:flex;"><span> Tamsyn8x15b.psf.gz                       TamzenForPowerline7x13r-13.fnt
+</span></span><span style="display:flex;"><span> Tamsyn8x15r.pcf                          TamzenForPowerline7x13r.afm
+</span></span><span style="display:flex;"><span> Tamsyn8x15r.psf.gz                       TamzenForPowerline7x13r.bdf
+</span></span><span style="display:flex;"><span> Tamsyn8x16b.pcf                          TamzenForPowerline7x13r.dfont
+</span></span><span style="display:flex;"><span> Tamsyn8x16b.psf.gz                       TamzenForPowerline7x13r.pcf
+</span></span><span style="display:flex;"><span> Tamsyn8x16r.pcf                          TamzenForPowerline7x13r.png
+</span></span><span style="display:flex;"><span> Tamsyn8x16r.psf.gz                       TamzenForPowerline7x13r.pt3
+</span></span><span style="display:flex;"><span> Tamzen10x20b-20.fnt                      TamzenForPowerline7x14b-14.fnt
+</span></span><span style="display:flex;"><span> Tamzen10x20b.afm                         TamzenForPowerline7x14b.afm
+</span></span><span style="display:flex;"><span> Tamzen10x20b.bdf                         TamzenForPowerline7x14b.bdf
+</span></span><span style="display:flex;"><span> Tamzen10x20b.dfont                       TamzenForPowerline7x14b.dfont
+</span></span><span style="display:flex;"><span> Tamzen10x20b.pcf                         TamzenForPowerline7x14b.pcf
+</span></span><span style="display:flex;"><span> Tamzen10x20b.png                         TamzenForPowerline7x14b.png
+</span></span><span style="display:flex;"><span> Tamzen10x20b.pt3                         TamzenForPowerline7x14b.pt3
+</span></span><span style="display:flex;"><span> Tamzen10x20b.ttf                         TamzenForPowerline7x14r-14.fnt
+</span></span><span style="display:flex;"><span> Tamzen10x20r-20.fnt                      TamzenForPowerline7x14r.afm
+</span></span><span style="display:flex;"><span> Tamzen10x20r.afm                         TamzenForPowerline7x14r.bdf
+</span></span><span style="display:flex;"><span> Tamzen10x20r.bdf                         TamzenForPowerline7x14r.dfont
+</span></span><span style="display:flex;"><span> Tamzen10x20r.dfont                       TamzenForPowerline7x14r.pcf
+</span></span><span style="display:flex;"><span> Tamzen10x20r.pcf                         TamzenForPowerline7x14r.png
+</span></span><span style="display:flex;"><span> Tamzen10x20r.png                         TamzenForPowerline7x14r.pt3
+</span></span><span style="display:flex;"><span> Tamzen10x20r.pt3                         TamzenForPowerline8x15b-15.fnt
+</span></span><span style="display:flex;"><span> Tamzen10x20r.ttf                         TamzenForPowerline8x15b.afm
+</span></span><span style="display:flex;"><span> Tamzen5x9b-9.fnt                         TamzenForPowerline8x15b.bdf
+</span></span><span style="display:flex;"><span> Tamzen5x9b.afm                           TamzenForPowerline8x15b.dfont
+</span></span><span style="display:flex;"><span> Tamzen5x9b.bdf                           TamzenForPowerline8x15b.pcf
+</span></span><span style="display:flex;"><span> Tamzen5x9b.dfont                         TamzenForPowerline8x15b.png
+</span></span><span style="display:flex;"><span> Tamzen5x9b.pcf                           TamzenForPowerline8x15b.pt3
+</span></span><span style="display:flex;"><span> Tamzen5x9b.png                           TamzenForPowerline8x15r-15.fnt
+</span></span><span style="display:flex;"><span> Tamzen5x9b.pt3                           TamzenForPowerline8x15r.afm
+</span></span><span style="display:flex;"><span> Tamzen5x9b.ttf                           TamzenForPowerline8x15r.bdf
+</span></span><span style="display:flex;"><span> Tamzen5x9r-9.fnt                         TamzenForPowerline8x15r.dfont
+</span></span><span style="display:flex;"><span> Tamzen5x9r.afm                           TamzenForPowerline8x15r.pcf
+</span></span><span style="display:flex;"><span> Tamzen5x9r.bdf                           TamzenForPowerline8x15r.png
+</span></span><span style="display:flex;"><span> Tamzen5x9r.dfont                         TamzenForPowerline8x15r.pt3
+</span></span><span style="display:flex;"><span> Tamzen5x9r.pcf                           TamzenForPowerline8x16b-16.fnt
+</span></span><span style="display:flex;"><span> Tamzen5x9r.png                           TamzenForPowerline8x16b.afm
+</span></span><span style="display:flex;"><span> Tamzen5x9r.pt3                           TamzenForPowerline8x16b.bdf
+</span></span><span style="display:flex;"><span> Tamzen5x9r.ttf                           TamzenForPowerline8x16b.dfont
+</span></span><span style="display:flex;"><span> Tamzen6x12b-12.fnt                       TamzenForPowerline8x16b.pcf
+</span></span><span style="display:flex;"><span> Tamzen6x12b.afm                          TamzenForPowerline8x16b.png
+</span></span><span style="display:flex;"><span> Tamzen6x12b.bdf                          TamzenForPowerline8x16b.pt3
+</span></span><span style="display:flex;"><span> Tamzen6x12b.dfont                        TamzenForPowerline8x16r-16.fnt
+</span></span><span style="display:flex;"><span> Tamzen6x12b.pcf                          TamzenForPowerline8x16r.afm
+</span></span><span style="display:flex;"><span> Tamzen6x12b.png                          TamzenForPowerline8x16r.bdf
+</span></span><span style="display:flex;"><span> Tamzen6x12b.pt3                          TamzenForPowerline8x16r.dfont
+</span></span><span style="display:flex;"><span> Tamzen6x12b.ttf                          TamzenForPowerline8x16r.pcf
+</span></span><span style="display:flex;"><span> Tamzen6x12r-12.fnt                       TamzenForPowerline8x16r.png
+</span></span><span style="display:flex;"><span> Tamzen6x12r.afm                          TamzenForPowerline8x16r.pt3
+</span></span><span style="display:flex;"><span> Tamzen6x12r.bdf                          VeraBd.ttf
+</span></span><span style="display:flex;"><span> Tamzen6x12r.dfont                        VeraBI.ttf
+</span></span><span style="display:flex;"><span> Tamzen6x12r.pcf                          VeraIt.ttf
+</span></span><span style="display:flex;"><span> Tamzen6x12r.png                          VeraMoBd.ttf
+</span></span><span style="display:flex;"><span> Tamzen6x12r.pt3                          VeraMoBI.ttf
+</span></span><span style="display:flex;"><span> Tamzen6x12r.ttf                          VeraMoIt.ttf
+</span></span><span style="display:flex;"><span> Tamzen7x13b-13.fnt                       VeraMono.ttf
+</span></span><span style="display:flex;"><span> Tamzen7x13b.afm                          VeraSeBd.ttf
+</span></span><span style="display:flex;"><span> Tamzen7x13b.bdf                          VeraSe.ttf
+</span></span><span style="display:flex;"><span> Tamzen7x13b.dfont                        Vera.ttf
+</span></span><span style="display:flex;"><span> Tamzen7x13b.pcf                          VL-Gothic-Regular.ttf
+</span></span><span style="display:flex;"><span> Tamzen7x13b.png                          VL-PGothic-Regular.ttf
+</span></span></code></pre></div><p>There you can see directories also exist. Just make sure they are world readable. Else they won&rsquo;t work.</p>
+<p>So now you have an idea how to save them. I installed them when I was on Arch Linux and never installed a single font again in my machine running Debian.</p>
+<h2 id="how-to-get-fonts">How to get fonts?</h2>
+<p>Well, As I said I have installed most of the fonts from Arch Linux official/community and AUR and some I downloaded from internet different websites.
+Just install them and create these directories if they already don&rsquo;t exist.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir -p ~/.local/share/fonts
+</span></span><span style="display:flex;"><span>$ find / -name <span style="color:#b83838">&#39;*.ttf&#39;</span> -o -name <span style="color:#b83838">&#39;*.psf&#39;</span> -o -name <span style="color:#b83838">&#39;*.bdf&#39;</span> -o -name <span style="color:#b83838">&#39;*.fnt&#39;</span> -o -name <span style="color:#b83838">&#39;*.ttf&#39;</span> -o -name <span style="color:#b83838">&#39;*.pcf&#39;</span> -exec cp <span style="color:#666">{}</span> ~/.local/share/fonts <span style="color:#709030">\;</span>
+</span></span></code></pre></div><h2 id="loadreload-fonts">Load/reload fonts</h2>
+<p>After copying the files, we have to load them.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ fc-cache -fvv
+</span></span></code></pre></div><h2 id="autoload-fonts-on-boot">Autoload fonts on boot</h2>
+<p>Put this file in session starting file. Like .Xsession or if you&rsquo;re using xorg-xinit to start your Desktop Environment or Windows Manager then put it into ~/.xinitrc.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ xset +fp ~/.local/share/fonts
+</span></span><span style="display:flex;"><span>$ xset fp rehash
+</span></span></code></pre></div><p>Still have problems? Just lemme know in comments section and I&rsquo;ll be happy to assist you.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

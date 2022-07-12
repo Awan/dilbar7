@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fork on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/fork/</link>
+    <description>Recent content in fork on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/fork/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to contribute to open source project</title>
+      <link>https://abdullah.solutions/contribution-with-git/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/contribution-with-git/</guid>
+      <description>So you want to contribute to some open source project which is hosted on git[hub,lab] or some other git website. Here is all you want to do.
+Fork the repository Create a personal fork. On github, visit the project repository and hit fork. It will fork the project in your personal account.
+Clone it Clone it in your local machine so you can work on it. Remember you are cloning the fork, and not the original project.</description>
+    </item>
+    
+  </channel>
+</rss>

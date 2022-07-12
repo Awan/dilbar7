@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>privileges escalation on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/privileges-escalation/</link>
+    <description>Recent content in privileges escalation on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Feb 2021 14:53:36 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/privileges-escalation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Persistent Backdoor in Linux Environment</title>
+      <link>https://abdullah.solutions/persistent-backdoor-in-linux-environment/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/persistent-backdoor-in-linux-environment/</guid>
+      <description>So you have hacked a linux box. Next step should be leave a persistent backdoor so in case, it is rebooted, you have to repeat all those steps again and again.
+There are multiple methods available to create a persistent backdoor. Today I&amp;rsquo;m going to explain how you can create a backdoor in webservers.
+Tools needed socat weevely some common sense Installing Tools weevely Install weevely if you don&amp;rsquo;t have it.</description>
+    </item>
+    
+  </channel>
+</rss>

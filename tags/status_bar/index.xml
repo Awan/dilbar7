@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>status_bar on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/status_bar/</link>
+    <description>Recent content in status_bar on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/status_bar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Polybar - A stylish bar</title>
+      <link>https://abdullah.solutions/polybar/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/polybar/</guid>
+      <description>I recently tried to compile polybar and used it with tiling window manager bspwm .
+Polybar Here is my bar configuration I have been using for over the years with i3, bspwm, dwm and many other window managers even with xfce4.
+$ cat $HOME/.config/polybar/config [colors] background = #FF000000 background-alt = ${xrdb:polybar*color8} foreground = ${xrdb:polybar*foreground} urgent = #B34747 foreground-alt = #555 primary = ${xrdb:polybar*color3} secondary = ${xrdb:polybar*color1} alert = ${xrdb:polybar*color13} [settings] screenchange-reload = true screenchange = true throttle-output = 5 throttle-output-for = 10 throttle-input-for = 30 compositing-background = source compositing-foreground = over compositing-overline = over compositing-underline = over compositing-border = over pseudo-transparency = true [global/wm] margin-top = 0 margin-bottom = 0 [bar/eDP-1] monitor = ${env:MONITOR:eDP-1} monitor-fallback = eDP1 bottom = false width = 100% height = 25 offset-x = 0 offset-y = 0 radius = 10 fixed-center = true background = ${colors.</description>
+    </item>
+    
+  </channel>
+</rss>

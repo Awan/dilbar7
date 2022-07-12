@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>terminal on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/terminal/</link>
+    <description>Recent content in terminal on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Nov 2020 07:32:13 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Send Mail Using Gmail using Command Line</title>
+      <link>https://abdullah.solutions/send-mail-using-gmail-from-terminal/</link>
+      <pubDate>Sun, 29 Nov 2020 07:32:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/send-mail-using-gmail-from-terminal/</guid>
+      <description>Yeah, you can send mail from your gmail account using command line.
+Requirements You have two options here.
+Gmail account settings Either enable less secure apps in your Google account or Generate an app password .
+Tools being used For Arch Linux:
+$ sudo pacman -S msmtp For Debian, Ubuntu and other Debian derived distributions:
+$ sudo apt install -y msmtp For Fedora, CentOS, Redhat etc:
+$ sudo dnf install msmtp Encrypt password Using gpg, we are going to encrypt our password.</description>
+    </item>
+    
+    <item>
+      <title>URXVT - Terminal for Geeks</title>
+      <link>https://abdullah.solutions/urxvt/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/urxvt/</guid>
+      <description>What&amp;rsquo;s URxvt? As a linux user, I spend most of my time in terminal emulators. There are alot of emulators available today but none can beat rxvt-unicode.
+The biggest problem most new linux users face is how to configure it. Today I&amp;rsquo;ll explain how you can use it to your needs.
+Most distributions package it with less features enabled. I always compile it from source. So let&amp;rsquo;s start and in the end you&amp;rsquo;ll end up with a perfect terminal emulator.</description>
+    </item>
+    
+  </channel>
+</rss>

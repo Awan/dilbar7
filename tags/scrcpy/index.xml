@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scrcpy on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/scrcpy/</link>
+    <description>Recent content in scrcpy on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 15 Sep 2020 13:21:18 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/scrcpy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Share Android Screen</title>
+      <link>https://abdullah.solutions/how-to-share-android-screen/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/how-to-share-android-screen/</guid>
+      <description>There are times you want to share your android phone&amp;rsquo;s screen with your Linux/Windows desktop. Like if you have got broken screen or for some purpose.
+So this post may help you.
+Requirements Android phone ADB installed In Arch Linux, you can install ADB with:
+$ sudo pacman -S android-tools There is a program which is used to screen sharing. You can install it using AUR in Arch Linux, use apt if you are using Ubuntu/Debian.</description>
+    </item>
+    
+  </channel>
+</rss>

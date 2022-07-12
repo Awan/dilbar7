@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Multihead with BSPWM and Polybar"/>
+<meta name="twitter:description" content="How to configure dual screen in linux?"/>
+
+    <meta property="og:title" content="Multihead with BSPWM and Polybar" />
+<meta property="og:description" content="How to configure dual screen in linux?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/multihead/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-02T10:52:37+05:00" />
+<meta property="article:modified_time" content="2020-06-02T10:52:37+05:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/multihead/">
+    
+    <title>
+  Multihead with BSPWM and Polybar · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/multihead/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Multihead with BSPWM and Polybar</h1>
+        </div>
+        <div class="description">
+          <span class="title">How to configure dual screen in linux?</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2020-06-02T10:52:37&#43;05:00'>
+                June 2, 2020
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              5 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <h1 id="multihead">Multihead</h1>
+<p>A few days ago, I relocated myself to new room. Actually this room I use for
+summer as its way cooler than others. I have a wall-mounted LCD monitor here so
+today I thought I should share how I do multi screening.</p>
+<h2 id="hardware">Hardware</h2>
+<p>I have this lenovo X series machine which is my main machine I use.
+Its resolution is 1920x1080.</p>
+<p><img src="https://abdullah.solutions/images/multi-2.jpeg" alt="x1 carbon"></p>
+<p>The second one is a LCD monitor. And the resolution is 1280x1024.</p>
+<p>My laptop doesn&rsquo;t have VGA port but I have a HDMI port. But I have worked on old
+hardware with VGA port and it works.</p>
+<h2 id="software">Software</h2>
+<p><code>xrandr</code> is what you want. I&rsquo;m using Archlinux and it got installed with
+<code>libinput</code> as dependency. I hope it will be there in other distributions as
+well. If you don&rsquo;t have it, install it using your distribution&rsquo;s package
+manager.</p>
+<p>I use <em>bspwm</em> with <em>polybar</em>. You might have different <em>WMs</em> or <em>DE</em>. Apart from
+polybar, everything would work fine. For polybar, you have to configure it to
+your taste. Or clone my <a href="https://gitlab.com/Abdullah/cfg.git" target="_blank" >git repository</a>
+
+and copy/symlink all files to their respective paths and polybar will work fine.</p>
+<h2 id="display-manager">Display manager</h2>
+<p>I don&rsquo;t use a Display manager. Instead I use <em>xinit</em>. See next section for
+configuring multihead using <em>xinit</em>.</p>
+<h2 id="starting-on-boot">Starting on Boot</h2>
+<p>In <em>bspwm</em>, when you plug HDMI cable in, OS detects it. But for screens to get
+display, you have to logout from <em>bspwm</em>.
+Login again and without configuration, the monitor would be a mirror to your
+laptop. What ever you see on first screen, you would see on second one.</p>
+<p>To make it work, you need to execute some commands.</p>
+<p>First get outputs names using <em>xrandr</em> without some arguments.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xrandr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Screen 0: minimum <span style="color:#444">320</span> x 200, current <span style="color:#444">3200</span> x 1080, maximum <span style="color:#444">16384</span> x <span style="color:#444">16384</span>
+</span></span><span style="display:flex;"><span>eDP-1 connected primary 1920x1080+0+0 <span style="color:#666">(</span>normal left inverted right x axis y axis<span style="color:#666">)</span> 309mm x 173mm
+</span></span><span style="display:flex;"><span>   1920x1080     60.03*+  60.01    59.97    59.96    59.93
+</span></span><span style="display:flex;"><span>   1680x1050     59.95    59.88
+</span></span><span style="display:flex;"><span>   1400x1050     59.98
+</span></span><span style="display:flex;"><span>   1600x900      59.99    59.94    59.95    59.82
+</span></span><span style="display:flex;"><span>   1280x1024     60.02
+</span></span><span style="display:flex;"><span>   1400x900      59.96    59.88
+</span></span><span style="display:flex;"><span>   1280x960      60.00
+</span></span><span style="display:flex;"><span>   1440x810      60.00    59.97
+</span></span><span style="display:flex;"><span>   1368x768      59.88    59.85
+</span></span><span style="display:flex;"><span>   1280x800      59.99    59.97    59.81    59.91
+</span></span><span style="display:flex;"><span>   1280x720      60.00    59.99    59.86    59.74
+</span></span><span style="display:flex;"><span>   1024x768      60.04    60.00
+</span></span><span style="display:flex;"><span>   960x720       60.00
+</span></span><span style="display:flex;"><span>   928x696       60.05
+</span></span><span style="display:flex;"><span>   896x672       60.01
+</span></span><span style="display:flex;"><span>   1024x576      59.95    59.96    59.90    59.82
+</span></span><span style="display:flex;"><span>   960x600       59.93    60.00
+</span></span><span style="display:flex;"><span>   960x540       59.96    59.99    59.63    59.82
+</span></span><span style="display:flex;"><span>   800x600       60.00    60.32    56.25
+</span></span><span style="display:flex;"><span>   840x525       60.01    59.88
+</span></span><span style="display:flex;"><span>   864x486       59.92    59.57
+</span></span><span style="display:flex;"><span>   700x525       59.98
+</span></span><span style="display:flex;"><span>   800x450       59.95    59.82
+</span></span><span style="display:flex;"><span>   640x512       60.02
+</span></span><span style="display:flex;"><span>   700x450       59.96    59.88
+</span></span><span style="display:flex;"><span>   640x480       60.00    59.94
+</span></span><span style="display:flex;"><span>   720x405       59.51    58.99
+</span></span><span style="display:flex;"><span>   684x384       59.88    59.85
+</span></span><span style="display:flex;"><span>   640x400       59.88    59.98
+</span></span><span style="display:flex;"><span>   640x360       59.86    59.83    59.84    59.32
+</span></span><span style="display:flex;"><span>   512x384       60.00
+</span></span><span style="display:flex;"><span>   512x288       60.00    59.92
+</span></span><span style="display:flex;"><span>   480x270       59.63    59.82
+</span></span><span style="display:flex;"><span>   400x300       60.32    56.34
+</span></span><span style="display:flex;"><span>   432x243       59.92    59.57
+</span></span><span style="display:flex;"><span>   320x240       60.05
+</span></span><span style="display:flex;"><span>   360x202       59.51    59.13
+</span></span><span style="display:flex;"><span>   320x180       59.84    59.32
+</span></span><span style="display:flex;"><span>DP-1 disconnected <span style="color:#666">(</span>normal left inverted right x axis y axis<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>HDMI-1 disconnected <span style="color:#666">(</span>normal left inverted right x axis y axis<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>DP-2 disconnected <span style="color:#666">(</span>normal left inverted right x axis y axis<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>HDMI-2 connected 1280x1024+1920+0 <span style="color:#666">(</span>normal left inverted right x axis y axis<span style="color:#666">)</span> 708mm x 398mm
+</span></span><span style="display:flex;"><span>   1280x1024     60.02*+
+</span></span><span style="display:flex;"><span>   1920x1080     60.00    50.00    59.94    24.00    23.98
+</span></span><span style="display:flex;"><span>   1920x1080i    60.00    50.00    59.94
+</span></span><span style="display:flex;"><span>   1280x960      60.00
+</span></span><span style="display:flex;"><span>   1280x720      60.00    50.00    59.94
+</span></span><span style="display:flex;"><span>   1024x768      60.00
+</span></span><span style="display:flex;"><span>   800x600       60.32    56.25
+</span></span><span style="display:flex;"><span>   720x576       50.00
+</span></span><span style="display:flex;"><span>   720x576i      50.00
+</span></span><span style="display:flex;"><span>   720x480       60.00    59.94
+</span></span><span style="display:flex;"><span>   720x480i      60.00    59.94
+</span></span><span style="display:flex;"><span>   640x480       60.00    59.94
+</span></span><span style="display:flex;"><span>   720x400       70.08
+</span></span></code></pre></div><p>Or to get connected monitors, you can invoke:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xrandr -q <span style="color:#888">|</span> awk <span style="color:#b83838">&#39;/ connected / {print $1}&#39;</span>
+</span></span></code></pre></div><p>You will get output of <em>N</em> lines where <em>N</em> is numbers of connected monitors.</p>
+<p>The first one you see is your laptop. Others are external monitors if you have
+not configured them already or have something in your $PATH which does something
+on hardware change.</p>
+<p>Okay. Let&rsquo;s assume my laptop is <em>eDP-1</em> and my external monitor is <em>HDMI-2</em>.
+I want external monitor to appear at right of my laptop screen:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xrandr --output HDMI-2 --auto --right-of eDP-1
+</span></span></code></pre></div><p>That&rsquo;s it. You can save these two functions in your <em>~/.xprofile</em> to auto
+start multihead on restart. As the configurations above we done, will go
+away after this session.</p>
+<p>Here is my <em>~/.xpofile</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ vim ~/.xprofile_
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#!/bin/sh</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># In the name of Allah, the most Gracious, the most Merciful.</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#  ▓▓▓▓▓▓▓▓▓▓</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># ░▓ Author ▓ Abdullah &lt;https://abdullah.today&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># ░▓▓▓▓▓▓▓▓▓▓</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># ░░░░░░░░░░</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Xresources file</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">user_resources</span><span style="color:#666">=</span><span style="color:#b04040">$HOME</span>/.Xresources
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># custom keymaps</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">user_keymaps</span><span style="color:#666">=</span><span style="color:#b04040">$HOME</span>/.Xmodmap
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># custom fonts</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">user_fonts_dir</span><span style="color:#666">=</span><span style="color:#b04040">$HOME</span>/.local/share/fonts
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Inactivity timeout</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">inactivity_timeout</span><span style="color:#666">=</span><span style="color:#444">180</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Time before exectuing lock</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">notify_time</span><span style="color:#666">=</span><span style="color:#444">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># For some java apps</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#wmname LG3D &amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>run<span style="color:#666">()</span> <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> ! pgrep <span style="color:#b04040">$1</span> <span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b04040">$@</span><span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> -d /etc/X11/xinit/xinitrc.d <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">for</span> f in /etc/X11/xinit/xinitrc.d/?*.sh <span style="color:#888">;</span> <span style="color:#2838b0">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">[</span> -x <span style="color:#b04040">$f</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> . <span style="color:#b04040">$f</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">done</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#388038">unset</span> f
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Session name</span>
+</span></span><span style="display:flex;"><span><span style="color:#388038">export</span> <span style="color:#b04040">DESKTOP_SESSION</span><span style="color:#666">=</span>bspwm
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># No tty</span>
+</span></span><span style="display:flex;"><span><span style="color:#388038">export</span> <span style="color:#b04040">XDG_SESSION_TYPE</span><span style="color:#666">=</span>x11
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tab<span style="color:#666">()</span> <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888;font-style:italic"># Configure only laptop&#39;s screen if no external monitor is connected.</span>
+</span></span><span style="display:flex;"><span>  xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --brightness 1.0 <span style="color:#709030">\
+</span></span></span><span style="display:flex;"><span><span style="color:#709030"></span>    --gamma 0.76:0.75:0.68 <span style="color:#b83838">&#34;</span><span style="color:#b04040">$@</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tabular<span style="color:#666">()</span> <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888;font-style:italic"># Configure external monitor if exists</span>
+</span></span><span style="display:flex;"><span>  tab
+</span></span><span style="display:flex;"><span>  xrandr --output HDMI-2 --mode 1280x1024 --pos 1920x0 <span style="color:#b83838">&#34;</span><span style="color:#b04040">$@</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start sxhkd</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sxhkd <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Load Xresources</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span> -f <span style="color:#b04040">$user_resources</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> xrdb -merge <span style="color:#b83838">&#34;</span><span style="color:#b04040">$user_resources</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Load keymaps</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span> -f <span style="color:#b04040">$user_keymaps</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> xmodmap <span style="color:#b83838">&#34;</span><span style="color:#b04040">$user_keymaps</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Run compositor</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>run picom -b --config <span style="color:#b83838">&#34;</span><span style="color:#b04040">$HOME</span><span style="color:#b83838">&#34;</span>/.config/picom/picom.conf <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Restore the last wallpaper</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b83838">&#34;</span><span style="color:#b04040">$HOME</span><span style="color:#b83838">&#34;</span>/.fehbg <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Set cursor shape</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xsetroot -cursor_name ul_angle <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#xcompmgr -c -f D 5 &amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Add fonts directories</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xset +fp <span style="color:#b83838">&#34;</span><span style="color:#b04040">$user_fonts_dir</span><span style="color:#b83838">&#34;</span> <span style="color:#666">&amp;&amp;</span> xset fp rehash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start urxvt in daemon mode</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># run urxvtd -q -o -f &amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># No mouse when idle</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>run unclutter --ignore-scrolling --fork --timeout <span style="color:#444">1</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># DPMS and lock screen</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xset dpms <span style="color:#b04040">$inactivity_timeout</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#xss-lock -- physlock -mp &#39;Say, &#34;If the sea were ink for [writing] the words of my Lord, the sea would be exhausted before the words of my Lord were exhausted, even if We brought the like of it as a supplement.&#34;&#39; &amp;</span>
+</span></span><span style="display:flex;"><span>xss-lock -- i3lock -c <span style="color:#444">000000</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start Notification daemon</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>run dunst -c <span style="color:#b83838">&#34;</span><span style="color:#b04040">$HOME</span><span style="color:#b83838">&#34;</span>/.config/dunst/dunstrc <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Mute the mic</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pactl set-source-mute alsa_input.pci-0000_00_1b.0.analog-stereo <span style="color:#388038">true</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Redshift for less eye strain</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#redshift -c ~/.config/redshift/redshift.conf &amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start tmux if not already running</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span> -z <span style="color:#b04040">$TMUX</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> tmux new-session -s <span style="color:#b04040">$USER</span> -d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Set brightness to 30 at boot</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>light -S <span style="color:#444">30</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Configure multihead.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> <span style="color:#b83838">&#34;</span><span style="color:#2838b0">$(</span>xrandr -q <span style="color:#888">|</span> awk <span style="color:#b83838">&#39;/ connected / {print $1}&#39;</span> <span style="color:#888">|</span> wc -l<span style="color:#2838b0">)</span><span style="color:#b83838">&#34;</span> -eq <span style="color:#444">1</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span>  tab --primary
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">else</span>
+</span></span><span style="display:flex;"><span>  tabular
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start a scratchpad</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#sleep 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#urxvtc -T &#39;scratchpad&#39; -geometry 65x20 &amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#termite -t scratchpad &amp;</span>
+</span></span><span style="display:flex;"><span>xfce4-terminal -T scratchpad --font<span style="color:#666">=</span><span style="color:#b83838">&#39;Fantasque Sans Mono Italic 16&#39;</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># vim:ft=sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:wq
+</span></span></code></pre></div><p>Change the resolution and outputs name in it and enjoy multiheading. 😉</p>
+<p>Here is a demonstration video.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Gjj-wcdc0-w" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

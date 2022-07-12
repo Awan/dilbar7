@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/categories/devops/</link>
+    <description>Recent content in devops on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Jun 2022 18:07:52 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trigger a Jenkins Build on Every Code Push Event</title>
+      <link>https://abdullah.solutions/trigger-a-jenkins-build-on-every-code-push-event/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/trigger-a-jenkins-build-on-every-code-push-event/</guid>
+      <description>Configure GitHub project Go to your GitHub repository settings and click on Webhooks. Click on add a webhook.
+In payload URL, add your jenkins installation URL + &amp;lsquo;/github-webhook/&amp;rsquo;. For example if my jenkins is running at https://jenkins.example.com:8080 , I&amp;rsquo;ll add https://jenkins.example.com:8080/github-webhook/ . Disable SSL verification. Select send me everything or you can select only push events. and lastly check the box which says Active.
+Configure Jenkins project Go to your jenkins project configuration.</description>
+    </item>
+    
+  </channel>
+</rss>

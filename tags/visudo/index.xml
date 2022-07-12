@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>visudo on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/visudo/</link>
+    <description>Recent content in visudo on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/visudo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>use sudo with no password</title>
+      <link>https://abdullah.solutions/enable%20sudo%20with%20no%20password/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/enable%20sudo%20with%20no%20password/</guid>
+      <description>In Unix world, we shouldn&amp;rsquo;t use administrator user without some important stuff which needs access to it. There is a utility sudo we can use to have administrator access. But everytime you invoke it, it asks for your user&amp;rsquo;s password.
+Today, I&amp;rsquo;m going to guide you, how you can use sudo without password.
+Once you install Debian, you get some option to create a user. And if you choose the option, &amp;ldquo;Don&amp;rsquo;t use root for login&amp;rdquo;, this new user becomes privileged user by default.</description>
+    </item>
+    
+  </channel>
+</rss>

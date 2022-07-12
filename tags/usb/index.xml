@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>usb on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/usb/</link>
+    <description>Recent content in usb on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Jul 2020 17:22:11 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/usb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kalilinux Persistence</title>
+      <link>https://abdullah.solutions/kalilinux-persistence/</link>
+      <pubDate>Tue, 14 Jul 2020 17:22:11 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/kalilinux-persistence/</guid>
+      <description>Getting Kalilinux image Go to Downloads and download latest live image. Make sure you don&amp;rsquo;t download the installer image.
+Make USB bootable Use dd to write the kali image to USB.
+In linux environment:
+# dd if=kali-linux-xxxx.x-live-amd64.iso of=/dev/sdX status=progress bs=4M Replace kali-linux-xxxx.x-live-amd64.iso with downloaded iso iamge path and /dev/sdX with path of your USB device. You can find USB path by running lsblk in terminal. Make sure you don&amp;rsquo;t select the existing linux installation drive.</description>
+    </item>
+    
+  </channel>
+</rss>

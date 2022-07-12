@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Things to do after a new Debian installation"/>
+<meta name="twitter:description" content="Things to do after a new Debian installation"/>
+
+    <meta property="og:title" content="Things to do after a new Debian installation" />
+<meta property="og:description" content="Things to do after a new Debian installation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/debian-fresh-install/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-09-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-22T00:00:00+00:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/debian-fresh-install/">
+    
+    <title>
+  Things to do after a new Debian installation · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/debian-fresh-install/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Things to do after a new Debian installation</h1>
+        </div>
+        <div class="description">
+          <span class="title">Things to do after a new Debian installation</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2019-09-22T00:00:00Z'>
+                September 22, 2019
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              1 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <p>So you have a new Debian installation? Maybe a minimal install like I do?
+Don&rsquo;t worry, I have you covered what to do next.</p>
+<h2 id="setup-a-sudo-user-without-password">Setup a sudo user without password</h2>
+<p>Go <a href="https://abdullah.today/enable-sudo-with-no-password.html" target="_blank" >here</a>
+.</p>
+<h2 id="install-software">Install software</h2>
+<p>Install software for daily use.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ sudo apt install build-essential \
+</span></span><span style="display:flex;"><span> git zsh mpv feh xss-lock urlview \
+</span></span><span style="display:flex;"><span> xbindkeys stow offlineimap mutt msmtp \
+</span></span><span style="display:flex;"><span> notmuch vim.nox rxvt-unicode -y 
+</span></span></code></pre></div><h2 id="setup-touchpad">Setup touchpad</h2>
+<p>If you have a machine that supports multitouch, enabling tap to click is a good option. Create directories if they don&rsquo;t have already created.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ sudo mkdir -p /etc/X11/xorg.conf.d
+</span></span></code></pre></div><p>Create a file here as 20-libinput.conf. Mine looks like:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ cat /etc/X11/xorg.conf.d/20-libinput.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Section &#34;InputClass&#34;
+</span></span><span style="display:flex;"><span>	Identifier &#34;libinput touchpad catchall&#34;
+</span></span><span style="display:flex;"><span>  MatchIsTouchpad &#34;on&#34;
+</span></span><span style="display:flex;"><span>  Driver &#34;libinput&#34;
+</span></span><span style="display:flex;"><span>  MatchDevicePath &#34;/dev/input/event*&#34;
+</span></span><span style="display:flex;"><span>  Option &#34;Tapping&#34; &#34;on&#34;
+</span></span><span style="display:flex;"><span>  Option &#34;TappingButtonMap&#34; &#34;lrm&#34;
+</span></span><span style="display:flex;"><span>  Option &#34;NaturalScrolling&#34; &#34;true&#34;
+</span></span><span style="display:flex;"><span>EndSection
+</span></span></code></pre></div><h2 id="brightness-keys">Brightness Keys</h2>
+<p>On some hardware, brightness keys don&rsquo;t work out of the box. So create a file
+<!-- raw HTML omitted -->30-backlight.conf<!-- raw HTML omitted --> in the same directory as you did in touchpad file.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ cat /etc/X11/xorg.conf.d/30-backlight.conf 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Section &#34;Device&#34;
+</span></span><span style="display:flex;"><span>	Identifier &#34;card0&#34;
+</span></span><span style="display:flex;"><span>	Driver	   &#34;intel&#34;
+</span></span><span style="display:flex;"><span>	Option	   &#34;Backlight&#34; &#34;intel_backlight&#34;
+</span></span><span style="display:flex;"><span>	BusID      &#34;PCI:0:2:0&#34;
+</span></span><span style="display:flex;"><span>EndSection
+</span></span></code></pre></div><h2 id="automatically-lock-screen-on-resume-from-suspension">Automatically lock screen on resume from suspension</h2>
+<p>systemd-logind automatically suspends the laptop if lid is closed. But you have
+to create another unit file and enable it to lock the screen on resume from
+suspension.</p>
+<p>Create a file <!-- raw HTML omitted -->/etc/systemd/system/wakelock@.service<!-- raw HTML omitted --> with following
+contents. Put your favorite locker application path in ExecStart if you don&rsquo;t
+use slock.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ cat /etc/systemd/system/wakelock@.service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Unit]
+</span></span><span style="display:flex;"><span>Description=Automatically lock the screen on resume from suspension
+</span></span><span style="display:flex;"><span>Before=sleep.target suspend.target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Service]
+</span></span><span style="display:flex;"><span>User=%i
+</span></span><span style="display:flex;"><span>Environment=DISPLAY=:0
+</span></span><span style="display:flex;"><span>ExecStart=/usr/bin/slock
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Install]
+</span></span><span style="display:flex;"><span>WantedBy=sleep.target suspend.target
+</span></span></code></pre></div><p>Reload the systemd daemon and enable/start it. Replace <!-- raw HTML omitted -->YOUR USERNAME<!-- raw HTML omitted --> with
+your username.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ sudo systemctl daemon-reload
+</span></span><span style="display:flex;"><span>$ sudo systemctl enable wakelock@&lt;YOUR USERNAME&gt;.service
+</span></span><span style="display:flex;"><span>$ sudo systemctl start wakelock@&lt;YOUR USERNAME&gt;.service
+</span></span></code></pre></div><p>That&rsquo;s it. I&rsquo;ll update this article for more things I remember or anytime I had
+to reinstall and find something I had to do&hellip;</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

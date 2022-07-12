@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="OpenBSD Encrypted Install"/>
+<meta name="twitter:description" content="How to install OpenBSD with full disk encryption"/>
+
+    <meta property="og:title" content="OpenBSD Encrypted Install" />
+<meta property="og:description" content="How to install OpenBSD with full disk encryption" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/openbsd-encrypted-install/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-09T20:12:36+05:00" />
+<meta property="article:modified_time" content="2021-02-09T20:12:36+05:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/openbsd-encrypted-install/">
+    
+    <title>
+  OpenBSD Encrypted Install · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/openbsd-encrypted-install/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">OpenBSD Encrypted Install</h1>
+        </div>
+        <div class="description">
+          <span class="title">How to install OpenBSD with full disk encryption</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2021-02-09T20:12:36&#43;05:00'>
+                February 9, 2021
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              1 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <p>So this is how you can have a fully encrypted OpenBSD installation.</p>
+<h3 id="getting-openbsd">Getting OpenBSD</h3>
+<p>Go to <a href="https://www.openbsd.org/faq/faq4.html#Download" target="_blank" >OpenBSD website</a>
+ and download the <em>.img</em> file for your hardware.</p>
+<h3 id="creating-install-media">Creating install media</h3>
+<p>If you are on some linux or mac, you can use <code>dd</code> command to burn it to USB drive.</p>
+<p>Suppose your USB drive is appearing as <code>/dev/sdb</code> in <code>lsblk</code>&rsquo;s output:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dd <span style="color:#2838b0">if</span><span style="color:#666">=</span>install.img <span style="color:#b04040">of</span><span style="color:#666">=</span>/dev/sdb <span style="color:#b04040">bs</span><span style="color:#666">=</span>1M
+</span></span></code></pre></div><h3 id="boot-from-install-media">Boot from install media</h3>
+<p>Plug the new install media and reboot the system. Once its starting, press the dedicated button to get the boot options screen. Select the USB drive and hit Enter.</p>
+<h3 id="get-command-prompt">Get command prompt</h3>
+<p>We are going to do an encrypted install so press <code>S</code> (shell) to get a command prompt.</p>
+<p>Once you got a command prompt, type:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysctl hw.disknames
+</span></span></code></pre></div><p>It will show you disks. First one might be your hard drive/SSD like <code>sd0</code>.</p>
+<p>You can verify your drive by running:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>disklabel /dev/sd0
+</span></span></code></pre></div><h3 id="erase-data-on-drive">Erase data on drive</h3>
+<p>Once you&rsquo;re sure with target drive, erase data on drive. Its optional step though.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#388038">cd</span> /dev <span style="color:#666">&amp;&amp;</span> sh MAKEDEV sd0
+</span></span><span style="display:flex;"><span>dd <span style="color:#2838b0">if</span><span style="color:#666">=</span>/dev/urandom <span style="color:#b04040">of</span><span style="color:#666">=</span>/dev/rsd0c <span style="color:#b04040">bs</span><span style="color:#666">=</span>1m
+</span></span></code></pre></div><h3 id="partitioning">Partitioning</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fdisk -iy -g -b <span style="color:#444">960</span> sd0
+</span></span><span style="display:flex;"><span>disklabel -E sd0
+</span></span><span style="display:flex;"><span>Label editor <span style="color:#666">(</span>enter <span style="color:#b83838">&#39;?&#39;</span> <span style="color:#2838b0">for</span> <span style="color:#388038">help</span> at any prompt<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>sd0&gt; a a			
+</span></span><span style="display:flex;"><span>offset: <span style="color:#666">[</span>1024<span style="color:#666">]</span>
+</span></span><span style="display:flex;"><span>size: <span style="color:#666">[</span>39825135<span style="color:#666">]</span> *
+</span></span><span style="display:flex;"><span>FS type: <span style="color:#666">[</span>4.2BSD<span style="color:#666">]</span> RAID
+</span></span><span style="display:flex;"><span>sd0*&gt; w
+</span></span><span style="display:flex;"><span>sd0&gt; q
+</span></span><span style="display:flex;"><span>No label changes.
+</span></span></code></pre></div><h3 id="encryption">Encryption</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bioctl -c C -l sd0a softraid0
+</span></span><span style="display:flex;"><span>New passphrase:
+</span></span><span style="display:flex;"><span>Re-type passphrase:
+</span></span><span style="display:flex;"><span>sd1 at scsibus2 targ <span style="color:#444">1</span> lun 0: &lt;OPENBSD, SR CRYPTO, 005&gt; SCSI2 0/direct fixed
+</span></span><span style="display:flex;"><span>sd1: 19445MB, <span style="color:#444">512</span> bytes/sector, <span style="color:#444">39824607</span> sectors
+</span></span><span style="display:flex;"><span>softraid0: CRYPTO volume attached as sd1
+</span></span></code></pre></div><p>Keep in mind /dev/sd1 exists:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#388038">cd</span> /dev <span style="color:#666">&amp;&amp;</span> sh MAKEDEV sd1
+</span></span></code></pre></div><h3 id="zero-out-first-megabyte">Zero out first Megabyte</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dd <span style="color:#2838b0">if</span><span style="color:#666">=</span>/dev/zero <span style="color:#b04040">of</span><span style="color:#666">=</span>/dev/rsd1c <span style="color:#b04040">bs</span><span style="color:#666">=</span>1m <span style="color:#b04040">count</span><span style="color:#666">=</span><span style="color:#444">1</span>
+</span></span></code></pre></div><h3 id="back-to-installer">Back to installer</h3>
+<p>Type <code>exit</code> to get the installer screen back. Now just give it the newly encrypted device for installation.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

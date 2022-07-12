@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/git/</link>
+    <description>Recent content in git on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Jun 2022 18:07:52 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trigger a Jenkins Build on Every Code Push Event</title>
+      <link>https://abdullah.solutions/trigger-a-jenkins-build-on-every-code-push-event/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/trigger-a-jenkins-build-on-every-code-push-event/</guid>
+      <description>Configure GitHub project Go to your GitHub repository settings and click on Webhooks. Click on add a webhook.
+In payload URL, add your jenkins installation URL + &amp;lsquo;/github-webhook/&amp;rsquo;. For example if my jenkins is running at https://jenkins.example.com:8080 , I&amp;rsquo;ll add https://jenkins.example.com:8080/github-webhook/ . Disable SSL verification. Select send me everything or you can select only push events. and lastly check the box which says Active.
+Configure Jenkins project Go to your jenkins project configuration.</description>
+    </item>
+    
+    <item>
+      <title>Git Initial Setup</title>
+      <link>https://abdullah.solutions/configure-git/</link>
+      <pubDate>Sun, 12 Jul 2020 18:58:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/configure-git/</guid>
+      <description>How to configure Git Git is a version control system by Linus Torvalds, same person who wrote linux kernel.
+Installation In Archlinux, you can install git by:
+$ sudo pacman -S git In Debian and derived distributions:
+$ sudo apt install -y git Configuration You have to tell git about the author who committed changes so lets do it.
+Name and Email Tell git about your name and email:
+$ git config --global user.</description>
+    </item>
+    
+    <item>
+      <title>git Cherry Pick</title>
+      <link>https://abdullah.solutions/cherry-pick/</link>
+      <pubDate>Thu, 04 Jun 2020 14:25:08 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/cherry-pick/</guid>
+      <description>Git cherry-picking Aah picking cherries! ❤️
+I&amp;rsquo;m using git since I started using linux. Cherry-pick is one of those commands I do alot with git. Right now I&amp;rsquo;m preparing a new cherry and will pick it later. 😉
+What&amp;rsquo;s cherry-pick? According to man(1) git-cherry-pick:
+Given one or more existing commits, apply the change each one introduces, recording a new commit for each. This requires your working tree to be clean (no modifications from the HEAD commit).</description>
+    </item>
+    
+    <item>
+      <title>How to manage a website using git</title>
+      <link>https://abdullah.solutions/site-as-git-repo/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/site-as-git-repo/</guid>
+      <description>Git is another awesome tool developed and maintained by Linus Torvalds who wrote linux kernel. In this post I&amp;rsquo;ll explain how can we use it for our site maintenance. I have a vps on which my site is hosted along with a mail server, git server and a web server too. But I&amp;rsquo;m sure this guide can be used with shared hosting accounts with some modifications.
+Install git. Once installed, as root user, create git user and add it to www-data group.</description>
+    </item>
+    
+    <item>
+      <title>How to contribute to open source project</title>
+      <link>https://abdullah.solutions/contribution-with-git/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/contribution-with-git/</guid>
+      <description>So you want to contribute to some open source project which is hosted on git[hub,lab] or some other git website. Here is all you want to do.
+Fork the repository Create a personal fork. On github, visit the project repository and hit fork. It will fork the project in your personal account.
+Clone it Clone it in your local machine so you can work on it. Remember you are cloning the fork, and not the original project.</description>
+    </item>
+    
+  </channel>
+</rss>

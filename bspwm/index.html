@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BSPWM"/>
+<meta name="twitter:description" content="A tiling window manager"/>
+
+    <meta property="og:title" content="BSPWM" />
+<meta property="og:description" content="A tiling window manager" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/bspwm/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-01T19:02:44+05:00" />
+<meta property="article:modified_time" content="2020-06-01T19:02:44+05:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/bspwm/">
+    
+    <title>
+  BSPWM · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/bspwm/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">BSPWM</h1>
+        </div>
+        <div class="description">
+          <span class="title">A tiling window manager</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2020-06-01T19:02:44&#43;05:00'>
+                June 1, 2020
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              8 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <h1 id="bspwm">BSPWM</h1>
+<p>BSPWM is a tiling window manager that represents windows as the leaves of a
+full binary tree. It has support for <a href="https://specifications.freedesktop.org/wm-spec/wm-spec-latest.html" target="_blank" >EWMH</a>
+ and multihead.</p>
+<h2 id="installation">Installation</h2>
+<p>bspwm is available in almost all major distributions. If you can&rsquo;t find it in
+your OS, clone the <a href="https://github.com/baskerville/bspwm" target="_blank" >repository</a>
+ and
+build it.</p>
+<h2 id="configuration">Configuration</h2>
+<p><em>bspwm</em> uses <em>sxhkd</em> for keyboard shortcuts. It has no other way to handle with keyboard input and instead provides <em>bspc</em> program as its interface.
+So you have to configure the keyboard shortcuts in another file.
+<em>bspwm</em> installs <em>sxhkd</em> as its dependency mostly. If you don&rsquo;t want to use it and
+want to use some other hotkey daemon like <em>xbindkeys</em> or something else, you can
+install that and configure it for you. <em>sxhkd</em> is from the same developer as
+<em>bspwm</em> with powerful and compact configuration syntax.</p>
+<p>Create directories first:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/.config/<span style="color:#666">{</span>bspwm,sxhkd<span style="color:#666">}</span>
+</span></span></code></pre></div><p>Copy the configuration files from <code>/usr/share/doc/</code>. You might have a
+different path for these files in your filesystem. Find them and copy over
+there.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
+</span></span><span style="display:flex;"><span>cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
+</span></span></code></pre></div><p>Cool. Now you have configuration files placed in correct location, you can
+start <em>bspwm</em> but wait. will you mind editing them?
+Edit them with some editor and change the defaults to how you like, change default programs.</p>
+<h2 id="start">Start</h2>
+<p>I use <em>xinit</em> to start my window manager. But you can use any display manager
+to boot into <em>bspwm</em>. Here is my <code>~/.xinitrc</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cat ~/.xinitrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#!/bin/sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">coded_by</span><span style="color:#666">=</span><span style="color:#b83838">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">In the name of Allah, the most Gracious, the most Merciful.
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">▓▓▓▓▓▓▓▓▓▓
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▓ Author ▓ Abdullah &lt;https://abdullah.today&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▓▓▓▓▓▓▓▓▓▓
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░░░░░░░░░░
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░█▀▀░▀█▀░█▀█░█▀▄░▀█▀░█░█
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▀▀█░░█░░█▀█░█▀▄░░█░░▄▀▄
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▀▀▀░░▀░░▀░▀░▀░▀░░▀░░▀░▀
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span> -f ~/.xprofile <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> . ~/.xprofile
+</span></span><span style="display:flex;"><span><span style="color:#388038">exec</span> bspwm &gt;/tmp/bspwm-<span style="color:#b83838">&#34;</span><span style="color:#b04040">$USER</span><span style="color:#b83838">&#34;</span>.log 2&gt;<span style="color:#888">&amp;</span><span style="color:#444">1</span>
+</span></span></code></pre></div><p>It&rsquo;s enought to boot into <em>bspwm</em>. But we want some programs to run at
+startup.</p>
+<h2 id="auto-start-programs">Auto-start programs</h2>
+<p>You can start applications from <code>~/.config/bspwmrc</code> or <code>~/.xprofile</code>.
+If you use some display manager, you can start applications from <code>~/.xprofile</code>. It&rsquo;s sourced when display manager starts.</p>
+<p>You can have a <em>autostart.sh</em> in your <code>~/.config/bspwm/</code> and execute from <code>~/.config/bspwm/bspwmrc</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.config/bspwm/bspwmrc
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#b04040">$HOME</span>/.config/bspwm/autostart.sh <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>or a better way to do this is launching your programs from  <code>~/.xprofile</code> and
+source it from <code>~/.xinitrc</code>. This way you can use any display manager or xinit and you don&rsquo;t need extra configuration or a script.</p>
+<p>Here is my <code>~/.xprofile</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cat ~/.xprofile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#!/bin/sh</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># In the name of Allah, the most Gracious, the most Merciful.</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#  ▓▓▓▓▓▓▓▓▓▓</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># ░▓ Author ▓ Abdullah &lt;https://abdullah.today&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># ░▓▓▓▓▓▓▓▓▓▓</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># ░░░░░░░░░░</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Xresources file</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">user_resources</span><span style="color:#666">=</span><span style="color:#b04040">$HOME</span>/.Xresources
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># custom keymaps</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">user_keymaps</span><span style="color:#666">=</span><span style="color:#b04040">$HOME</span>/.Xmodmap
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># custom fonts</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">user_fonts_dir</span><span style="color:#666">=</span><span style="color:#b04040">$HOME</span>/.local/share/fonts
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Inactivity timeout</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">inactivity_timeout</span><span style="color:#666">=</span><span style="color:#444">180</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Time before exectuing lock</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">notify_time</span><span style="color:#666">=</span><span style="color:#444">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># For some java apps</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#wmname LG3D &amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>run<span style="color:#666">()</span> <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> ! pgrep <span style="color:#b04040">$1</span> <span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">$@</span><span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> -d /etc/X11/xinit/xinitrc.d <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">for</span> f in /etc/X11/xinit/xinitrc.d/?*.sh <span style="color:#888">;</span> <span style="color:#2838b0">do</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span> -x <span style="color:#b04040">$f</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> . <span style="color:#b04040">$f</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#388038">unset</span> f
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Session name</span>
+</span></span><span style="display:flex;"><span><span style="color:#388038">export</span> <span style="color:#b04040">DESKTOP_SESSION</span><span style="color:#666">=</span>bspwm
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># No tty</span>
+</span></span><span style="display:flex;"><span><span style="color:#388038">export</span> <span style="color:#b04040">XDG_SESSION_TYPE</span><span style="color:#666">=</span>x11
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tab<span style="color:#666">()</span> <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Configure only laptop&#39;s screen if no external monitor is connected.</span>
+</span></span><span style="display:flex;"><span>xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --brightness 1.0 <span style="color:#709030">\
+</span></span></span><span style="display:flex;"><span><span style="color:#709030"></span>--gamma 0.76:0.75:0.68 <span style="color:#b83838">&#34;</span><span style="color:#b04040">$@</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tabular<span style="color:#666">()</span> <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Configure external monitor if exists</span>
+</span></span><span style="display:flex;"><span>tab
+</span></span><span style="display:flex;"><span>xrandr --output HDMI-2 --mode 1280x1024 --pos 1920x0 <span style="color:#b83838">&#34;</span><span style="color:#b04040">$@</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start sxhkd</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sxhkd <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Load Xresources</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span> -f <span style="color:#b04040">$user_resources</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> xrdb -merge <span style="color:#b83838">&#34;</span><span style="color:#b04040">$user_resources</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Load keymaps</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span> -f <span style="color:#b04040">$user_keymaps</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> xmodmap <span style="color:#b83838">&#34;</span><span style="color:#b04040">$user_keymaps</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Run compositor</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>run picom -b --config <span style="color:#b83838">&#34;</span><span style="color:#b04040">$HOME</span><span style="color:#b83838">&#34;</span>/.config/picom/picom.conf <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Restore the last wallpaper</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b83838">&#34;</span><span style="color:#b04040">$HOME</span><span style="color:#b83838">&#34;</span>/.fehbg <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Set cursor shape</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xsetroot -cursor_name ul_angle <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#xcompmgr -c -f D 5 &amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Add fonts directories</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xset +fp <span style="color:#b83838">&#34;</span><span style="color:#b04040">$user_fonts_dir</span><span style="color:#b83838">&#34;</span> <span style="color:#666">&amp;&amp;</span> xset fp rehash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start urxvt in daemon mode</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># run urxvtd -q -o -f &amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># No mouse when idle</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>run unclutter --ignore-scrolling --fork --timeout <span style="color:#444">1</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># DPMS and lock screen</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xset dpms <span style="color:#b04040">$inactivity_timeout</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#xss-lock -- physlock -mp &#39;Say, &#34;If the sea were ink for [writing] the words of my Lord, the sea would be exhausted before the words of my Lord were exhausted, even if We brought the like of it as a supplement.&#34;&#39; &amp;</span>
+</span></span><span style="display:flex;"><span>xss-lock -- i3lock -c <span style="color:#444">000000</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start Notification daemon</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>run dunst -c <span style="color:#b83838">&#34;</span><span style="color:#b04040">$HOME</span><span style="color:#b83838">&#34;</span>/.config/dunst/dunstrc <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Mute the mic</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pactl set-source-mute alsa_input.pci-0000_00_1b.0.analog-stereo <span style="color:#388038">true</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Redshift for less eye strain</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#redshift -c ~/.config/redshift/redshift.conf &amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start tmux if not already running</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span> -z <span style="color:#b04040">$TMUX</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> tmux new-session -s <span style="color:#b04040">$USER</span> -d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Set brightness to 30 at boot</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>light -S <span style="color:#444">30</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Configure multihead.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> <span style="color:#b83838">&#34;</span><span style="color:#2838b0">$(</span>xrandr -q <span style="color:#888">|</span> awk <span style="color:#b83838">&#39;/ connected / {print $1}&#39;</span> <span style="color:#888">|</span> wc -l<span style="color:#2838b0">)</span><span style="color:#b83838">&#34;</span> -eq <span style="color:#444">1</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span>tab --primary
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">else</span>
+</span></span><span style="display:flex;"><span>tabular
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Start a scratchpad</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#sleep 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#urxvtc -T &#39;scratchpad&#39; -geometry 65x20 &amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#termite -t scratchpad &amp;</span>
+</span></span><span style="display:flex;"><span>xfce4-terminal -T scratchpad --font<span style="color:#666">=</span><span style="color:#b83838">&#39;Fantasque Sans Mono Italic 16&#39;</span> <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># vim:ft=sh</span>
+</span></span></code></pre></div><p>The file is well-commented. So you can copy and edit it to your likings.</p>
+<h2 id="barpanel">Bar/Panel</h2>
+<p>I&rsquo;m using <a href="https://github.com/jaagr/polybar" target="_blank" >polybar</a>
+ with <em>bspwm</em>. To be
+honest, it was the reason I left <a href="https://dwm.suckless.org" target="_blank" >dwm</a>
+ because
+even with patching <em>dwm</em>, I wasn&rsquo;t able to use polybar with it. <em>bspwm</em> is
+<em>EWMH</em> supported so you can use almost any bar with it.
+I&rsquo;m starting polybar from <code>~/.config/bspwm/bspwmrc</code>. More on polybar, you
+can find a <a href="https://abdullah.today/polybar" target="_blank" >post</a>
+ in my blog to know more about
+it.</p>
+<h2 id="rules">Rules</h2>
+<p>In <em>bspwm</em>, you can define rules for windows how and where they appear.
+You can add a rule in <code>~/.config/bswpm/bspwmrc</code> like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bspc rule -a Chromium <span style="color:#b04040">desktop</span><span style="color:#666">=</span>^2
+</span></span></code></pre></div><p>This rule will always open Chromium on desktop 2.</p>
+<p>Or if you have some applications with complex window rules, you can define
+them in a script and execute that script from <code>~/.config/bspwm/bspwrc</code> like
+this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bspc config external_rules_command <span style="color:#b83838">&#34;</span><span style="color:#b04040">$HOME</span><span style="color:#b83838">/.config/bspwm/external_rules&#34;</span>
+</span></span></code></pre></div><p>Here is my <em>external_rules</em> script:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat ~/.config/bspwm/external_rules
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#!/bin/sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">coded_by</span><span style="color:#666">=</span><span style="color:#b83838">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">In the name of Allah, the most Gracious, the most Merciful.
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838"> ▓▓▓▓▓▓▓▓▓▓
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▓ Author ▓ Abdullah &lt;https://abdullah.today&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▓▓▓▓▓▓▓▓▓▓
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░░░░░░░░░░
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░█▀▄░█▀▀░█▀█░█░█░█▄█░░░█▀▄░█░█░█░░░█▀▀░█▀▀
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░█▀▄░▀▀█░█▀▀░█▄█░█░█░░░█▀▄░█░█░█░░░█▀▀░▀▀█
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▀▀░░▀▀▀░▀░░░▀░▀░▀░▀░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">wid</span><span style="color:#666">=</span><span style="color:#b04040">$1</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">class</span><span style="color:#666">=</span><span style="color:#b04040">$2</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">instance</span><span style="color:#666">=</span><span style="color:#b04040">$3</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">title</span><span style="color:#666">=</span><span style="color:#2838b0">$(</span>xdotool getwindowname <span style="color:#b04040">$wid</span><span style="color:#2838b0">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">case</span> <span style="color:#b04040">$class</span> in
+</span></span><span style="display:flex;"><span>  <span style="color:#666">[</span>Rr<span style="color:#666">]</span>edshift-*<span style="color:#888">|</span><span style="color:#666">[</span>Tt<span style="color:#666">]</span>int2<span style="color:#888">|</span><span style="color:#666">[</span>Pp<span style="color:#666">]</span>inentry-*<span style="color:#888">|</span><span style="color:#666">[</span>Mm<span style="color:#666">]</span>pv<span style="color:#888">|</span><span style="color:#666">[</span>Mm<span style="color:#666">]</span>u<span style="color:#666">[</span>Pp<span style="color:#666">][</span>Dd<span style="color:#666">][</span>Ff<span style="color:#666">]</span><span style="color:#888">|</span><span style="color:#666">[</span>Mm<span style="color:#666">]</span>Player<span style="color:#888">|</span><span style="color:#666">[</span>Tt<span style="color:#666">]</span>hunar<span style="color:#888">|</span><span style="color:#666">[</span>Ff<span style="color:#666">]</span>im<span style="color:#888">|</span><span style="color:#666">[</span>Gg<span style="color:#666">]</span>picview<span style="color:#888">|</span><span style="color:#666">[</span>Nn<span style="color:#666">]</span>itrogen<span style="color:#888">|</span><span style="color:#666">[</span>Aa<span style="color:#666">]</span>randr<span style="color:#888">|</span><span style="color:#666">[</span>Gg<span style="color:#666">]</span>alculator<span style="color:#888">|</span><span style="color:#666">[</span>Ff<span style="color:#666">]</span>ont-manager<span style="color:#888">|</span><span style="color:#666">[</span>Oo<span style="color:#666">]</span>blogout<span style="color:#888">|</span><span style="color:#666">[</span>Pp<span style="color:#666">]</span>eek<span style="color:#888">|</span><span style="color:#666">[</span>Ss<span style="color:#666">]</span>kype<span style="color:#888">|</span><span style="color:#666">[</span>Xx<span style="color:#666">]</span>fce4-appfinder<span style="color:#888">|</span><span style="color:#666">[</span>Xx<span style="color:#666">]</span>fce4-about<span style="color:#888">|</span><span style="color:#666">[</span>Gg<span style="color:#666">]</span>pick<span style="color:#888">|</span><span style="color:#666">[</span>Gg<span style="color:#666">]</span>mrun<span style="color:#888">|</span><span style="color:#666">[</span>Xx<span style="color:#666">][</span>Cc<span style="color:#666">]</span>alc<span style="color:#888">|</span><span style="color:#666">[</span>Pp<span style="color:#666">]</span>avucontrol<span style="color:#888">|</span><span style="color:#666">[</span>Vv<span style="color:#666">]</span>lc<span style="color:#888">|</span><span style="color:#666">[</span>Ee<span style="color:#666">]</span>o<span style="color:#666">[</span>mg<span style="color:#666">]</span><span style="color:#888">|</span><span style="color:#666">[</span>Ff<span style="color:#666">]</span>eh<span style="color:#888">|</span><span style="color:#666">[</span>Rr<span style="color:#666">]</span>istretto<span style="color:#888">|</span><span style="color:#666">[</span>Ss<span style="color:#666">]</span>xiv<span style="color:#888">|</span><span style="color:#666">[</span>Pp<span style="color:#666">]</span>qiv<span style="color:#888">|</span><span style="color:#666">[</span>Aa<span style="color:#666">]</span>tril<span style="color:#888">|</span><span style="color:#666">[</span>Ee<span style="color:#666">]</span>vince<span style="color:#888">|</span><span style="color:#666">[</span>Zz<span style="color:#666">]</span>athura<span style="color:#888">|</span>scratchpad<span style="color:#888">|</span>fzfmenu<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#388038">echo</span> <span style="color:#b83838">&#34;state = floating&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#388038">echo</span> <span style="color:#b83838">&#34;center = on&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">;;</span>
+</span></span><span style="display:flex;"><span>  Google-chrome<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#388038">echo</span> <span style="color:#b83838">&#34;desktop = ^2&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">;;</span>
+</span></span><span style="display:flex;"><span>  Opera<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#388038">echo</span> <span style="color:#b83838">&#34;desktop = ^3&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">;;</span>
+</span></span><span style="display:flex;"><span>  Gimp<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#388038">echo</span> <span style="color:#b83838">&#34;desktop = ^5&#34;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#888">;;</span>
+</span></span><span style="display:flex;"><span> Anydesk<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#388038">echo</span> <span style="color:#b83838">&#34;desktop = ^4&#34;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#388038">echo</span> <span style="color:#b83838">&#34;follow = on&#34;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#888">;;</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">esac</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">case</span> <span style="color:#b04040">$title</span> in
+</span></span><span style="display:flex;"><span>  scratchpad<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#388038">echo</span> <span style="color:#b83838">&#34;state = floating&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">;;</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">esac</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># vim:ft=sh</span>
+</span></span></code></pre></div><h2 id="scratchpad">Scratchpad</h2>
+<p>I love to use a terminal emulator mostly. So I have a hidden terminal window
+in floating mode. Whenever I need it, I just press the keybinds and it
+appears on top of other apps so I can copy/paste something to it.</p>
+<p>There are multiple way to achieve this. But what I have done is different. Not
+just terminal window, any window can be pushed to scratchpad.</p>
+<p>Copy this script in <code>~/.config/bspwm/scratchpad.sh</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#289870">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#289870"></span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">coded_by</span><span style="color:#666">=</span><span style="color:#b83838">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">In the name of Allah, the most Gracious, the most Merciful.
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">▓▓▓▓▓▓▓▓▓▓
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▓ Author ▓ Abdullah &lt;https://abdullah.today&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▓▓▓▓▓▓▓▓▓▓
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░░░░░░░░░░
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░█▀▀░█▀▀░█▀▄░█▀█░▀█▀░█▀▀░█░█░█▀█░█▀█░█▀▄
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▀▀█░█░░░█▀▄░█▀█░░█░░█░░░█▀█░█▀▀░█▀█░█░█
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">░▀▀▀░▀▀▀░▀░▀░▀░▀░░▀░░▀▀▀░▀░▀░▀░░░▀░▀░▀▀░
+</span></span></span><span style="display:flex;"><span><span style="color:#b83838">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>toggle_flag<span style="color:#666">()</span> <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">id</span><span style="color:#666">=</span><span style="color:#2838b0">$(</span>bspc query -N -n <span style="color:#b83838">&#34;focused&#34;</span><span style="color:#2838b0">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> -n <span style="color:#b83838">&#34;</span><span style="color:#b04040">$id</span><span style="color:#b83838">&#34;</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> <span style="color:#2838b0">$(</span>xprop -id <span style="color:#b83838">&#34;</span><span style="color:#b04040">$id</span><span style="color:#b83838">&#34;</span> <span style="color:#888">|</span> grep <span style="color:#b83838">&#34;_SCRATCH_ORDER&#34;</span> <span style="color:#888">|</span> wc -l<span style="color:#2838b0">)</span> -gt <span style="color:#444">0</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span>xprop -id <span style="color:#b04040">$id</span> -remove _SCRATCH_ORDER
+</span></span><span style="display:flex;"><span>xprop -id <span style="color:#b04040">$id</span> -remove _SCRATCH_VISIBILITY
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">else</span>
+</span></span><span style="display:flex;"><span>xprop -id <span style="color:#b04040">$id</span> -f _SCRATCH_ORDER 32ii -set _SCRATCH_ORDER <span style="color:#2838b0">$(</span>date +%s,%N<span style="color:#2838b0">)</span>
+</span></span><span style="display:flex;"><span>xprop -id <span style="color:#b04040">$id</span> -f _SCRATCH_VISIBILITY 8i -set _SCRATCH_VISIBILITY <span style="color:#444">0</span>
+</span></span><span style="display:flex;"><span>xdotool windowunmap <span style="color:#b04040">$id</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>switch_app<span style="color:#666">()</span> <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">id</span><span style="color:#666">=</span><span style="color:#2838b0">$(</span>bspc query -N -n <span style="color:#b83838">&#34;focused&#34;</span><span style="color:#2838b0">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> <span style="color:#2838b0">$(</span>xprop -id <span style="color:#b83838">&#34;</span><span style="color:#b04040">$id</span><span style="color:#b83838">&#34;</span> <span style="color:#888">|</span> grep <span style="color:#b83838">&#34;_SCRATCH_VISIBILITY(INTEGER) = 1&#34;</span> <span style="color:#888">|</span> wc -l<span style="color:#2838b0">)</span> -gt <span style="color:#444">0</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span>xprop -id <span style="color:#b04040">$id</span> -f _SCRATCH_VISIBILITY 8i -set _SCRATCH_VISIBILITY <span style="color:#444">0</span>
+</span></span><span style="display:flex;"><span>xdotool windowunmap <span style="color:#b04040">$id</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">sid</span><span style="color:#666">=</span><span style="color:#2838b0">$(</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">id</span><span style="color:#666">=</span><span style="color:#2838b0">$(</span>bspc query -N -n <span style="color:#b83838">&#34;focused&#34;</span><span style="color:#2838b0">)</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">for</span> w in <span style="color:#2838b0">$(</span>xwininfo -root -children <span style="color:#888">|</span> grep -e <span style="color:#b83838">&#34;^\s*0x[0-9a-f]\+&#34;</span> -o<span style="color:#2838b0">)</span><span style="color:#888">;</span> <span style="color:#2838b0">do</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> <span style="color:#b83838">&#34;</span><span style="color:#b04040">$w</span><span style="color:#b83838">&#34;</span> !<span style="color:#666">=</span> <span style="color:#b83838">&#34;</span><span style="color:#b04040">$id</span><span style="color:#b83838">&#34;</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">t</span><span style="color:#666">=</span><span style="color:#2838b0">$(</span>xprop -id <span style="color:#b04040">$w</span> _SCRATCH_ORDER <span style="color:#888">|</span> grep <span style="color:#b83838">&#39; = \(.*\)&#39;</span><span style="color:#2838b0">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> -n <span style="color:#b83838">&#34;</span><span style="color:#b04040">$t</span><span style="color:#b83838">&#34;</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span><span style="color:#388038">echo</span> <span style="color:#b04040">$t</span> <span style="color:#b04040">$w</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">done</span> <span style="color:#888">|</span> sort -n <span style="color:#888">|</span> head -n1 <span style="color:#888">|</span> cut -d<span style="color:#b83838">&#34; &#34;</span> -f <span style="color:#444">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">)</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> -n <span style="color:#b83838">&#34;</span><span style="color:#b04040">$sid</span><span style="color:#b83838">&#34;</span> <span style="color:#666">]</span> <span style="color:#666">&amp;&amp;</span> <span style="color:#666">[</span> <span style="color:#b83838">&#34;</span><span style="color:#2838b0">$(</span><span style="color:#388038">printf</span> <span style="color:#b83838">&#34;%04d&#34;</span> <span style="color:#b04040">$sid</span><span style="color:#2838b0">)</span><span style="color:#b83838">&#34;</span> !<span style="color:#666">=</span> <span style="color:#b83838">&#34;</span><span style="color:#2838b0">$(</span><span style="color:#388038">printf</span> <span style="color:#b83838">&#34;%04d&#34;</span> <span style="color:#b04040">$id</span><span style="color:#2838b0">)</span><span style="color:#b83838">&#34;</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span><span style="color:#388038">echo</span> <span style="color:#b83838">&#34;</span><span style="color:#b04040">$sid</span><span style="color:#b83838">&#34;</span> !<span style="color:#666">=</span> <span style="color:#b83838">&#34;</span><span style="color:#b04040">$id</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span>xprop -id <span style="color:#b04040">$sid</span> -f _SCRATCH_ORDER 32ii -set _SCRATCH_ORDER <span style="color:#2838b0">$(</span>date +%s,%N<span style="color:#2838b0">)</span>
+</span></span><span style="display:flex;"><span>xprop -id <span style="color:#b04040">$sid</span> -f _SCRATCH_VISIBILITY 8i -set _SCRATCH_VISIBILITY <span style="color:#444">1</span>
+</span></span><span style="display:flex;"><span>xdotool windowmap <span style="color:#b04040">$sid</span>
+</span></span><span style="display:flex;"><span>bspc node -f <span style="color:#b04040">$sid</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">op</span><span style="color:#666">=</span><span style="color:#b83838">&#34;</span><span style="color:#b04040">$1</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">if</span> <span style="color:#666">[</span> <span style="color:#b83838">&#34;</span><span style="color:#b04040">$op</span><span style="color:#b83838">&#34;</span> <span style="color:#666">=</span> <span style="color:#b83838">&#34;toggle-flag&#34;</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span>toggle_flag
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">elif</span> <span style="color:#666">[</span> <span style="color:#b83838">&#34;</span><span style="color:#b04040">$op</span><span style="color:#b83838">&#34;</span> <span style="color:#666">=</span> <span style="color:#b83838">&#34;switch-app&#34;</span> <span style="color:#666">]</span><span style="color:#888">;</span> <span style="color:#2838b0">then</span>
+</span></span><span style="display:flex;"><span>switch_app
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">fi</span>
+</span></span></code></pre></div><p>And add this line to your <code>~/.config/sxhkd/sxhkdrc</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Push focused window to scratchpad (background)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>super + shift + i
+</span></span><span style="display:flex;"><span>&#34;$HOME&#34;/.config/bspwm/scratchpad.sh toggle-flag
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Hide/Un-Hide a window pushed to scratchpad previously
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>super + i
+</span></span><span style="display:flex;"><span>&#34;$HOME&#34;/.config/bspwm/scratchpad.sh switch-app
+</span></span></code></pre></div><p>Now you can use <code>Super + Shift + i</code> to hide the focused window and <code>Super + i</code>
+to get it back.</p>
+<h2 id="misc-settings">Misc settings</h2>
+<h4 id="borders">Borders</h4>
+<p>There are active, normal, focused window colors settings available:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cat ~/.config/bspwm/bspwmrc
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Colors</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">dark_moderate_blue</span><span style="color:#666">=</span><span style="color:#b83838">&#34;#5e81ac&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">pure_cyan</span><span style="color:#666">=</span><span style="color:#b83838">&#34;#00FFFF&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">pure_magenta</span><span style="color:#666">=</span><span style="color:#b83838">&#34;#FF00FF&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">vivid_red</span><span style="color:#666">=</span><span style="color:#b83838">&#34;#ff3232&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">hot_pink</span><span style="color:#666">=</span><span style="color:#b83838">&#34;#ff69b4&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">up_maroon</span><span style="color:#666">=</span><span style="color:#b83838">&#34;#7b1113&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Feedback color of preselection</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bspc config presel_feedback_color   <span style="color:#b04040">$up_maroon</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Focused Border color</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bspc config focused_border_color    <span style="color:#b04040">$hot_pink</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Active border color</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bspc config active_border_color     <span style="color:#b04040">$pure_magenta</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Normal border color</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bspc config normal_border_color     <span style="color:#b04040">$pure_cyan</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h4 id="mouse">Mouse</h4>
+<p>While you press and hold <em>SUPER</em> key and hit these mouse buttons, these actions can be done:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi ~/.config/bspwm/bspwmrc
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Pointer actions when pressing mod + button</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bspc config pointer_action1         move
+</span></span><span style="display:flex;"><span>bspc config pointer_action2         resize_side
+</span></span><span style="display:flex;"><span>bspc config pointer_action3         resize_corner
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>:wq!
+</span></span></code></pre></div><h4 id="focus">Focus</h4>
+<p>When you move your mouse to some window, it should get focused. This behaviour is disabled by default which I use mostly and found helpful. Enable it by appending this line to your <em>bspwmrc</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ bspc config focus_follows_pointer <span style="color:#388038">true</span>
+</span></span></code></pre></div><h4 id="no-borders">No borders</h4>
+<p>If you have only one window open on a desktop, you might not want it to have
+borders. Append it to <em>bspwmrc</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ bspc config borderless_monocle <span style="color:#388038">true</span>
+</span></span></code></pre></div><h4 id="split-ratio">Split ratio</h4>
+<p>How much area the new window should take? You can configure this behaviour using
+this command or by appending it to <em>bspwmrc</em>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>bspc config split_ratio 0.50
+</span></span></code></pre></div><p>It will alot half of the available screen to new window.</p>
+<h4 id="ewmh">EWMH</h4>
+<p>Ignore EWMH focus requests. If true, opening new program in already opened instance will have direct focus too. Like if you&rsquo;re on desktop 8 and you open a URL from mutt, and chrome is configured as url launcher, it will send the url to chrome opened
+in 2nd desktop and switch to it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bspc config ignore_ewmh_focus <span style="color:#388038">false</span>
+</span></span></code></pre></div><p>I think its enough for now. <em>BSPWM</em> is amazing and very useful if you know
+scripting. If need assistance on <em>BSPWM</em>, you can always ask in comments.
+Thanks for reading. 😉</p>
+<p>Here is a demonstration video.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Y_aX-TOPREc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux filesystem directory structure on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/linux-filesystem-directory-structure/</link>
+    <description>Recent content in linux filesystem directory structure on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Dec 2020 14:24:49 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/linux-filesystem-directory-structure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Filesystem Directory Structure</title>
+      <link>https://abdullah.solutions/linux-filesystem-directory-structure/</link>
+      <pubDate>Thu, 17 Dec 2020 14:24:49 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/linux-filesystem-directory-structure/</guid>
+      <description>Unlike other operating systems, in linux everything starts from /. This is called root directory.
+You can use cd command to navigate in filesystem. If you&amp;rsquo;re inside some directory and you want to know where you&amp;rsquo;re inside the directory tree, just type pwd and it will show you the current working directory. pwd stands for print working directory.
+cd command needs some arguments if you want to visit some other directory.</description>
+    </item>
+    
+  </channel>
+</rss>

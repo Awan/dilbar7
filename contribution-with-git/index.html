@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to contribute to open source project"/>
+<meta name="twitter:description" content="How to contribute to a project using git"/>
+
+    <meta property="og:title" content="How to contribute to open source project" />
+<meta property="og:description" content="How to contribute to a project using git" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/contribution-with-git/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-02-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-12T00:00:00+00:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/contribution-with-git/">
+    
+    <title>
+  How to contribute to open source project · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/contribution-with-git/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">How to contribute to open source project</h1>
+        </div>
+        <div class="description">
+          <span class="title">How to contribute to a project using git</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2020-02-12T00:00:00Z'>
+                February 12, 2020
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              1 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <p>So you want to contribute to some open source project which is hosted on
+git[hub,lab] or some other git website.
+Here is all you want to do.</p>
+<h2 id="fork-the-repository">Fork the repository</h2>
+<p>Create a personal fork. On github, visit the project repository and hit fork.
+It will fork the project in your personal account.</p>
+<h2 id="clone-it">Clone it</h2>
+<p>Clone it in your local machine so you can work on it.
+Remember you are cloning the fork, and not the original project.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git clone git@github.com:USERNAME/project
+</span></span></code></pre></div><h2 id="add-the-upstream">Add the upstream</h2>
+<p>Add the original project as upstream.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git remote add upstream https://github.com/ORIGINAL_PROJECT_USERNAME/ORIGINAL_PROJECT_REPO
+</span></span></code></pre></div><h2 id="fetch-latest-work">Fetch latest work</h2>
+<p>If you forked a project just now, you can go to next step. If there is a time
+gap, fetch latest work from upstream to your fork.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git pull upstream
+</span></span></code></pre></div><h2 id="create-a-new-branch">Create a new branch</h2>
+<p>Create a new branch so you can work there.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git checkout -b develop
+</span></span></code></pre></div><h2 id="add-your-contribution">Add your contribution</h2>
+<p>Add your work in new created branch.
+Commit changes. Make sure to write meaninigful commits.</p>
+<h2 id="push-your-work-live">Push your work live</h2>
+<p>Push the changes you have made to remote origin.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git push
+</span></span></code></pre></div><h2 id="create-a-pull-request">Create a pull request</h2>
+<p>Go to your fork page and create a pull request. That&rsquo;s it</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

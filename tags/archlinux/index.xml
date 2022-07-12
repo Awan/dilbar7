@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>archlinux on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/archlinux/</link>
+    <description>Recent content in archlinux on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Encrypted Arch Linux installation</title>
+      <link>https://abdullah.solutions/encrypted-archlinux/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/encrypted-archlinux/</guid>
+      <description>What&amp;rsquo;s Arch Linux? Arch Linux is a free and open source linux distribution based on the rule Keep it Simple.
+Installation Arch Linux has no graphical installer. You have to install using CLI.
+Installation media creation Go to Downloads page and select a nearby mirror. Download the iso file. If you&amp;rsquo;re on Windows, you can use rufus to create a bootable media.
+On linux, you can use dd:
+dd if=downloaded iso file of=/dev/sdX status=progress where X is your USB device&amp;rsquo;s ID.</description>
+    </item>
+    
+  </channel>
+</rss>

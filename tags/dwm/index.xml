@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dwm on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/dwm/</link>
+    <description>Recent content in dwm on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/dwm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dwm window manager</title>
+      <link>https://abdullah.solutions/dwm/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/dwm/</guid>
+      <description>What&amp;rsquo;s DWM? DWM is a Tiling window manager by Suckless community .
+Installation You can install dwm by using your distribution package maangers. But as dwm is configured by hand before compilation, so it&amp;rsquo;s recommended you clone its repository, configure and then compile it for your system. I have a fork which you may like.
+Configuration In the root directory, there is a file config.h. You can edit it how you like.</description>
+    </item>
+    
+  </channel>
+</rss>

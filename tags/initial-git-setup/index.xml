@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>initial git setup on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/initial-git-setup/</link>
+    <description>Recent content in initial git setup on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 Jul 2020 18:58:13 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/initial-git-setup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Initial Setup</title>
+      <link>https://abdullah.solutions/configure-git/</link>
+      <pubDate>Sun, 12 Jul 2020 18:58:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/configure-git/</guid>
+      <description>How to configure Git Git is a version control system by Linus Torvalds, same person who wrote linux kernel.
+Installation In Archlinux, you can install git by:
+$ sudo pacman -S git In Debian and derived distributions:
+$ sudo apt install -y git Configuration You have to tell git about the author who committed changes so lets do it.
+Name and Email Tell git about your name and email:
+$ git config --global user.</description>
+    </item>
+    
+  </channel>
+</rss>

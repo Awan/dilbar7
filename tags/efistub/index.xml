@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>efistub on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/efistub/</link>
+    <description>Recent content in efistub on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/efistub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EFISTUB</title>
+      <link>https://abdullah.solutions/EFISTUB/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/EFISTUB/</guid>
+      <description>So in this post I&amp;rsquo;m gonna guide you how you can use efistub, a feature which you can use to boot the kernel without an extra boot manager(grub, systemd-boot, rEFInd etc.)
+Create a boot entry using efibootmgr.
+# efibootmgr --create --disk /dev/sda --part 1 --label Debian --loader /vmlinuz --unicode &amp;#34;root=/dev/sda2 rw initrd=\initrd.img&amp;#34; --verbose Explaination of the command.
+--create &amp;#39;creates a new boot entry&amp;#39; --disk &amp;#39;disk where you wanna create the boot entry&amp;#39; --part &amp;#39;partition number&amp;#39; --label &amp;#39;the label for new entry&amp;#39; --loader &amp;#39;loader to boot, it&amp;#39;s vmlinuz in this example&amp;#39; --unicode &amp;#39;kernel parameters you can define here like initrd, swap, encrypted container for root&amp;#39; --verbose &amp;#39;let it verbose&amp;#39; I have an encrypted installation on my machine so here is how I create an entry for me.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/</link>
+    <description>Recent content in Tags on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Jun 2022 18:07:52 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://abdullah.solutions/tags/automation/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://abdullah.solutions/tags/devops/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://abdullah.solutions/tags/git/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://abdullah.solutions/tags/github/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>integration</title>
+      <link>https://abdullah.solutions/tags/integration/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/integration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jenkins</title>
+      <link>https://abdullah.solutions/tags/jenkins/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7</title>
+      <link>https://abdullah.solutions/tags/centos7/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/centos7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>epel-release</title>
+      <link>https://abdullah.solutions/tags/epel-release/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/epel-release/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mpc</title>
+      <link>https://abdullah.solutions/tags/mpc/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/mpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mpd</title>
+      <link>https://abdullah.solutions/tags/mpd/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/mpd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>https://abdullah.solutions/tags/music/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music player daemon</title>
+      <link>https://abdullah.solutions/tags/music-player-daemon/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/music-player-daemon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ncmpcpp</title>
+      <link>https://abdullah.solutions/tags/ncmpcpp/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/ncmpcpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backdoor</title>
+      <link>https://abdullah.solutions/tags/backdoor/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/backdoor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>malware</title>
+      <link>https://abdullah.solutions/tags/malware/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/malware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>persistent backdoor</title>
+      <link>https://abdullah.solutions/tags/persistent-backdoor/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/persistent-backdoor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pivoting</title>
+      <link>https://abdullah.solutions/tags/pivoting/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/pivoting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privileges escalation</title>
+      <link>https://abdullah.solutions/tags/privileges-escalation/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/privileges-escalation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RAT</title>
+      <link>https://abdullah.solutions/tags/rat/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/rat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://abdullah.solutions/tags/security/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>super user</title>
+      <link>https://abdullah.solutions/tags/super-user/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/super-user/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trojan</title>
+      <link>https://abdullah.solutions/tags/trojan/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/trojan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>weevely</title>
+      <link>https://abdullah.solutions/tags/weevely/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/weevely/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backlight openbsd</title>
+      <link>https://abdullah.solutions/tags/backlight-openbsd/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/backlight-openbsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encrypted installation</title>
+      <link>https://abdullah.solutions/tags/encrypted-installation/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/encrypted-installation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>new install</title>
+      <link>https://abdullah.solutions/tags/new-install/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/new-install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openbsd</title>
+      <link>https://abdullah.solutions/tags/openbsd/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/openbsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openbsd wsconctl</title>
+      <link>https://abdullah.solutions/tags/openbsd-wsconctl/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/openbsd-wsconctl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>todo</title>
+      <link>https://abdullah.solutions/tags/todo/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/todo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xorg setup openbsd</title>
+      <link>https://abdullah.solutions/tags/xorg-setup-openbsd/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/xorg-setup-openbsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encrypted openbsd install</title>
+      <link>https://abdullah.solutions/tags/encrypted-openbsd-install/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/encrypted-openbsd-install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encryption</title>
+      <link>https://abdullah.solutions/tags/encryption/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/encryption/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>full disk encryption</title>
+      <link>https://abdullah.solutions/tags/full-disk-encryption/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/full-disk-encryption/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bsd</title>
+      <link>https://abdullah.solutions/tags/bsd/</link>
+      <pubDate>Mon, 08 Feb 2021 11:37:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/bsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>https://abdullah.solutions/tags/dotfiles/</link>
+      <pubDate>Mon, 08 Feb 2021 11:37:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openbsd as daily driver</title>
+      <link>https://abdullah.solutions/tags/openbsd-as-daily-driver/</link>
+      <pubDate>Mon, 08 Feb 2021 11:37:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/openbsd-as-daily-driver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openbsd on laptop</title>
+      <link>https://abdullah.solutions/tags/openbsd-on-laptop/</link>
+      <pubDate>Mon, 08 Feb 2021 11:37:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/openbsd-on-laptop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bike</title>
+      <link>https://abdullah.solutions/tags/bike/</link>
+      <pubDate>Mon, 01 Feb 2021 19:41:58 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/bike/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>honda</title>
+      <link>https://abdullah.solutions/tags/honda/</link>
+      <pubDate>Mon, 01 Feb 2021 19:41:58 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/honda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>honda125</title>
+      <link>https://abdullah.solutions/tags/honda125/</link>
+      <pubDate>Mon, 01 Feb 2021 19:41:58 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/honda125/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hondacg125</title>
+      <link>https://abdullah.solutions/tags/hondacg125/</link>
+      <pubDate>Mon, 01 Feb 2021 19:41:58 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/hondacg125/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ride</title>
+      <link>https://abdullah.solutions/tags/ride/</link>
+      <pubDate>Mon, 01 Feb 2021 19:41:58 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/ride/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>absolute pathnames</title>
+      <link>https://abdullah.solutions/tags/absolute-pathnames/</link>
+      <pubDate>Thu, 17 Dec 2020 14:24:49 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/absolute-pathnames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>filesystem</title>
+      <link>https://abdullah.solutions/tags/filesystem/</link>
+      <pubDate>Thu, 17 Dec 2020 14:24:49 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/filesystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux filesystem directory structure</title>
+      <link>https://abdullah.solutions/tags/linux-filesystem-directory-structure/</link>
+      <pubDate>Thu, 17 Dec 2020 14:24:49 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/linux-filesystem-directory-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pathnames</title>
+      <link>https://abdullah.solutions/tags/pathnames/</link>
+      <pubDate>Thu, 17 Dec 2020 14:24:49 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/pathnames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>relative pathnames</title>
+      <link>https://abdullah.solutions/tags/relative-pathnames/</link>
+      <pubDate>Thu, 17 Dec 2020 14:24:49 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/relative-pathnames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gmail</title>
+      <link>https://abdullah.solutions/tags/gmail/</link>
+      <pubDate>Sun, 29 Nov 2020 07:32:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/gmail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mail</title>
+      <link>https://abdullah.solutions/tags/mail/</link>
+      <pubDate>Sun, 29 Nov 2020 07:32:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/mail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>msmtp</title>
+      <link>https://abdullah.solutions/tags/msmtp/</link>
+      <pubDate>Sun, 29 Nov 2020 07:32:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/msmtp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mutt</title>
+      <link>https://abdullah.solutions/tags/mutt/</link>
+      <pubDate>Sun, 29 Nov 2020 07:32:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/mutt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>suckless</title>
+      <link>https://abdullah.solutions/tags/suckless/</link>
+      <pubDate>Sun, 29 Nov 2020 07:32:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/suckless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>https://abdullah.solutions/tags/terminal/</link>
+      <pubDate>Sun, 29 Nov 2020 07:32:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>login</title>
+      <link>https://abdullah.solutions/tags/login/</link>
+      <pubDate>Tue, 06 Oct 2020 13:45:06 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/login/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>passwordless authentication</title>
+      <link>https://abdullah.solutions/tags/passwordless-authentication/</link>
+      <pubDate>Tue, 06 Oct 2020 13:45:06 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/passwordless-authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pubkey authentication</title>
+      <link>https://abdullah.solutions/tags/pubkey-authentication/</link>
+      <pubDate>Tue, 06 Oct 2020 13:45:06 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/pubkey-authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://abdullah.solutions/tags/ssh/</link>
+      <pubDate>Tue, 06 Oct 2020 13:45:06 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>adb</title>
+      <link>https://abdullah.solutions/tags/adb/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/adb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://abdullah.solutions/tags/android/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android debugging bride</title>
+      <link>https://abdullah.solutions/tags/android-debugging-bride/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/android-debugging-bride/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android-debugging</title>
+      <link>https://abdullah.solutions/tags/android-debugging/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/android-debugging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scrcpy</title>
+      <link>https://abdullah.solutions/tags/scrcpy/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/scrcpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>screen sharing</title>
+      <link>https://abdullah.solutions/tags/screen-sharing/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/screen-sharing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>screensharing</title>
+      <link>https://abdullah.solutions/tags/screensharing/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/screensharing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bootable</title>
+      <link>https://abdullah.solutions/tags/bootable/</link>
+      <pubDate>Tue, 14 Jul 2020 17:22:11 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/bootable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kali linux</title>
+      <link>https://abdullah.solutions/tags/kali-linux/</link>
+      <pubDate>Tue, 14 Jul 2020 17:22:11 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/kali-linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kali linux persistence</title>
+      <link>https://abdullah.solutions/tags/kali-linux-persistence/</link>
+      <pubDate>Tue, 14 Jul 2020 17:22:11 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/kali-linux-persistence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux in usb</title>
+      <link>https://abdullah.solutions/tags/linux-in-usb/</link>
+      <pubDate>Tue, 14 Jul 2020 17:22:11 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/linux-in-usb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>usb</title>
+      <link>https://abdullah.solutions/tags/usb/</link>
+      <pubDate>Tue, 14 Jul 2020 17:22:11 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/usb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git configuration</title>
+      <link>https://abdullah.solutions/tags/git-configuration/</link>
+      <pubDate>Sun, 12 Jul 2020 18:58:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/git-configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>initial git setup</title>
+      <link>https://abdullah.solutions/tags/initial-git-setup/</link>
+      <pubDate>Sun, 12 Jul 2020 18:58:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/initial-git-setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fqdn</title>
+      <link>https://abdullah.solutions/tags/fqdn/</link>
+      <pubDate>Sun, 21 Jun 2020 13:26:14 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/fqdn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hostname</title>
+      <link>https://abdullah.solutions/tags/hostname/</link>
+      <pubDate>Sun, 21 Jun 2020 13:26:14 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/hostname/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>console</title>
+      <link>https://abdullah.solutions/tags/console/</link>
+      <pubDate>Sat, 06 Jun 2020 18:13:35 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/console/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multiplexer</title>
+      <link>https://abdullah.solutions/tags/multiplexer/</link>
+      <pubDate>Sat, 06 Jun 2020 18:13:35 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/multiplexer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>screen</title>
+      <link>https://abdullah.solutions/tags/screen/</link>
+      <pubDate>Sat, 06 Jun 2020 18:13:35 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/screen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tmux</title>
+      <link>https://abdullah.solutions/tags/tmux/</link>
+      <pubDate>Sat, 06 Jun 2020 18:13:35 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/tmux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>advanced git</title>
+      <link>https://abdullah.solutions/tags/advanced-git/</link>
+      <pubDate>Thu, 04 Jun 2020 14:25:08 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/advanced-git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>branches</title>
+      <link>https://abdullah.solutions/tags/branches/</link>
+      <pubDate>Thu, 04 Jun 2020 14:25:08 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/branches/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cherry-pick</title>
+      <link>https://abdullah.solutions/tags/cherry-pick/</link>
+      <pubDate>Thu, 04 Jun 2020 14:25:08 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/cherry-pick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://abdullah.solutions/tags/development/</link>
+      <pubDate>Thu, 04 Jun 2020 14:25:08 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bspwm</title>
+      <link>https://abdullah.solutions/tags/bspwm/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/bspwm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dual-monitor</title>
+      <link>https://abdullah.solutions/tags/dual-monitor/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/dual-monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dual-screen</title>
+      <link>https://abdullah.solutions/tags/dual-screen/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/dual-screen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multi-display</title>
+      <link>https://abdullah.solutions/tags/multi-display/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/multi-display/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multi-screen</title>
+      <link>https://abdullah.solutions/tags/multi-screen/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/multi-screen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multihead</title>
+      <link>https://abdullah.solutions/tags/multihead/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/multihead/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multimonitor</title>
+      <link>https://abdullah.solutions/tags/multimonitor/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/multimonitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>polybar</title>
+      <link>https://abdullah.solutions/tags/polybar/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/polybar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tiling window manager</title>
+      <link>https://abdullah.solutions/tags/tiling-window-manager/</link>
+      <pubDate>Mon, 01 Jun 2020 19:02:44 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/tiling-window-manager/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>window managers</title>
+      <link>https://abdullah.solutions/tags/window-managers/</link>
+      <pubDate>Mon, 01 Jun 2020 19:02:44 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/window-managers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wm</title>
+      <link>https://abdullah.solutions/tags/wm/</link>
+      <pubDate>Mon, 01 Jun 2020 19:02:44 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/wm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workflow</title>
+      <link>https://abdullah.solutions/tags/workflow/</link>
+      <pubDate>Mon, 01 Jun 2020 19:02:44 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/workflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rdp</title>
+      <link>https://abdullah.solutions/tags/rdp/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/rdp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>remote</title>
+      <link>https://abdullah.solutions/tags/remote/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/remote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal sharing</title>
+      <link>https://abdullah.solutions/tags/terminal-sharing/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/terminal-sharing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tmate</title>
+      <link>https://abdullah.solutions/tags/tmate/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/tmate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>beautiful</title>
+      <link>https://abdullah.solutions/tags/beautiful/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/beautiful/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crux</title>
+      <link>https://abdullah.solutions/tags/crux/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/crux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distrohopping</title>
+      <link>https://abdullah.solutions/tags/distrohopping/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/distrohopping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distros</title>
+      <link>https://abdullah.solutions/tags/distros/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/distros/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encrypted crux</title>
+      <link>https://abdullah.solutions/tags/encrypted-crux/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/encrypted-crux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encrypted laptop</title>
+      <link>https://abdullah.solutions/tags/encrypted-laptop/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/encrypted-laptop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://abdullah.solutions/tags/linux/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>luks</title>
+      <link>https://abdullah.solutions/tags/luks/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/luks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lvm</title>
+      <link>https://abdullah.solutions/tags/lvm/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/lvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>source based distros</title>
+      <link>https://abdullah.solutions/tags/source-based-distros/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/source-based-distros/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitlab readme</title>
+      <link>https://abdullah.solutions/tags/gitlab-readme/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/gitlab-readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project readme</title>
+      <link>https://abdullah.solutions/tags/project-readme/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/project-readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>readme</title>
+      <link>https://abdullah.solutions/tags/readme/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://abdullah.solutions/tags/hugo/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://abdullah.solutions/tags/vim/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://abdullah.solutions/tags/web-development/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/web-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>https://abdullah.solutions/tags/website/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gist</title>
+      <link>https://abdullah.solutions/tags/gist/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/gist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gists</title>
+      <link>https://abdullah.solutions/tags/gists/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/gists/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github-gists</title>
+      <link>https://abdullah.solutions/tags/github-gists/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/github-gists/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitlab snippets</title>
+      <link>https://abdullah.solutions/tags/gitlab-snippets/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/gitlab-snippets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snippets</title>
+      <link>https://abdullah.solutions/tags/snippets/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/snippets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>contribution</title>
+      <link>https://abdullah.solutions/tags/contribution/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/contribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fork</title>
+      <link>https://abdullah.solutions/tags/fork/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/fork/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>repository</title>
+      <link>https://abdullah.solutions/tags/repository/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/repository/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration_files</title>
+      <link>https://abdullah.solutions/tags/configuration_files/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/configuration_files/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encrypted_dotfiles</title>
+      <link>https://abdullah.solutions/tags/encrypted_dotfiles/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/encrypted_dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gnupg</title>
+      <link>https://abdullah.solutions/tags/gnupg/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/gnupg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gpg</title>
+      <link>https://abdullah.solutions/tags/gpg/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/gpg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>archlinux</title>
+      <link>https://abdullah.solutions/tags/archlinux/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/archlinux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encrypted install</title>
+      <link>https://abdullah.solutions/tags/encrypted-install/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/encrypted-install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>luks_on_lvm</title>
+      <link>https://abdullah.solutions/tags/luks_on_lvm/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/luks_on_lvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>status_bar</title>
+      <link>https://abdullah.solutions/tags/status_bar/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/status_bar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>editor</title>
+      <link>https://abdullah.solutions/tags/editor/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IDE</title>
+      <link>https://abdullah.solutions/tags/ide/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text editor</title>
+      <link>https://abdullah.solutions/tags/text-editor/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/text-editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vi</title>
+      <link>https://abdullah.solutions/tags/vi/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/vi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visual</title>
+      <link>https://abdullah.solutions/tags/visual/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/visual/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youcompleteme</title>
+      <link>https://abdullah.solutions/tags/youcompleteme/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/youcompleteme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debian</title>
+      <link>https://abdullah.solutions/tags/debian/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fresh install</title>
+      <link>https://abdullah.solutions/tags/fresh-install/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/fresh-install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rxvt</title>
+      <link>https://abdullah.solutions/tags/rxvt/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/rxvt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rxvt-unicode</title>
+      <link>https://abdullah.solutions/tags/rxvt-unicode/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/rxvt-unicode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>term</title>
+      <link>https://abdullah.solutions/tags/term/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/term/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>urxvt</title>
+      <link>https://abdullah.solutions/tags/urxvt/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/urxvt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xterm</title>
+      <link>https://abdullah.solutions/tags/xterm/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/xterm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fontconfig</title>
+      <link>https://abdullah.solutions/tags/fontconfig/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/fontconfig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fonts</title>
+      <link>https://abdullah.solutions/tags/fonts/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/fonts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fontset</title>
+      <link>https://abdullah.solutions/tags/fontset/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/fontset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privileges</title>
+      <link>https://abdullah.solutions/tags/privileges/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/privileges/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sudo</title>
+      <link>https://abdullah.solutions/tags/sudo/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/sudo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visudo</title>
+      <link>https://abdullah.solutions/tags/visudo/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/visudo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xdefaults</title>
+      <link>https://abdullah.solutions/tags/xdefaults/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/xdefaults/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xrdb</title>
+      <link>https://abdullah.solutions/tags/xrdb/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/xrdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xresources</title>
+      <link>https://abdullah.solutions/tags/xresources/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/xresources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xset</title>
+      <link>https://abdullah.solutions/tags/xset/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/xset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>commandline_email</title>
+      <link>https://abdullah.solutions/tags/commandline_email/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/commandline_email/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>email</title>
+      <link>https://abdullah.solutions/tags/email/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/email/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>isync</title>
+      <link>https://abdullah.solutions/tags/isync/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/isync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mbsync</title>
+      <link>https://abdullah.solutions/tags/mbsync/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/mbsync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neomutt</title>
+      <link>https://abdullah.solutions/tags/neomutt/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/neomutt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sendmail</title>
+      <link>https://abdullah.solutions/tags/sendmail/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/sendmail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://abdullah.solutions/tags/nodejs/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>https://abdullah.solutions/tags/chrome/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome_in_linux</title>
+      <link>https://abdullah.solutions/tags/chrome_in_linux/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/chrome_in_linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>https://abdullah.solutions/tags/google/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google-chrome</title>
+      <link>https://abdullah.solutions/tags/google-chrome/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/google-chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bootloader</title>
+      <link>https://abdullah.solutions/tags/bootloader/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/bootloader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>efibootmgr</title>
+      <link>https://abdullah.solutions/tags/efibootmgr/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/efibootmgr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>efistub</title>
+      <link>https://abdullah.solutions/tags/efistub/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/efistub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>baba</title>
+      <link>https://abdullah.solutions/tags/baba/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/baba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dad</title>
+      <link>https://abdullah.solutions/tags/dad/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/dad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>date</title>
+      <link>https://abdullah.solutions/tags/date/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/date/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dwm</title>
+      <link>https://abdullah.solutions/tags/dwm/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/dwm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pak_army</title>
+      <link>https://abdullah.solutions/tags/pak_army/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/pak_army/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>timezone</title>
+      <link>https://abdullah.solutions/tags/timezone/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/timezone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tzdata</title>
+      <link>https://abdullah.solutions/tags/tzdata/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/tzdata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windowmanager</title>
+      <link>https://abdullah.solutions/tags/windowmanager/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/windowmanager/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>systemd</title>
+      <link>https://abdullah.solutions/tags/systemd/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/systemd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>systemd timer</title>
+      <link>https://abdullah.solutions/tags/systemd-timer/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/systemd-timer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>systemd unit</title>
+      <link>https://abdullah.solutions/tags/systemd-unit/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/systemd-unit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wallpapers</title>
+      <link>https://abdullah.solutions/tags/wallpapers/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/wallpapers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ci/cd</title>
+      <link>https://abdullah.solutions/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

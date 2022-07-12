@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Polybar - A stylish bar"/>
+<meta name="twitter:description" content="Polybar - A stylish bar"/>
+
+    <meta property="og:title" content="Polybar - A stylish bar" />
+<meta property="og:description" content="Polybar - A stylish bar" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/polybar/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-10-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-12T00:00:00+00:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/polybar/">
+    
+    <title>
+  Polybar - A stylish bar · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/polybar/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Polybar - A stylish bar</h1>
+        </div>
+        <div class="description">
+          <span class="title">Polybar - A stylish bar</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2019-10-12T00:00:00Z'>
+                October 12, 2019
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              15 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <p>I recently tried to compile <a href="https://github.com/polybar/polybar.git" target="_blank" >polybar</a>
+ and used it with tiling window manager <a href="https://github.com/baskerville/bspwm.git" target="_blank" >bspwm</a>
+.</p>
+<h2 id="polybar">Polybar</h2>
+<p>Here is my bar configuration I have been using for over the years with i3,
+bspwm, dwm and many other window managers even with xfce4.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ cat $HOME/.config/polybar/config
+</span></span><span style="display:flex;"><span>[colors]
+</span></span><span style="display:flex;"><span>background = #FF000000
+</span></span><span style="display:flex;"><span>background-alt = ${xrdb:polybar*color8}
+</span></span><span style="display:flex;"><span>foreground = ${xrdb:polybar*foreground}
+</span></span><span style="display:flex;"><span>urgent = #B34747
+</span></span><span style="display:flex;"><span>foreground-alt = #555
+</span></span><span style="display:flex;"><span>primary = ${xrdb:polybar*color3}
+</span></span><span style="display:flex;"><span>secondary = ${xrdb:polybar*color1}
+</span></span><span style="display:flex;"><span>alert = ${xrdb:polybar*color13}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[settings]
+</span></span><span style="display:flex;"><span>screenchange-reload = true
+</span></span><span style="display:flex;"><span>screenchange = true
+</span></span><span style="display:flex;"><span>throttle-output = 5
+</span></span><span style="display:flex;"><span>throttle-output-for = 10
+</span></span><span style="display:flex;"><span>throttle-input-for = 30
+</span></span><span style="display:flex;"><span>compositing-background = source
+</span></span><span style="display:flex;"><span>compositing-foreground = over
+</span></span><span style="display:flex;"><span>compositing-overline = over
+</span></span><span style="display:flex;"><span>compositing-underline = over
+</span></span><span style="display:flex;"><span>compositing-border = over
+</span></span><span style="display:flex;"><span>pseudo-transparency = true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[global/wm]
+</span></span><span style="display:flex;"><span>margin-top = 0
+</span></span><span style="display:flex;"><span>margin-bottom = 0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[bar/eDP-1]
+</span></span><span style="display:flex;"><span>monitor = ${env:MONITOR:eDP-1}
+</span></span><span style="display:flex;"><span>monitor-fallback = eDP1
+</span></span><span style="display:flex;"><span>bottom = false
+</span></span><span style="display:flex;"><span>width = 100%
+</span></span><span style="display:flex;"><span>height = 25
+</span></span><span style="display:flex;"><span>offset-x = 0
+</span></span><span style="display:flex;"><span>offset-y = 0
+</span></span><span style="display:flex;"><span>radius = 10
+</span></span><span style="display:flex;"><span>fixed-center = true
+</span></span><span style="display:flex;"><span>background = ${colors.background}
+</span></span><span style="display:flex;"><span>foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>line-size = 0
+</span></span><span style="display:flex;"><span>line-color = #f00
+</span></span><span style="display:flex;"><span>border-size = 0
+</span></span><span style="display:flex;"><span>border-top-size = 0
+</span></span><span style="display:flex;"><span>border-color = ${xrdb:background}
+</span></span><span style="display:flex;"><span>padding-left = 0
+</span></span><span style="display:flex;"><span>padding-right = 1
+</span></span><span style="display:flex;"><span>module-margin-left = 2
+</span></span><span style="display:flex;"><span>module-margin-right = 2
+</span></span><span style="display:flex;"><span>font-0 =  FontAwesome
+</span></span><span style="display:flex;"><span>font-1 = Monospace:weight=regular:pixelsize=13
+</span></span><span style="display:flex;"><span>font-2 = DejaVu Sans:pixelsize=11
+</span></span><span style="display:flex;"><span>font-3 =  Segoe UI Emoji
+</span></span><span style="display:flex;"><span>modules-right = bspwm
+</span></span><span style="display:flex;"><span>modules-center = mpd
+</span></span><span style="display:flex;"><span>modules-left = date hijri wlan battery temperature cpu memory pulseaudio arch_backlight
+</span></span><span style="display:flex;"><span>tray-position = right
+</span></span><span style="display:flex;"><span>tray-padding = 6
+</span></span><span style="display:flex;"><span>;tray-background = #24292A00
+</span></span><span style="display:flex;"><span>tray-background = ${root.background}
+</span></span><span style="display:flex;"><span>wm-restack = bspwm
+</span></span><span style="display:flex;"><span>override-redirect = false
+</span></span><span style="display:flex;"><span>;scroll-up = bspwm-desknext
+</span></span><span style="display:flex;"><span>;scroll-down = bspwm-deskprev
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/bspwm]
+</span></span><span style="display:flex;"><span>type = internal/bspwm
+</span></span><span style="display:flex;"><span>pin-workspaces = true
+</span></span><span style="display:flex;"><span>inline-mode = false
+</span></span><span style="display:flex;"><span>enable-click = true
+</span></span><span style="display:flex;"><span>enable-scroll = true
+</span></span><span style="display:flex;"><span>reverse-scroll = true
+</span></span><span style="display:flex;"><span>fuzzy-match = false
+</span></span><span style="display:flex;"><span>ws-icon-0 = &#34;I&#34;
+</span></span><span style="display:flex;"><span>ws-icon-1 = &#34;II&#34;
+</span></span><span style="display:flex;"><span>ws-icon-2 = &#34;III&#34;
+</span></span><span style="display:flex;"><span>ws-icon-3 = &#34;IV&#34;
+</span></span><span style="display:flex;"><span>ws-icon-4 = &#34;V&#34;
+</span></span><span style="display:flex;"><span>ws-icon-5 = &#34;VI&#34;
+</span></span><span style="display:flex;"><span>ws-icon-6 = &#34;VII&#34;
+</span></span><span style="display:flex;"><span>ws-icon-7 = &#34;VIII&#34;
+</span></span><span style="display:flex;"><span>ws-icon-8 = &#34;IX&#34;
+</span></span><span style="display:flex;"><span>ws-icon-9 = &#34;X&#34;
+</span></span><span style="display:flex;"><span>format = &lt;label-state&gt; &lt;label-mode&gt;
+</span></span><span style="display:flex;"><span>label-monitor = %name%
+</span></span><span style="display:flex;"><span>label-dimmed-foreground = #555
+</span></span><span style="display:flex;"><span>;label-dimmed-focused-background = #f00
+</span></span><span style="display:flex;"><span>label-focused = %icon% %name%
+</span></span><span style="display:flex;"><span>label-focused-underline= ${colors.primary}
+</span></span><span style="display:flex;"><span>label-focused-foreground = #f00000
+</span></span><span style="display:flex;"><span>label-occupied = %icon% %name%
+</span></span><span style="display:flex;"><span>label-occupied-underline = #555555
+</span></span><span style="display:flex;"><span>label-urgent = %icon% %name%
+</span></span><span style="display:flex;"><span>label-urgent-underline = ${colors.primary}
+</span></span><span style="display:flex;"><span>label-urgent-background = ${colors.alert}
+</span></span><span style="display:flex;"><span>label-empty = %icon% %name%
+</span></span><span style="display:flex;"><span>label-empty-foreground = #d700ff
+</span></span><span style="display:flex;"><span>;label-empty-foreground = ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>label-monocle = &#34;  &#34;
+</span></span><span style="display:flex;"><span>label-monocle-foreground = #fff995
+</span></span><span style="display:flex;"><span>label-tiled = &#34;  &#34;
+</span></span><span style="display:flex;"><span>;label-tiled-foreground = #750080
+</span></span><span style="display:flex;"><span>label-tiled-foreground = #00ffff
+</span></span><span style="display:flex;"><span>label-fullscreen = &#34;  &#34;
+</span></span><span style="display:flex;"><span>;label-floating = &#34;  &#34;
+</span></span><span style="display:flex;"><span>label-floating = &#34;  &#34;
+</span></span><span style="display:flex;"><span>label-floating-foreground = #ff45ff
+</span></span><span style="display:flex;"><span>label-pseudotiled = &#34;  &#34;
+</span></span><span style="display:flex;"><span>label-locked = &#34;  &#34;
+</span></span><span style="display:flex;"><span>label-locked-foreground = #bd2c40
+</span></span><span style="display:flex;"><span>label-sticky = &#34;  &#34;
+</span></span><span style="display:flex;"><span>label-sticky-foreground = #fba922
+</span></span><span style="display:flex;"><span>label-private = &#34;     &#34;
+</span></span><span style="display:flex;"><span>label-private-foreground = #bd2c40
+</span></span><span style="display:flex;"><span>label-marked = &#34; &#34;
+</span></span><span style="display:flex;"><span>label-marked-foreground = #0000ff
+</span></span><span style="display:flex;"><span>label-separator = 
+</span></span><span style="display:flex;"><span>label-separator-padding = 3
+</span></span><span style="display:flex;"><span>label-separator-foreground = #ffb52a
+</span></span><span style="display:flex;"><span>label-occupied-padding = 3
+</span></span><span style="display:flex;"><span>label-empty-padding = 3
+</span></span><span style="display:flex;"><span>label-urgent-padding = 3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/xwindow]
+</span></span><span style="display:flex;"><span>type = internal/xwindow
+</span></span><span style="display:flex;"><span>label = &#34;    /  %title:0:48:...%&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/backlight-acpi]
+</span></span><span style="display:flex;"><span>type = internal/backlight
+</span></span><span style="display:flex;"><span>sub = module/backlight-acpi
+</span></span><span style="display:flex;"><span>base = module/xbacklight
+</span></span><span style="display:flex;"><span>inherit = module/xbacklight
+</span></span><span style="display:flex;"><span>card = intel_backlight
+</span></span><span style="display:flex;"><span>format = &lt;ramp&gt;&lt;label&gt;
+</span></span><span style="display:flex;"><span>label = %percentage%%
+</span></span><span style="display:flex;"><span>ramp-0 = 🌕
+</span></span><span style="display:flex;"><span>ramp-1 = 🌔
+</span></span><span style="display:flex;"><span>ramp-2 = 🌓
+</span></span><span style="display:flex;"><span>ramp-3 = 🌒
+</span></span><span style="display:flex;"><span>ramp-4 = 🌑
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>;[module/backlight]
+</span></span><span style="display:flex;"><span>;type = internal/backlight
+</span></span><span style="display:flex;"><span>;card = intel_backlight
+</span></span><span style="display:flex;"><span>;;output = eDP-1
+</span></span><span style="display:flex;"><span>;format = &lt;ramp&gt;&lt;label&gt;
+</span></span><span style="display:flex;"><span>;label = %percentage%%
+</span></span><span style="display:flex;"><span>;label-foreground = #3EC13F
+</span></span><span style="display:flex;"><span>;format-padding = 1
+</span></span><span style="display:flex;"><span>;ramp-0 = 🌕
+</span></span><span style="display:flex;"><span>;ramp-1 = 🌔
+</span></span><span style="display:flex;"><span>;ramp-2 = 🌓
+</span></span><span style="display:flex;"><span>;ramp-3 = 🌒
+</span></span><span style="display:flex;"><span>;ramp-4 = 🌑
+</span></span><span style="display:flex;"><span>;enable-scroll = true
+</span></span><span style="display:flex;"><span>;scroll-up = exec light -A 5
+</span></span><span style="display:flex;"><span>;scroll-down = exec light -U 6
+</span></span><span style="display:flex;"><span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/pavolume]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>label = %output%
+</span></span><span style="display:flex;"><span>label-foreground = #D1FF00
+</span></span><span style="display:flex;"><span>exec = ~/.config/polybar/scripts/pavolume.sh --listen
+</span></span><span style="display:flex;"><span>click-right = exec pavucontrol
+</span></span><span style="display:flex;"><span>scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
+</span></span><span style="display:flex;"><span>scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+</span></span><span style="display:flex;"><span>format-underline = #3EC13F
+</span></span><span style="display:flex;"><span>format-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>format-background = ${colors.background}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/xworkspaces]
+</span></span><span style="display:flex;"><span>type = internal/xworkspaces
+</span></span><span style="display:flex;"><span>pin-workspaces = true
+</span></span><span style="display:flex;"><span>; Create click handler used to focus desktop
+</span></span><span style="display:flex;"><span>enable-click = true
+</span></span><span style="display:flex;"><span>index-sort = true
+</span></span><span style="display:flex;"><span>wrapping-scroll = false
+</span></span><span style="display:flex;"><span>#ws-num = 9
+</span></span><span style="display:flex;"><span>icon-0 = code;♚
+</span></span><span style="display:flex;"><span>icon-1 = office;♛
+</span></span><span style="display:flex;"><span>icon-2 = graphics;♜
+</span></span><span style="display:flex;"><span>icon-3 = mail;♝
+</span></span><span style="display:flex;"><span>icon-4 = web;♞
+</span></span><span style="display:flex;"><span>icon-default = ♟
+</span></span><span style="display:flex;"><span>show-all = true
+</span></span><span style="display:flex;"><span>label-empty-foreground =  ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>#label-empty = %icon%
+</span></span><span style="display:flex;"><span>label-mode-padding = 3
+</span></span><span style="display:flex;"><span>label-mode-foreground = ${colors.background}
+</span></span><span style="display:flex;"><span>label-mode-background = #a8df5a
+</span></span><span style="display:flex;"><span>label-focused = %icon%
+</span></span><span style="display:flex;"><span>label-focused-background = ${module/bspwm.label-focused-background}
+</span></span><span style="display:flex;"><span>label-focused-underline = ${module/bspwm.label-focused-underline}
+</span></span><span style="display:flex;"><span>label-focused-padding = ${module/bspwm.label-focused-padding}
+</span></span><span style="display:flex;"><span>label-unfocused = %icon%
+</span></span><span style="display:flex;"><span>label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+</span></span><span style="display:flex;"><span>; visible = Active workspace on unfocused monitor
+</span></span><span style="display:flex;"><span>label-visible = %icon%
+</span></span><span style="display:flex;"><span>label-visible-background = ${self.label-focused-background}
+</span></span><span style="display:flex;"><span>label-visible-underline = ${self.label-focused-underline}
+</span></span><span style="display:flex;"><span>label-visible-padding = ${self.label-focused-padding}
+</span></span><span style="display:flex;"><span>; urgent = Workspace with urgency hint set
+</span></span><span style="display:flex;"><span>label-urgent-foreground = ${xrdb:polybar*color8}
+</span></span><span style="display:flex;"><span>label-urgent-background = ${module/bspwm.label-urgent-background}
+</span></span><span style="display:flex;"><span>label-urgent-padding = ${module/bspwm.label-urgent-padding}
+</span></span><span style="display:flex;"><span>; Create scroll handlers used to cycle desktops
+</span></span><span style="display:flex;"><span>enable-scroll = true
+</span></span><span style="display:flex;"><span>label-monitor = %name%
+</span></span><span style="display:flex;"><span>format = &lt;label-state&gt;
+</span></span><span style="display:flex;"><span>label-active = %icon% %name%
+</span></span><span style="display:flex;"><span>label-active-foreground = #ffffff
+</span></span><span style="display:flex;"><span>#label-active-background = #3f3f3f
+</span></span><span style="display:flex;"><span>label-active-underline = #fba922
+</span></span><span style="display:flex;"><span>label-occupied = %icon%
+</span></span><span style="display:flex;"><span>label-occupied-underline = #555555
+</span></span><span style="display:flex;"><span>label-urgent = %icon%
+</span></span><span style="display:flex;"><span>#label-empty = %icon%
+</span></span><span style="display:flex;"><span>#label-empty-foreground = #55
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/wlan]
+</span></span><span style="display:flex;"><span>type = internal/network
+</span></span><span style="display:flex;"><span>interface = wlp3s0
+</span></span><span style="display:flex;"><span>#interval = 3.0
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>format-connected = &lt;ramp-signal&gt; &lt;label-connected&gt;
+</span></span><span style="display:flex;"><span>format-connected-underline = #9f78e1
+</span></span><span style="display:flex;"><span>label-connected =  %essid%%{A}
+</span></span><span style="display:flex;"><span>label-connected-foreground = ${xrdb:polybar.color16}
+</span></span><span style="display:flex;"><span>label-disconnected = 
+</span></span><span style="display:flex;"><span>format-disconnected = &lt;label-disconnected&gt;
+</span></span><span style="display:flex;"><span>ramp-signal-0 = 
+</span></span><span style="display:flex;"><span>ramp-signal-1 = 
+</span></span><span style="display:flex;"><span>ramp-signal-2 = 
+</span></span><span style="display:flex;"><span>ramp-signal-3 = 
+</span></span><span style="display:flex;"><span>ramp-signal-4 = 
+</span></span><span style="display:flex;"><span>;ramp-signal-0 = 😱
+</span></span><span style="display:flex;"><span>;ramp-signal-1 = 😠
+</span></span><span style="display:flex;"><span>;ramp-signal-2 = 😒
+</span></span><span style="display:flex;"><span>;ramp-signal-3 = 😊
+</span></span><span style="display:flex;"><span>;ramp-signal-4 = 😃
+</span></span><span style="display:flex;"><span>;ramp-signal-5 = 😈
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>;label-connected = %essid%
+</span></span><span style="display:flex;"><span>;format-disconnected = &lt;label-disconnected&gt;
+</span></span><span style="display:flex;"><span>;label-disconnected =   Disconnected
+</span></span><span style="display:flex;"><span>label-disconnected-foreground = ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>format-packetloss = &lt;animation-packetloss&gt; &lt;label-connected&gt;
+</span></span><span style="display:flex;"><span>animation-packetloss-0 = ⚠
+</span></span><span style="display:flex;"><span>animation-packetloss-0-foreground = #ffa64c
+</span></span><span style="display:flex;"><span>animation-packetloss-1 = 📶
+</span></span><span style="display:flex;"><span>animation-packetloss-1-foreground = #000000
+</span></span><span style="display:flex;"><span>; Framerate in milliseconds
+</span></span><span style="display:flex;"><span>animation-packetloss-framerate = 500
+</span></span><span style="display:flex;"><span>label-packetloss = %essid%
+</span></span><span style="display:flex;"><span>label-packetloss-foreground = #eefafafa
+</span></span><span style="display:flex;"><span>;ramp-signal-0 =  
+</span></span><span style="display:flex;"><span>;ramp-signal-1 =  
+</span></span><span style="display:flex;"><span>;ramp-signal-2 =  
+</span></span><span style="display:flex;"><span>;ramp-signal-3 =  
+</span></span><span style="display:flex;"><span>;ramp-signal-4 =  
+</span></span><span style="display:flex;"><span>;ramp-signal-5 =  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ramp-signal-foreground = ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/xbacklight]
+</span></span><span style="display:flex;"><span>type = internal/xbacklight
+</span></span><span style="display:flex;"><span>format = &lt;label&gt; &lt;bar&gt;
+</span></span><span style="display:flex;"><span>bar-width = 10
+</span></span><span style="display:flex;"><span>bar-indicator =  
+</span></span><span style="display:flex;"><span>bar-indicator-foreground = #fff
+</span></span><span style="display:flex;"><span>bar-empty = 
+</span></span><span style="display:flex;"><span>bar-fill = 
+</span></span><span style="display:flex;"><span>format-prefix = &#34; &#34;
+</span></span><span style="display:flex;"><span>label-foreground = #3EC13F
+</span></span><span style="display:flex;"><span>format-padding = 1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/cpu]
+</span></span><span style="display:flex;"><span>type = internal/cpu
+</span></span><span style="display:flex;"><span>interval = 2
+</span></span><span style="display:flex;"><span>format-prefix = &#34;cpu &#34;
+</span></span><span style="display:flex;"><span>format-prefix-foreground = ${xrdb:polybar.color3}
+</span></span><span style="display:flex;"><span>format-underline = #f90000
+</span></span><span style="display:flex;"><span>label = %percentage%%
+</span></span><span style="display:flex;"><span>label-foreground = ${xrdb:polybar.color16}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/memory]
+</span></span><span style="display:flex;"><span>type = internal/memory
+</span></span><span style="display:flex;"><span>interval = 2
+</span></span><span style="display:flex;"><span>format-prefix = &#34;mem &#34;
+</span></span><span style="display:flex;"><span>format-prefix-foreground = ${xrdb:polybar.color2}
+</span></span><span style="display:flex;"><span>format-underline = #4bffdc
+</span></span><span style="display:flex;"><span>label = %percentage_used%%
+</span></span><span style="display:flex;"><span>label-foreground = ${xrdb:polybar.color12}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/date]
+</span></span><span style="display:flex;"><span>type = internal/date
+</span></span><span style="display:flex;"><span>interval = 1
+</span></span><span style="display:flex;"><span>date = &#34; %a %d %b -&#34;
+</span></span><span style="display:flex;"><span>date-alt = &#34; %d %b -&#34;
+</span></span><span style="display:flex;"><span>time = %H:%M
+</span></span><span style="display:flex;"><span>time-alt = %H:%M:%S
+</span></span><span style="display:flex;"><span>format-prefix = &#34; &#34;
+</span></span><span style="display:flex;"><span>;format-prefix = &#34;🕓&#34;
+</span></span><span style="display:flex;"><span>format-prefix-foreground = ${xrdb:polybar*color5}
+</span></span><span style="display:flex;"><span>format-underline = #0a6cf5
+</span></span><span style="display:flex;"><span>;label = %date% %time%
+</span></span><span style="display:flex;"><span>label = %time%
+</span></span><span style="display:flex;"><span>label-foreground = #9A32DB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/time]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>exec = ~/.config/polybar/scripts/time.py
+</span></span><span style="display:flex;"><span>format-prefix = &#34; &#34;
+</span></span><span style="display:flex;"><span>format-prefix-foreground = ${xrdb:polybar*color4}
+</span></span><span style="display:flex;"><span>format-underline = #0a6cf5
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/battery]
+</span></span><span style="display:flex;"><span>type = internal/battery
+</span></span><span style="display:flex;"><span>battery = BAT0
+</span></span><span style="display:flex;"><span>adapter = AC0
+</span></span><span style="display:flex;"><span>full-at = 100
+</span></span><span style="display:flex;"><span>poll-interval = 5
+</span></span><span style="display:flex;"><span>time-format = %H:%M
+</span></span><span style="display:flex;"><span>format-charging = &lt;animation-charging&gt; &lt;label-charging&gt;
+</span></span><span style="display:flex;"><span>format-charging-underline = #ffb52a
+</span></span><span style="display:flex;"><span>label-charging =  %percentage%% %time%
+</span></span><span style="display:flex;"><span>label-charging-foreground = ${xrdb:polybar.color9}
+</span></span><span style="display:flex;"><span>format-discharging = &lt;ramp-capacity&gt; &lt;label-discharging&gt;
+</span></span><span style="display:flex;"><span>format-discharging-underline = ${self.format-charging-underline}
+</span></span><span style="display:flex;"><span>label-discharging = %percentage%% %time%
+</span></span><span style="display:flex;"><span>label-discharging-foreground = ${xrdb:polybar.color9}
+</span></span><span style="display:flex;"><span>format-full = &lt;ramp-capacity&gt; &lt;label-full&gt;
+</span></span><span style="display:flex;"><span>format-full-prefix = &#34; &#34;
+</span></span><span style="display:flex;"><span>format-full-prefix-foreground = ${xrdb:polybar.color1}
+</span></span><span style="display:flex;"><span>format-full-underline = ${self.format-charging-underline}
+</span></span><span style="display:flex;"><span>;label-full = %percentage%% - fully charged!
+</span></span><span style="display:flex;"><span>ramp-capacity-0 = &#34; &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-1 = &#34; &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-2 = &#34; &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-3 = &#34; &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-4 = &#34; &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-foreground = ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>animation-charging-0 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-1 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-2 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-3 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-4 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>animation-charging-framerate = 750
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/battery2]
+</span></span><span style="display:flex;"><span>type = internal/battery
+</span></span><span style="display:flex;"><span>battery = BAT0
+</span></span><span style="display:flex;"><span>adapter = AC
+</span></span><span style="display:flex;"><span>full-at = 95
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>format-charging = &#34;&lt;animation-charging&gt;&lt;label-charging&gt;&#34;
+</span></span><span style="display:flex;"><span>;format-charging-underline = ${colors.foreground}
+</span></span><span style="display:flex;"><span>label-charging = %percentage%% - time left %time%
+</span></span><span style="display:flex;"><span>label-charging-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>label-charging-background = ${colors.background}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>format-discharging = &#34;&lt;ramp-capacity&gt;&lt;label-discharging&gt;&#34;
+</span></span><span style="display:flex;"><span>;format-discharging-underline = ${self.format-charging-underline}
+</span></span><span style="display:flex;"><span>label-discharging = %percentage%% - time left %time%
+</span></span><span style="display:flex;"><span>label-discharging-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>label-discharging-background = ${colors.background}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>format-full-prefix = &#34;  &#34;
+</span></span><span style="display:flex;"><span>format-full-prefix-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>format-full-prefix-background = ${colors.background}
+</span></span><span style="display:flex;"><span>;format-full-underline = ${self.format-charging-underline}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ramp-capacity-0 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-0-foreground = ${colors.alert}
+</span></span><span style="display:flex;"><span>ramp-capacity-1 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-2 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-3 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>ramp-capacity-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>ramp-capacity-background = ${colors.background}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>animation-charging-0 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-1 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-2 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-3 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>animation-charging-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>animation-charging-background = ${colors.background}
+</span></span><span style="display:flex;"><span>animation-charging-framerate = 750
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/mpd]
+</span></span><span style="display:flex;"><span>type = internal/mpd
+</span></span><span style="display:flex;"><span>format-online = &#34;&lt;label-song&gt; &lt;label-time&gt; &lt;icon-prev&gt; &lt;icon-stop&gt; &lt;toggle&gt; &lt;icon-next&gt;&#34;
+</span></span><span style="display:flex;"><span>format-underline = #FF00DB
+</span></span><span style="display:flex;"><span>format-prefix-foreground = #00A5FF
+</span></span><span style="display:flex;"><span>icon-prev = 
+</span></span><span style="display:flex;"><span>icon-stop = 
+</span></span><span style="display:flex;"><span>icon-play-prefix = #f00
+</span></span><span style="display:flex;"><span>icon-play = 
+</span></span><span style="display:flex;"><span>icon-pause = 
+</span></span><span style="display:flex;"><span>icon-next = 
+</span></span><span style="display:flex;"><span>label-song = %title%
+</span></span><span style="display:flex;"><span>label-song-foreground = #00A5FF
+</span></span><span style="display:flex;"><span>label-song-maxlen = 40
+</span></span><span style="display:flex;"><span>label-song-ellipsis = true
+</span></span><span style="display:flex;"><span>bar-progress-width = 10
+</span></span><span style="display:flex;"><span>bar-progress-indicator = 
+</span></span><span style="display:flex;"><span>bar-progress-fill = 
+</span></span><span style="display:flex;"><span>bar-progress-empty = 
+</span></span><span style="display:flex;"><span>bar-progress-fill-foreground = #ff0
+</span></span><span style="display:flex;"><span>bar-progress-fill-background = ${colors.background}
+</span></span><span style="display:flex;"><span>bar-progress-indicator-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>;format-online-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>;format-online-background = ${colors.background}
+</span></span><span style="display:flex;"><span>label-time-foreground = #ff0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/gmail]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>#exec = python3 ~/.config/polybar/gmail/run.py 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>#exec = ping -c 1 google.com 2&amp;&gt;/dev/null &amp;&amp; python3 ~/.config/polybar/gmail/run.py || echo &#39;no network&#39;
+</span></span><span style="display:flex;"><span>exec = ~/bin/gmailScript4Polybar 
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>click-right= /usr/bin/google-chrome-stable https://mail.google.com
+</span></span><span style="display:flex;"><span>click-left= urxvtc -e mutg
+</span></span><span style="display:flex;"><span>;format-background = #00A5FF
+</span></span><span style="display:flex;"><span>;format-underline = #FF00DB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/abdullah]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>exec = python3 ~/.config/polybar/abdullah/inbox.py 
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>interval = 60
+</span></span><span style="display:flex;"><span>click-right= google-chrome https://mail.google.com
+</span></span><span style="display:flex;"><span>click-left= urxvtc -e mutt -F ~/.config/mutt/muttrc
+</span></span><span style="display:flex;"><span>;format-background = #00A5FF
+</span></span><span style="display:flex;"><span>;format-underline = #FF00DB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/mail]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>#exec = python3 ~/.config/polybar/theak/myinbox.py 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>#exec = python3 ~/.config/polybar/theak/networktheak.py
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>#exec = &#34;if ping -c 1 google.com &amp;&gt; /dev/null \
+</span></span><span style="display:flex;"><span>#then python3 ~/.config/polybar/theak/myinbox.py \
+</span></span><span style="display:flex;"><span>#else \
+</span></span><span style="display:flex;"><span>#  echo &#34;no network&#34;
+</span></span><span style="display:flex;"><span>#  fi&#34;
+</span></span><span style="display:flex;"><span>#exec = &#34;ping -c 1 theak.me \&amp;&gt; /dev/null &amp;&amp; python3 ~/.config/polybar/theak/myinbox.py || echo &#34;
+</span></span><span style="display:flex;"><span>exec = ping -c 1 theak.me \&amp;&gt; /dev/null \&amp;&amp; python3 ~/.config/polybar/theak/myinbox.py || echo &#39;no network&#39;
+</span></span><span style="display:flex;"><span>#click-right= qutebrowser https://mail.theak.me
+</span></span><span style="display:flex;"><span>click-left= urxvtc -e mutt 
+</span></span><span style="display:flex;"><span>#format-background = #00A5FF
+</span></span><span style="display:flex;"><span>format-underline = #FF00DB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/music]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>exec = mpc current | skroll -l
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/mpd1]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>exec = ~/.config/polybar/scripts/mpd.sh
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>format-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>format-underline = #FF00DB
+</span></span><span style="display:flex;"><span>format-prefix-foreground = #00A5FF
+</span></span><span style="display:flex;"><span>format-background = ${colors.background}
+</span></span><span style="display:flex;"><span>click-left = exec smus
+</span></span><span style="display:flex;"><span>click-right = mpc pause &amp; pkill -F /tmp/smus.pid
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/bluetooth]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>exec = ~/.config/polybar/scripts/isactive-bluetooth.sh
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>;format-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>format-underline = #FF00DB
+</span></span><span style="display:flex;"><span>format-background = ${colors.background}
+</span></span><span style="display:flex;"><span>format-prefix = &#34;&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/menu]
+</span></span><span style="display:flex;"><span>type = custom/menu
+</span></span><span style="display:flex;"><span>label-open = 
+</span></span><span style="display:flex;"><span>label-open-foreground = ${colors.secondary}
+</span></span><span style="display:flex;"><span>label-close =  cancel
+</span></span><span style="display:flex;"><span>label-close-foreground = ${xrdb:polybar*color9}
+</span></span><span style="display:flex;"><span>label-separator = |
+</span></span><span style="display:flex;"><span>label-separator-foreground = ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>format-spacing = 1
+</span></span><span style="display:flex;"><span>;label-open = &#34;  &#34;
+</span></span><span style="display:flex;"><span>;label-open-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>;label-close = &#34;  &#34;
+</span></span><span style="display:flex;"><span>;label-close-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>;label-separator = &#34;│&#34;
+</span></span><span style="display:flex;"><span>;label-separator-foreground = ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>menu-0-0 = Top
+</span></span><span style="display:flex;"><span>menu-0-0-exec = menu-open-1
+</span></span><span style="display:flex;"><span>menu-0-1 = Extra
+</span></span><span style="display:flex;"><span>menu-0-1-exec = menu-open-2
+</span></span><span style="display:flex;"><span>menu-0-2 = Music
+</span></span><span style="display:flex;"><span>menu-0-2-exec = menu-open-3
+</span></span><span style="display:flex;"><span>menu-0-3 = Power
+</span></span><span style="display:flex;"><span>menu-0-3-exec = menu-open-4
+</span></span><span style="display:flex;"><span>menu-1-0 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-1-0-exec = qutebrowser
+</span></span><span style="display:flex;"><span>menu-1-1 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-1-1-exec = urxvt
+</span></span><span style="display:flex;"><span>menu-1-2 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-1-2-exec = urxvtc -e ranger
+</span></span><span style="display:flex;"><span>menu-1-3 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-1-3-exec = subl3
+</span></span><span style="display:flex;"><span>menu-2-0 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-2-0-exec = gimp-2.8
+</span></span><span style="display:flex;"><span>menu-2-1 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-2-1-exec = spotify --force-device-scale-factor=1.5
+</span></span><span style="display:flex;"><span>menu-2-2 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-2-2-exec = deluge
+</span></span><span style="display:flex;"><span>menu-2-3 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-2-3-exec = claws-mail
+</span></span><span style="display:flex;"><span>menu-2-4 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-2-4-exec = steam-runtime
+</span></span><span style="display:flex;"><span>menu-2-5 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-2-5-exec = scrot %F-%S_$wx$h_scrot.png -e &#39;mv $f /tmp/foo.png&#39;
+</span></span><span style="display:flex;"><span>menu-3-0 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-3-0-exec = $HOME/bin/smus
+</span></span><span style="display:flex;"><span>menu-3-1 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-3-1-exec = mpc prev
+</span></span><span style="display:flex;"><span>menu-3-2 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-3-2-exec = mpc stop 
+</span></span><span style="display:flex;"><span>menu-3-3 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-3-3-exec = mpc pause 
+</span></span><span style="display:flex;"><span>menu-3-4 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-3-4-exec = mpc next
+</span></span><span style="display:flex;"><span>menu-4-0 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-4-0-exec = lock
+</span></span><span style="display:flex;"><span>menu-4-1 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-4-1-exec = systemctl reboot
+</span></span><span style="display:flex;"><span>menu-4-2 = &#34;  &#34;
+</span></span><span style="display:flex;"><span>menu-4-2-exec = systemctl poweroff
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/arch_backlight]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>exec = ~/.config/polybar/scripts/backlight.sh
+</span></span><span style="display:flex;"><span>tail = true
+</span></span><span style="display:flex;"><span>scroll-up = exec light -A 5
+</span></span><span style="display:flex;"><span>scroll-down = exec light -U 5
+</span></span><span style="display:flex;"><span>format-prefix = &#34; &#34;
+</span></span><span style="display:flex;"><span>label = %output%%
+</span></span><span style="display:flex;"><span>label-foreground = #3EC13F
+</span></span><span style="display:flex;"><span>format-padding = 1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/backlight]
+</span></span><span style="display:flex;"><span>type = internal/backlight
+</span></span><span style="display:flex;"><span>card = intel_backlight
+</span></span><span style="display:flex;"><span>exec = light | cut -d . -f1
+</span></span><span style="display:flex;"><span>format = &lt;label&gt;
+</span></span><span style="display:flex;"><span>;tail = true
+</span></span><span style="display:flex;"><span>;interval = 0.2
+</span></span><span style="display:flex;"><span>label = %percentage%%
+</span></span><span style="display:flex;"><span>enable-scroll = true
+</span></span><span style="display:flex;"><span>scroll-up = exec /usr/sbin/light -A 5
+</span></span><span style="display:flex;"><span>scroll-down = exec /usr/sbin/light -U 5
+</span></span><span style="display:flex;"><span>format-prefix = &#34; &#34;
+</span></span><span style="display:flex;"><span>;label = %output%%
+</span></span><span style="display:flex;"><span>label-foreground = #3EC13F
+</span></span><span style="display:flex;"><span>format-padding = 1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/mpd-new]
+</span></span><span style="display:flex;"><span>type = internal/mpd
+</span></span><span style="display:flex;"><span>format-online = &lt;label-song&gt; &lt;icon-prev&gt; &lt;toggle&gt; &lt;icon-next&gt; &lt;icon-random&gt;  &lt;icon-repeat&gt; &lt;label-time&gt; 
+</span></span><span style="display:flex;"><span>format-offline = &lt;label-offline&gt;
+</span></span><span style="display:flex;"><span>label-offline =  no music
+</span></span><span style="display:flex;"><span>icon-prev = 
+</span></span><span style="display:flex;"><span>icon-stop = o
+</span></span><span style="display:flex;"><span>icon-play = 
+</span></span><span style="display:flex;"><span>icon-pause = 
+</span></span><span style="display:flex;"><span>icon-next = 
+</span></span><span style="display:flex;"><span>icon-seekf = &gt;&gt;
+</span></span><span style="display:flex;"><span>icon-random = 
+</span></span><span style="display:flex;"><span>icon-repeat = 
+</span></span><span style="display:flex;"><span>label-song = 𝄞 %title% - %artist% 
+</span></span><span style="display:flex;"><span>label-song-maxlen = 25
+</span></span><span style="display:flex;"><span>label-song-ellipsis = true
+</span></span><span style="display:flex;"><span>toggle-on-foreground = #e60053
+</span></span><span style="display:flex;"><span>toggle-off-foreground = #66
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/pulseaudio]
+</span></span><span style="display:flex;"><span>type = internal/pulseaudio
+</span></span><span style="display:flex;"><span>sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+</span></span><span style="display:flex;"><span>use-ui-max = true
+</span></span><span style="display:flex;"><span>format-volume = &lt;ramp-volume&gt;&lt;label-volume&gt; 
+</span></span><span style="display:flex;"><span>label-volume =  %percentage%%
+</span></span><span style="display:flex;"><span>label-volume-foreground = ${xrdb:polybar.color13}
+</span></span><span style="display:flex;"><span>label-muted = 🔇 
+</span></span><span style="display:flex;"><span>label-muted-foreground = #
+</span></span><span style="display:flex;"><span>label-active-font = 4
+</span></span><span style="display:flex;"><span>bar-volume-width = 10
+</span></span><span style="display:flex;"><span>bar-volume-foreground-0 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-1 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-2 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-3 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-4 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-5 = #f5a70a
+</span></span><span style="display:flex;"><span>bar-volume-foreground-6 = #ff5555
+</span></span><span style="display:flex;"><span>bar-volume-gradient = true
+</span></span><span style="display:flex;"><span>bar-volume-indicator = 
+</span></span><span style="display:flex;"><span>bar-volume-indicator-font = 2
+</span></span><span style="display:flex;"><span>bar-volume-fill = 
+</span></span><span style="display:flex;"><span>bar-volume-fill-font = 2
+</span></span><span style="display:flex;"><span>bar-volume-empty = 
+</span></span><span style="display:flex;"><span>bar-volume-empty-font = 2
+</span></span><span style="display:flex;"><span>bar-volume-empty-foreground = ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>ramp-volume-0 = 🔈
+</span></span><span style="display:flex;"><span>ramp-volume-1 = 🔉
+</span></span><span style="display:flex;"><span>ramp-volume-2 = 🔊
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/mic]
+</span></span><span style="display:flex;"><span>type = internal/pulseaudio
+</span></span><span style="display:flex;"><span>sink = alsa_input.pci-0000_00_1b.0.analog-stereo
+</span></span><span style="display:flex;"><span>format-volume = &lt;label-volume&gt; &lt;bar-volume&gt;
+</span></span><span style="display:flex;"><span>label-volume =  %percentage%%
+</span></span><span style="display:flex;"><span>label-volume-foreground = ${root.foreground}
+</span></span><span style="display:flex;"><span>label-muted = 🔇 muted
+</span></span><span style="display:flex;"><span>label-muted-foreground = #666
+</span></span><span style="display:flex;"><span>bar-volume-width = 10
+</span></span><span style="display:flex;"><span>bar-volume-foreground-0 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-1 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-2 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-3 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-4 = #55aa55
+</span></span><span style="display:flex;"><span>bar-volume-foreground-5 = #f5a70a
+</span></span><span style="display:flex;"><span>bar-volume-foreground-6 = #ff5555
+</span></span><span style="display:flex;"><span>bar-volume-gradient = false
+</span></span><span style="display:flex;"><span>bar-volume-indicator = 
+</span></span><span style="display:flex;"><span>bar-volume-indicator-font = 2
+</span></span><span style="display:flex;"><span>bar-volume-fill = 
+</span></span><span style="display:flex;"><span>bar-volume-fill-font = 2
+</span></span><span style="display:flex;"><span>bar-volume-empty = 
+</span></span><span style="display:flex;"><span>bar-volume-empty-font = 2
+</span></span><span style="display:flex;"><span>bar-volume-empty-foreground = ${colors.foreground-alt}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/tags]
+</span></span><span style="display:flex;"><span>type = internal/xworkspaces
+</span></span><span style="display:flex;"><span>label-active = %name%
+</span></span><span style="display:flex;"><span>label-active-padding = 2
+</span></span><span style="display:flex;"><span>label-active-background = ${colors.background}
+</span></span><span style="display:flex;"><span>label-active-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>label-occupied = %name%
+</span></span><span style="display:flex;"><span>label-occupied-background = #ff0000
+</span></span><span style="display:flex;"><span>label-empty = %name%
+</span></span><span style="display:flex;"><span>label-empty-padding = 2
+</span></span><span style="display:flex;"><span>label-urgent = %name%
+</span></span><span style="display:flex;"><span>label-urgent-padding = 2
+</span></span><span style="display:flex;"><span>label-urgent-background = ${colors.background}
+</span></span><span style="display:flex;"><span>label-urgent-foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/temperature]
+</span></span><span style="display:flex;"><span>type = internal/temperature
+</span></span><span style="display:flex;"><span>interval = 3
+</span></span><span style="display:flex;"><span>thermal-zone = 0
+</span></span><span style="display:flex;"><span>warn-temperature = 70
+</span></span><span style="display:flex;"><span>format = &lt;ramp&gt;&lt;label&gt;
+</span></span><span style="display:flex;"><span>format-padding = 1
+</span></span><span style="display:flex;"><span>;label = %{A1:termite --exec=&#39;watch sensors&#39; &amp; disown:} %temperature%%{A}
+</span></span><span style="display:flex;"><span>label-foreground = ${xrdb:polybar.color11}
+</span></span><span style="display:flex;"><span>ramp-0 = &#34;&#34;
+</span></span><span style="display:flex;"><span>ramp-0-foreground = ${xrdb:polybar*color4}
+</span></span><span style="display:flex;"><span>ramp-1 = &#34;&#34;
+</span></span><span style="display:flex;"><span>ramp-1-foreground = ${xrdb:polybar*color16}
+</span></span><span style="display:flex;"><span>ramp-2 = &#34;&#34;
+</span></span><span style="display:flex;"><span>ramp-2-foreground = ${xrdb:polybar*color17}
+</span></span><span style="display:flex;"><span>ramp-3 = &#34;&#34;
+</span></span><span style="display:flex;"><span>ramp-3-foreground = ${xrdb:polybar*urgent}
+</span></span><span style="display:flex;"><span>format-warn = &lt;label-warn&gt;
+</span></span><span style="display:flex;"><span>label-warn = &#34; %temperature-c%&#34;
+</span></span><span style="display:flex;"><span>label-warn-padding = 1
+</span></span><span style="display:flex;"><span>label-warn-foreground = ${xrdb:polybar.urgent}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/window_switch]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>interval = 5
+</span></span><span style="display:flex;"><span>label = &#34;%{A1:skippy-xd:} %{A3:skippy-xd:} %output% %{A} %{A}&#34;
+</span></span><span style="display:flex;"><span>exec = echo &#34;&#34;
+</span></span><span style="display:flex;"><span>format = &lt;label&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[module/hijri]
+</span></span><span style="display:flex;"><span>type = custom/script
+</span></span><span style="display:flex;"><span>#exec = &#34;python -c &#39;from ummalqura.hijri_date import HijriDate; from datetime import date; print(HijriDate.get_hijri_date(date.today()))&#39;&#34;
+</span></span><span style="display:flex;"><span>exec = ~/.config/polybar/scripts/hijri.py
+</span></span><span style="display:flex;"><span>tail = false
+</span></span><span style="display:flex;"><span>interval = 180
+</span></span><span style="display:flex;"><span>label-foreground = ${xrdb:polybar.color5}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[bar/dwm]
+</span></span><span style="display:flex;"><span>inherit = settings
+</span></span><span style="display:flex;"><span>background = ${colors.background}
+</span></span><span style="display:flex;"><span>foreground = ${colors.foreground}
+</span></span><span style="display:flex;"><span>override-redirect = true
+</span></span><span style="display:flex;"><span>;width = 55%
+</span></span><span style="display:flex;"><span>;height = 26
+</span></span><span style="display:flex;"><span>;offset-x = 45%
+</span></span><span style="display:flex;"><span>modules-left = date wlan memory cpu pulseaudio backlight-acpi battery 
+</span></span><span style="display:flex;"><span>modules-right = mpd-new
+</span></span><span style="display:flex;"><span>modules-center = window_switch
+</span></span><span style="display:flex;"><span>font-0 =  Segoe UI Emoji
+</span></span><span style="display:flex;"><span>font-1 = DejaVu Sans:pixelsize=11
+</span></span><span style="display:flex;"><span>bottom = true
+</span></span><span style="display:flex;"><span>width = 100%
+</span></span><span style="display:flex;"><span>height = 20
+</span></span><span style="display:flex;"><span>;offset-x = 1%
+</span></span><span style="display:flex;"><span>offset-y = -1
+</span></span><span style="display:flex;"><span>radius = 0
+</span></span><span style="display:flex;"><span>fixed-center = true
+</span></span><span style="display:flex;"><span>line-size = 0
+</span></span><span style="display:flex;"><span>line-color = #f00
+</span></span><span style="display:flex;"><span>border-size = 0
+</span></span><span style="display:flex;"><span>border-color = #00000000
+</span></span><span style="display:flex;"><span>padding-left = 0
+</span></span><span style="display:flex;"><span>padding-right = 1
+</span></span><span style="display:flex;"><span>module-margin-left = 2
+</span></span><span style="display:flex;"><span>module-margin-right = 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[bar/HDMI-2]
+</span></span><span style="display:flex;"><span>inherit = bar/eDP-1
+</span></span><span style="display:flex;"><span>monitor = HDMI-2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[bar/XWAYLAND0]
+</span></span><span style="display:flex;"><span>inherit = bar/eDP-1
+</span></span><span style="display:flex;"><span>monitor = XWAYLAND0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>; vim:ft=dosini
+</span></span></code></pre></div><h1 id="bspwm">BSPWM</h1>
+<blockquote>
+<p><strong><em>UPDATE:</em></strong> Here is a <a href="https://abdullah.today/bspwm" target="_blank" >post</a>
+ for BSPWM.</p>
+</blockquote>
+<p>bspwm is a tiling window manager, it uses <code>sxhkd</code> for keybindings and windows
+management keybindings. Here is both configurations for both programs. You can use <code>xbindkeys</code> there&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat <span style="color:#b04040">$HOME</span>/.config/bspwm/bspwrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#! /bin/sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sxhkd <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>xsetroot -cursor_name left_ptr
+</span></span><span style="display:flex;"><span><span style="color:#b04040">$HOME</span>/.config/bspwm/autostart.sh <span style="color:#888">&amp;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bspc monitor -d I II III IV V VI VII VIII IX X
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bspc config border_width         <span style="color:#444">2</span>
+</span></span><span style="display:flex;"><span>bspc config window_gap           <span style="color:#444">7</span>
+</span></span><span style="display:flex;"><span>bspc config split_ratio          0.52
+</span></span><span style="display:flex;"><span>bspc config borderless_monocle   <span style="color:#388038">true</span>
+</span></span><span style="display:flex;"><span>bspc config gapless_monocle      <span style="color:#388038">true</span>
+</span></span><span style="display:flex;"><span>bspc config top_padding	       	 <span style="color:#444">0</span>
+</span></span><span style="display:flex;"><span>bspc config split_ratio          0.50
+</span></span><span style="display:flex;"><span>bspc config borderless_monocle   <span style="color:#388038">true</span>
+</span></span><span style="display:flex;"><span>bspc config gapless_monocle      <span style="color:#388038">true</span>
+</span></span><span style="display:flex;"><span>bspc config focus_follows_pointer <span style="color:#388038">true</span>
+</span></span><span style="display:flex;"><span>bspc config click_to_focus        <span style="color:#388038">true</span>
+</span></span><span style="display:flex;"><span>bspc config focus_by_distance     <span style="color:#388038">true</span>
+</span></span><span style="display:flex;"><span>bspc config history_aware_focus   <span style="color:#388038">true</span>
+</span></span><span style="display:flex;"><span>bspc config single_monocle        <span style="color:#388038">false</span>
+</span></span><span style="display:flex;"><span>bspc config normal_border_color   <span style="color:#b83838">&#34;#4c566a&#34;</span>
+</span></span><span style="display:flex;"><span>bspc config focused_border_color  <span style="color:#b83838">&#34;#5e81ac&#34;</span>
+</span></span><span style="display:flex;"><span>bspc config presel_feedback_color <span style="color:#b83838">&#34;#5e81ac&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bspc rule -a Sxiv <span style="color:#b04040">state</span><span style="color:#666">=</span>floating <span style="color:#b04040">follow</span><span style="color:#666">=</span>on
+</span></span><span style="display:flex;"><span>bspc rule -a Chromium <span style="color:#b04040">desktop</span><span style="color:#666">=</span><span style="color:#b83838">&#39;^2&#39;</span>
+</span></span><span style="display:flex;"><span>bspc rule -a Kupfer.py <span style="color:#b04040">focus</span><span style="color:#666">=</span>on
+</span></span><span style="display:flex;"><span>bspc rule -a Screenkey <span style="color:#b04040">manage</span><span style="color:#666">=</span>off
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#bspc rule -a URxvt follow=on focus=on</span>
+</span></span><span style="display:flex;"><span>bspc rule -a feh <span style="color:#b04040">state</span><span style="color:#666">=</span>floating <span style="color:#b04040">follow</span><span style="color:#666">=</span>on
+</span></span><span style="display:flex;"><span>bspc rule -a Gpicview <span style="color:#b04040">state</span><span style="color:#666">=</span>floating <span style="color:#b04040">follow</span><span style="color:#666">=</span>on
+</span></span><span style="display:flex;"><span>bspc rule -a Pavucontrol <span style="color:#b04040">state</span><span style="color:#666">=</span>floating <span style="color:#b04040">follow</span><span style="color:#666">=</span>on
+</span></span><span style="display:flex;"><span>bspc rule -a mpv <span style="color:#b04040">state</span><span style="color:#666">=</span>floating <span style="color:#b04040">sticky</span><span style="color:#666">=</span>on
+</span></span><span style="display:flex;"><span>bspc rule -a feh <span style="color:#b04040">state</span><span style="color:#666">=</span>floating
+</span></span><span style="display:flex;"><span>bspc rule -a Nitrogen <span style="color:#b04040">state</span><span style="color:#666">=</span>floating
+</span></span><span style="display:flex;"><span>bspc rule -a Arandr <span style="color:#b04040">state</span><span style="color:#666">=</span>floating
+</span></span><span style="display:flex;"><span>bspc rule -a Galculator <span style="color:#b04040">state</span><span style="color:#666">=</span>floating
+</span></span><span style="display:flex;"><span>bspc rule -a Font-manager <span style="color:#b04040">state</span><span style="color:#666">=</span>floating
+</span></span><span style="display:flex;"><span>bspc rule -a Oblogout <span style="color:#b04040">state</span><span style="color:#666">=</span>floating
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#bspc rule -a Peek state=floating</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#bspc rule -a Skype state=floating</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#bspc rule -a Pavucontrol state=floating sticky=on</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#bspc rule -a Xfce4-appfinder  state=floating sticky=on</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#bspc rule -a Gpick state=floating sticky=on</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Colors</span>
+</span></span><span style="display:flex;"><span>bspc config focused_border_color <span style="color:#b83838">&#34;#d8dee8&#34;</span>
+</span></span><span style="display:flex;"><span>bspc config normal_border_color <span style="color:#b83838">&#34;#2f343f&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Scratchpad </span>
+</span></span><span style="display:flex;"><span>bspc rule <span style="color:#b04040">title</span><span style="color:#666">=</span>scratchpad <span style="color:#b04040">class</span><span style="color:#666">=</span>scratchpad <span style="color:#b04040">sticky</span><span style="color:#666">=</span>on <span style="color:#b04040">state</span><span style="color:#666">=</span>floating <span style="color:#b04040">hidden</span><span style="color:#666">=</span>on
+</span></span><span style="display:flex;"><span>urxvtc -name scratchpad -geometry 75x20 <span style="color:#888">&amp;</span>
+</span></span></code></pre></div><h2 id="sxhkd">SXHKD</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat <span style="color:#b04040">$HOME</span>/.config/sxhkd/sxhkdrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#!/bin/sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Reload functions</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#super + Escape</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#	&#34;$XDG_CONFIG_HOME&#34;/sxhkd/functions</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Reload sxhkd</span>
+</span></span><span style="display:flex;"><span>super + Escape
+</span></span><span style="display:flex;"><span>  pkill -USR1 -x sxhkd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Exit bspwm</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#388038">shift</span> + q
+</span></span><span style="display:flex;"><span>  bspc quit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Alternate between the tiled and monocle layout</span>
+</span></span><span style="display:flex;"><span>super + t
+</span></span><span style="display:flex;"><span>	bspc desktop -l next
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Swap the current node and the biggest node</span>
+</span></span><span style="display:flex;"><span>super + g
+</span></span><span style="display:flex;"><span>	bspc node -s biggest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Kill a window</span>
+</span></span><span style="display:flex;"><span>super + q
+</span></span><span style="display:flex;"><span>  bspc node -c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Scratchpad</span>
+</span></span><span style="display:flex;"><span>super + i
+</span></span><span style="display:flex;"><span>  ~/.local/bin/scratchtoggle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>super + Return
+</span></span><span style="display:flex;"><span>  urxvtc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Alt + Return
+</span></span><span style="display:flex;"><span>  termite
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>super + d
+</span></span><span style="display:flex;"><span>  dmenu_run
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>h,j,k,l<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -f <span style="color:#666">{</span>west,south,north,east<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>super + w
+</span></span><span style="display:flex;"><span>  <span style="color:#b04040">$BROWSER</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>super + alt + <span style="color:#666">{</span>0-9<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	mpc -q seek <span style="color:#666">{</span>0-9<span style="color:#666">}</span>0%
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>_,alt + <span style="color:#666">}{</span>h,j,k,l<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -<span style="color:#666">{</span>f,s<span style="color:#666">}</span> <span style="color:#666">{</span>west,south,north,east<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#XF86Audio{RaiseVolume,LowerVolume,Mute}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#	amixer {-q set Master 5%+,-q set Master 5%-,set Master toggle}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># set the window state</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>t,shift + t,s,f<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -t <span style="color:#666">{</span>tiled,pseudo_tiled,floating,fullscreen<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># set the node flags</span>
+</span></span><span style="display:flex;"><span>super + ctrl + <span style="color:#666">{</span>m,x,y,z<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -g <span style="color:#666">{</span>marked,locked,sticky,private<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Music</span>
+</span></span><span style="display:flex;"><span>XF86LaunchA
+</span></span><span style="display:flex;"><span>  mpc toggle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># focus/swap</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># focus the node in the given direction</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#super + {_,shift + }{h,j,k,l}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#	bspc node -{f,s} {west,south,north,east}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># focus the node for the given path jump</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>p,b,comma,period<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -f @<span style="color:#666">{</span>parent,brother,first,second<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># focus the next/previous node in the current desktop</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>_,shift + <span style="color:#666">}</span>c
+</span></span><span style="display:flex;"><span>	bspc node -f <span style="color:#666">{</span>next,prev<span style="color:#666">}</span>.local
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># focus the next/previous desktop in the current monitor</span>
+</span></span><span style="display:flex;"><span>super + bracket<span style="color:#666">{</span>left,right<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc desktop -f <span style="color:#666">{</span>prev,next<span style="color:#666">}</span>.local
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># focus the last node/desktop</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>Tab,semicolon<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc <span style="color:#666">{</span>node,desktop<span style="color:#666">}</span> -f next
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># focus the older or newer node in the focus history</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>o,i<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc wm -h off<span style="color:#888">;</span> <span style="color:#709030">\
+</span></span></span><span style="display:flex;"><span><span style="color:#709030"></span>	bspc node <span style="color:#666">{</span>older,newer<span style="color:#666">}</span> -f<span style="color:#888">;</span> <span style="color:#709030">\
+</span></span></span><span style="display:flex;"><span><span style="color:#709030"></span>	bspc wm -h on
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># focus or send to the given desktop</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>_,shift + <span style="color:#666">}{</span>1-9,0<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc <span style="color:#666">{</span>desktop -f,node -d<span style="color:#666">}</span> <span style="color:#b83838">&#39;^{1-9,10}&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># preselect</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># preselect the direction</span>
+</span></span><span style="display:flex;"><span>super + ctrl + <span style="color:#666">{</span>h,j,k,l<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -p <span style="color:#666">{</span>west,south,north,east<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># preselect the ratio</span>
+</span></span><span style="display:flex;"><span>super + ctrl + <span style="color:#666">{</span>1-9<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -o 0.<span style="color:#666">{</span>1-9<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># cancel the preselection for the focused node</span>
+</span></span><span style="display:flex;"><span>super + ctrl + space
+</span></span><span style="display:flex;"><span>	bspc node -p cancel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># cancel the preselection for the focused desktop</span>
+</span></span><span style="display:flex;"><span>super + ctrl + <span style="color:#388038">shift</span> + space
+</span></span><span style="display:flex;"><span>	bspc query -N -d <span style="color:#888">|</span> xargs -I id -n <span style="color:#444">1</span> bspc node id -p cancel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># move/resize</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># expand a window by moving one of its side outward</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#388038">shift</span> + <span style="color:#666">{</span>h,j,k,l<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -z <span style="color:#666">{</span>left -20 0,bottom <span style="color:#444">0</span> 20,top <span style="color:#444">0</span> -20,right <span style="color:#444">20</span> 0<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># contract a window by moving one of its side inward</span>
+</span></span><span style="display:flex;"><span>super + alt + <span style="color:#388038">shift</span> + <span style="color:#666">{</span>h,j,k,l<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -z <span style="color:#666">{</span>right -20 0,top <span style="color:#444">0</span> 20,bottom <span style="color:#444">0</span> -20,left <span style="color:#444">20</span> 0<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># move a floating window</span>
+</span></span><span style="display:flex;"><span>super + <span style="color:#666">{</span>Left,Down,Up,Right<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>	bspc node -v <span style="color:#666">{</span>-20 0,0 20,0 -20,20 0<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">############################################################################ </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#                                        ▗▄▖       ▗▖                      # </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#                                        ▝▜▌       ▐▌                      # </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#     ▐▙█▙  ▟█▙  █▟█▌▗▟██▖ ▟█▙ ▐▙██▖ ▟██▖ ▐▌       ▐▌▟▛  ▟█▙ ▝█ █▌▗▟██▖    # </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#     ▐▛ ▜▌▐▙▄▟▌ █▘  ▐▙▄▖▘▐▛ ▜▌▐▛ ▐▌ ▘▄▟▌ ▐▌       ▐▙█  ▐▙▄▟▌ █▖█ ▐▙▄▖▘    # </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#     ▐▌ ▐▌▐▛▀▀▘ █    ▀▀█▖▐▌ ▐▌▐▌ ▐▌▗█▀▜▌ ▐▌       ▐▛█▖ ▐▛▀▀▘ ▐█▛  ▀▀█▖    # </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#     ▐█▄█▘▝█▄▄▌ █   ▐▄▄▟▌▝█▄█▘▐▌ ▐▌▐▙▄█▌ ▐▙▄      ▐▌▝▙ ▝█▄▄▌  █▌ ▐▄▄▟▌    # </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#     ▐▌▀▘  ▝▀▀  ▀    ▀▀▀  ▝▀▘ ▝▘ ▝▘ ▀▀▝▘  ▀▀      ▝▘ ▀▘ ▝▀▀   █   ▀▀▀     # </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#     ▐▌                                                      █▌           # </span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">############################################################################ </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Brightness keys</span>
+</span></span><span style="display:flex;"><span>XF86MonBrightnessDown
+</span></span><span style="display:flex;"><span>  xbacklight -5
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>XF86MonBrightnessUp
+</span></span><span style="display:flex;"><span>  xbacklight +5
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Raise Volume</span>
+</span></span><span style="display:flex;"><span>XF86AudioRaiseVolume
+</span></span><span style="display:flex;"><span>        amixer <span style="color:#388038">set</span> Master 10%+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Lower Volume</span>
+</span></span><span style="display:flex;"><span>XF86AudioLowerVolume
+</span></span><span style="display:flex;"><span>        amixer <span style="color:#388038">set</span> Master 10%-
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Mute </span>
+</span></span><span style="display:flex;"><span>XF86AudioMute
+</span></span><span style="display:flex;"><span>        amixer -D pulse <span style="color:#388038">set</span> Master 1+ toggle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Screenshot</span>
+</span></span><span style="display:flex;"><span>Print
+</span></span><span style="display:flex;"><span>    import -window root /tmp/foo.png<span style="color:#888">;</span> cat /tmp/foo.png <span style="color:#888">|</span> xclip -selection clipboard -t image/png
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># File Manager</span>
+</span></span><span style="display:flex;"><span>XF86Explorer
+</span></span><span style="display:flex;"><span>    urxvtc -e ranger
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">## Mouse buttons</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#super + button{1-3}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#   bspc pointer -g {move,resize_side,resize_corner}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#super + !button{1-3}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#   bspc pointer -t %i %i</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#super + @button{1-3}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#   bspc pointer -u</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Music little backward/forward</span>
+</span></span><span style="display:flex;"><span>alt + bracket<span style="color:#666">{</span>left,right<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>  mpc seek <span style="color:#666">{</span>-10,+10<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Music backward/forward</span>
+</span></span><span style="display:flex;"><span>alt + <span style="color:#388038">shift</span> + bracket<span style="color:#666">{</span>left,right<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>  mpc seek <span style="color:#666">{</span>-120,+120<span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># Lock the screen</span>
+</span></span><span style="display:flex;"><span>super + x
+</span></span><span style="display:flex;"><span>  slock
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># vim:ft=sxhkdrc</span>
+</span></span></code></pre></div><p>I hope you will get a working desktop experience with these configurations. It&rsquo;s easy to manipulate them to your needs.</p>
+<p>Here is a demonstration video.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/9iKVKyaUayc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

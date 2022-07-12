@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to install CRUX with encryption"/>
+<meta name="twitter:description" content="Encrypted CRUX installation"/>
+
+    <meta property="og:title" content="How to install CRUX with encryption" />
+<meta property="og:description" content="Encrypted CRUX installation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/encrypted-crux/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-05-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-12T00:00:00+00:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/encrypted-crux/">
+    
+    <title>
+  How to install CRUX with encryption · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/encrypted-crux/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">How to install CRUX with encryption</h1>
+        </div>
+        <div class="description">
+          <span class="title">Encrypted CRUX installation</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2020-05-12T00:00:00Z'>
+                May 12, 2020
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              5 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="how-to-install-fully-encrypted-crux">How to install fully encrypted CRUX</h2>
+<p>This post is for crux users who wanna secure their crux installation.</p>
+<h2 id="partitioning">Partitioning</h2>
+<p>I&rsquo;m gonna use two partitions. First boot partition will be unencrypted which holds kernel. I use secure boot with my own keys. You can find a post in my blog how to do that. and I have some ports too for secure boot. <!-- raw HTML omitted --></p>
+<h2 id="unencrypted-boot-partition">Unencrypted Boot Partition</h2>
+<p>Create a partition more than 200 Mbs for boot ESP with gdisk code ef00.</p>
+<p>Let&rsquo;s create a FAT filesystem on it for EFI.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>```bash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># mkfs.fat -F32 /dev/sda1
+</span></span></code></pre></div><h2 id="encrypted-partition">Encrypted Partition</h2>
+<p>Create an encrypted LUKS container</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># cryptsetup luksFormat /dev/sda2</span>
+</span></span></code></pre></div><p>Type uppercase &ldquo;YES&rdquo; and then enter passphrase two times.</p>
+<p>Open the encrypted container.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># cryptsetup open /dev/sda2 crux</span>
+</span></span></code></pre></div><p>Now the encrypted container is available at /dev/mapper/crux so lets create some lvm stuff and create filesystems and a swap partition.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># pvcreate /dev/mapper/crux</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># vgcreate ak /dev/mapper/crux</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># lvcreate -L 8G ak -n swap</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># lvcreate -L 50G ak -n root</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># lvcreate -l 100%FREE ak -n home</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mkfs.ext4 /dev/ak/root -L crux-root</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mkfs.ext4 /dev/ak/home -L crux-home</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mkswap /dev/ak/swap -L crux-swap</span>
+</span></span></code></pre></div><p>Mount the partitions and start installations.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mount /dev/mapper/ak-root /mnt</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mkdir /mnt/{boot,home}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mount /dev/mapper/ak-home /mnt/home</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mount /dev/sda1 /mnt/boot</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># swapon /dev/mapper/ak-swap</span>
+</span></span></code></pre></div><h2 id="base-system-installation">Base system installation</h2>
+<p>Start installation. Type &ldquo;setup&rdquo; and select &ldquo;YES&rdquo;. Install all packages. Make sure you get no error messages once installation is finished.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># setup</span>
+</span></span></code></pre></div><h2 id="chroot">Chroot</h2>
+<p>Enter chroot.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># setup-chroot</span>
+</span></span></code></pre></div><h2 id="fstab">fstab</h2>
+<p>Check fstab by going to /etc/fstab. Open it with vim. You&rsquo;ll see two uncommented entries there. Leave them as it is. In vim prompt mode just type :r! blkid and you&rsquo;ll get UUIDs of all partitions. Add them there for root, home, boot and swap partitions.</p>
+<h2 id="locales">locales</h2>
+<p>Generate locales.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># localedef -i en_US -f ISO-8859-1 en_US</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># localedef -i en_US -f ISO-8859-1 en_US.ISO-8859-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># localedef -i en_US -f UTF-8 en_US.UTF-8</span>
+</span></span></code></pre></div><h2 id="rcconf">rc.conf</h2>
+<p>Edit rc.conf. Mine looks like this.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># vim /etc/rc.conf</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># /etc/rc.conf: system configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">FONT</span><span style="color:#666">=</span>ter-v22n
+</span></span><span style="display:flex;"><span><span style="color:#b04040">KEYMAP</span><span style="color:#666">=</span>us
+</span></span><span style="display:flex;"><span><span style="color:#b04040">TIMEZONE</span><span style="color:#666">=</span>Asia/Karachi
+</span></span><span style="display:flex;"><span><span style="color:#b04040">HOSTNAME</span><span style="color:#666">=</span>cruz
+</span></span><span style="display:flex;"><span><span style="color:#b04040">SYSLOG</span><span style="color:#666">=</span>sysklogd
+</span></span><span style="display:flex;"><span><span style="color:#b04040">SERVICES</span><span style="color:#666">=(</span>crond wifi acpid <span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># End of file</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:wq
+</span></span></code></pre></div><h2 id="resolvconf">resolv.conf</h2>
+<p>Edit /etc/resolv.conf. I&rsquo;m using OpenDNS nameserver here.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># vim /etc/resolv.conf</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nameserver 208.67.222.222
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:wq
+</span></span></code></pre></div><h2 id="wifi">wifi</h2>
+<p>For wireless connection, you can use wpa_supplicant. For example if your interface is wlp3s0 and SSID is nix, add passphrase to it using wpa_passphrase like this.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># wpa_passphrase nix &gt;&gt; /etc/wpa_supplicant.conf</span>
+</span></span><span style="display:flex;"><span>Reading from STDIN  <span style="color:#888;font-style:italic"># Type your passphrase.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># wpa_supplicant -i wlp3s0 -B -c /etc/wpa_supplicant.conf</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># dhcpcd wlp3s0</span>
+</span></span></code></pre></div><h2 id="kernel">Kernel</h2>
+<p>Compile the kernel now. Go to the /usr/src/linux directory. Configure the kernel config. Since we are gonna have an encrypted installation, we need some extra drivers. Invoke &lsquo;make menuconfig&rsquo; and enable these options. And also enable what is needed for your hardware. I&rsquo;ll add only options needed for encryption here.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>General setup ---&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#666">[</span>*<span style="color:#666">]</span> Initial RAM filesystem and RAM disk <span style="color:#666">(</span>iniramfs/initrd<span style="color:#666">)</span> support
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Device Drivers ---&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Multiple devices driver support <span style="color:#666">(</span>RAID and LVM<span style="color:#666">)</span> ---&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#666">[</span>*<span style="color:#666">]</span> Device mapper support
+</span></span><span style="display:flex;"><span>    <span style="color:#666">[</span>*<span style="color:#666">]</span> Crypt target support
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Cryptographic API ---&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  -*- CBC support
+</span></span><span style="display:flex;"><span>  &lt;*&gt; SHA224 and SHA256 digest algorithm
+</span></span><span style="display:flex;"><span>  &lt;*&gt; AES cipher algorithms
+</span></span></code></pre></div><p>You can get my kernel config from <a href="https://gitlab.com/Abdullah/cfg/raw/master/kernel/config" target="_blank" >https://gitlab.com/Abdullah/cfg/raw/master/kernel/config</a>
+ by using wget and then edit it as per your hardware. This one is for Thinkpad with SSD.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># wget https://gitlab.com/Abdullah/cfg/raw/master/kernel/config &gt; .config</span>
+</span></span></code></pre></div><p>After you&rsquo;re done with configuring kernel, compile it. Once it&rsquo;s compiled, copy it to /boot directory and install modules.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># make -j8</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># make modules_install</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># cp arch/x86/boot/bzImage /boot/vmlinuz</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># cp System.map /boot</span>
+</span></span></code></pre></div><h2 id="users-and-package-management">Users and package management</h2>
+<h2 id="root-password-and-a-normal-user">Root password and a normal user</h2>
+<p>Set root password. Create our first user. And then we will create a second user for package management.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># passwd</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># useradd -G wheel,audio,video -m -U abdullah</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># passwd abdullah</span>
+</span></span></code></pre></div><h2 id="give-new-user-sudo-access">Give new user sudo access</h2>
+<p>Add new created user to sudoers. Uncomment this line in /etc/sudoers.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>%wheel <span style="color:#b04040">ALL</span><span style="color:#666">=(</span>ALL<span style="color:#666">)</span> ALL
+</span></span></code></pre></div><h2 id="user-for-creating-packages">User for creating packages</h2>
+<p>Now let&rsquo;s create a user for package management.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># groupadd pkgmk</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># useradd -m -g pkgmk pkgmk</span>
+</span></span></code></pre></div><p>Add our user to this newly created group.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># usermod -aG pkgmk abdullah</span>
+</span></span></code></pre></div><h2 id="fakeroot">fakeroot</h2>
+<p>Edit /etc/prt-get.conf to set up fakeroot building.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># makecommand sudo -H -u pkgmk /usr/bin/fakeroot /usr/bin/pkgmk</span>
+</span></span></code></pre></div><p>Edit /etc/pkgmk.conf.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># vim /etc/pkgmk.conf</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">PKGMK_SOURCE_DIR</span><span style="color:#666">=</span><span style="color:#b83838">&#34;/home/pkgmk/distfiles&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">PKGMK_PACKAGE_DIR</span><span style="color:#666">=</span><span style="color:#b83838">&#34;/home/pkgmk/packages&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b04040">PKGMK_WORK_DIR</span><span style="color:#666">=</span><span style="color:#b83838">&#34;/home/pkgmk/work/</span><span style="color:#b04040">$name</span><span style="color:#b83838">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:wq
+</span></span></code></pre></div><p>Create those directories.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mkdir /home/pkgmk/{distfiles,packages,work}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># chown pkgmk:pkgmk /home/pkgmk/*</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># chmod 775 /home/pkgmk/*</span>
+</span></span></code></pre></div><p>Enable contrib repository.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># mv /etc/ports/contrib.rsync.inactive /etc/ports/contrib.rsync</span>
+</span></span></code></pre></div><p>Add my custom ports repository.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># echo &#34;ROOT_DIR=/usr/ports/ak\nURL=https://abdullah.today/ports&#34; &gt; /etc/ports/ak.httpup</span>
+</span></span></code></pre></div><p>Enable contrib and my repository by editing /etc/prt-get.conf. Uncomment the line which says &ldquo;prtdir /usr/ports/contrib&rdquo; and add this line on top of the other port directories path. &ldquo;prtdir /usr/ports/ak&rdquo;. Also don&rsquo;t forget to uncomment the line which says, &ldquo;runscripts yes&rdquo;. After editing the file, it should be look like this.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">###</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### prt-get conf</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">###</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># note: the order matters: the package found first is used</span>
+</span></span><span style="display:flex;"><span>prtdir /usr/ports/ak
+</span></span><span style="display:flex;"><span>prtdir /usr/ports/core
+</span></span><span style="display:flex;"><span>prtdir /usr/ports/opt
+</span></span><span style="display:flex;"><span>prtdir /usr/ports/xorg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># the following line enables the multilib compat-32 collection</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">#prtdir /usr/ports/compat-32</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># the following line enables the user maintained contrib collection</span>
+</span></span><span style="display:flex;"><span>prtdir /usr/ports/contrib
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### use mypackage form local directory</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># prtdir /home/packages/build:mypackage</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### log options:</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># writelog enabled         # (enabled|disabled)</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># logmode  overwrite       # (append|overwrite)</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># rmlog_on_success yes     # (no|yes)</span>
+</span></span><span style="display:flex;"><span>logfile  /var/log/pkgbuild/%n.log
+</span></span><span style="display:flex;"><span>                           <span style="color:#888;font-style:italic"># path, %p=path to port dir, %n=port name</span>
+</span></span><span style="display:flex;"><span>                           <span style="color:#888;font-style:italic">#       %v=version, %r=release</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### use alternate cache file (default: /var/lib/pkg/prt-get.cache</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># cachefile /mnt/nfs/cache</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### print README information:</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># readme verbose           # (verbose|compact|disabled)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### prefer higher versions in sysup / diff</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># preferhigher no      # (yes|no)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### use regexp search</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># useregex no        # (yes|no)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### run pre- and post-installs scripts; yes is equivalent to the</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### --install-scripts option</span>
+</span></span><span style="display:flex;"><span>runscripts yes            <span style="color:#888;font-style:italic"># (no|yes)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### EXPERT SECTION ###</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">### alternative commands</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># makecommand      pkgmk</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># addcommand       pkgadd</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># removecommand    pkgrm</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># runscriptcommand sh</span>
+</span></span><span style="display:flex;"><span>makecommand sudo -H -u pkgmk /usr/bin/fakeroot /usr/bin/pkgmk
+</span></span></code></pre></div><p>Sync ports now.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># ports -u</span>
+</span></span></code></pre></div><p>Get fakeroot installed if you don&rsquo;t have yet.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># prt-get install fakeroot</span>
+</span></span></code></pre></div><h2 id="dracut">Dracut</h2>
+<p>Get dracut and create an initramfs.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># prt-get depinst dracut</span>
+</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"># dracut initramfs.img</span>
+</span></span></code></pre></div><h2 id="bootloader">Bootloader</h2>
+<p>I&rsquo;m using EFISTUB. If you&rsquo;re using some other boot manager like grub, consult their wiki. There are some dracut related variables in this example. I&rsquo;d recommand, create a new file with vim, and then in prompt mode, type :r! blkid so you&rsquo;ll get all UUIDs there in the file. Just copy them in the new file, delete other lines and save it. Then redirect this file&rsquo;s output to shell like this, &lsquo;cat newCreatedFile | sh&rsquo;. It will create a new entry. root-UUID=, rd.luks.uuid=, and rd.lvm.vg=. For EFISTUB, create an entry like this.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#888;font-style:italic"># efibootmgr --create --disk /dev/sda --part 1 --label &#39;CRUX-Encrypted&#39; --loader /vmlinuz --unicode &#34;root=UUID=XXXX-XXXX-XXXX-XXX rw resume=UUID=XXXX-XXXX-XXXX-XXXX rd.luks.uuid=XXXX-XXXX-XXXX-XXXX rd.lvm.vg=ak&#34; --verbose</span>
+</span></span></code></pre></div><h2 id="congrats">Congrats!</h2>
+<p>Congrats! You have now a fully encrypted system. Reboot now. If you have some problems, just send me an email and I&rsquo;ll be glad to help.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

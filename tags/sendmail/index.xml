@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sendmail on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/sendmail/</link>
+    <description>Recent content in sendmail on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 17 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/sendmail/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Email Setup</title>
+      <link>https://abdullah.solutions/mutt/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/mutt/</guid>
+      <description>why commandline? TL;DR
+powerful and efficient!
+I have been creating multiple accounts for email since 2009. Some of the accounts I still have them in 2019 and others I don&amp;rsquo;t have access to. I realized that having your own email server on your own domain is a good thing. So I started creating mail server. I did that well. Learned a lot.
+As you know I like things to keep minimalistic yet powerful than most written GUI apps.</description>
+    </item>
+    
+  </channel>
+</rss>

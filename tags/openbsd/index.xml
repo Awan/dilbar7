@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openbsd on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/openbsd/</link>
+    <description>Recent content in openbsd on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 10 Feb 2021 18:52:24 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/openbsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Things to Do After New OpenBSD Install</title>
+      <link>https://abdullah.solutions/things-to-do-after-new-openbsd-install/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/things-to-do-after-new-openbsd-install/</guid>
+      <description>So you have installed OpenBSD as main OS. Most of the things will work out of the box. But still you have to configure some things.
+Lock screen on suspend/hibernate/resume Login as root and create /etc/apm directory if it isn&amp;rsquo;t there already.
+mkdir /etc/apm echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/suspend echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/resume echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/hibernate chmod +x /etc/apm/suspend chmod +x /etc/apm/hibernate chmod +x /etc/apm/resume On lid closure, machines mostly get suspended.</description>
+    </item>
+    
+    <item>
+      <title>OpenBSD Encrypted Install</title>
+      <link>https://abdullah.solutions/openbsd-encrypted-install/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/openbsd-encrypted-install/</guid>
+      <description>So this is how you can have a fully encrypted OpenBSD installation.
+Getting OpenBSD Go to OpenBSD website and download the .img file for your hardware.
+Creating install media If you are on some linux or mac, you can use dd command to burn it to USB drive.
+Suppose your USB drive is appearing as /dev/sdb in lsblk&amp;rsquo;s output:
+dd if=install.img of=/dev/sdb bs=1M Boot from install media Plug the new install media and reboot the system.</description>
+    </item>
+    
+    <item>
+      <title>OpenBSD Dedicated Dotfiles</title>
+      <link>https://abdullah.solutions/openbsd-dedicated-dotfiles/</link>
+      <pubDate>Mon, 08 Feb 2021 11:37:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/openbsd-dedicated-dotfiles/</guid>
+      <description>OpenBSD as new OS I keep my dotfiles on Github/Gitlab. I had to configure many things so I started a dedicated repository .
+New Dotfiles I created a new directory dot in my home dir. And cherry picked some of my old dots. I have pushed my new dot directory to Git[hub,lab] as [Awan,Abdullah]/dot respectively.
+Old Linux dotfiles Linux users still can find my dotfiles on Github and Gitlab .</description>
+    </item>
+    
+  </channel>
+</rss>

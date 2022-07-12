@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>timezone on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/timezone/</link>
+    <description>Recent content in timezone on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/timezone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set time zone in Debian, Ubuntu, Raspberry Pi(Raspbian)</title>
+      <link>https://abdullah.solutions/tzdata/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tzdata/</guid>
+      <description>Sometimes we install systems and don&amp;rsquo;t care about setting timezone. Or we travel to some other countries where timezone is different. So here is how you can change timezone in Debian, Ubuntu, Mint, Raspbian and almost all distributions derived from Debian.
+# dpkg-reconfigure tzdata You will see a dialog box opened.
+Select your continent.
+Hit enter after selecting your continent using arrow keys.
+Select your city and hit Enter. Voila, you are done!</description>
+    </item>
+    
+  </channel>
+</rss>

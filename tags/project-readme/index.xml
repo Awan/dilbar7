@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project readme on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/project-readme/</link>
+    <description>Recent content in project readme on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/project-readme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to include a screenshot in Github README</title>
+      <link>https://abdullah.solutions/github-readme/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/github-readme/</guid>
+      <description>A picture is worth 1000 words. Working with github repos, sometimes you want to include a screenshot in your repos. Today I&amp;rsquo;ll help you getting this done in one step.
+Go to your repo page and click on issues.
+Click new issue
+Take a screenshot you wanna add and paste it there using Control + V or whatever you like.
+You will get a link once the screenshot is uploaded. Just copy it and paste it in your README.</description>
+    </item>
+    
+  </channel>
+</rss>

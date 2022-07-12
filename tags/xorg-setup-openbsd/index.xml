@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xorg setup openbsd on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/xorg-setup-openbsd/</link>
+    <description>Recent content in xorg setup openbsd on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 10 Feb 2021 18:52:24 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/xorg-setup-openbsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Things to Do After New OpenBSD Install</title>
+      <link>https://abdullah.solutions/things-to-do-after-new-openbsd-install/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/things-to-do-after-new-openbsd-install/</guid>
+      <description>So you have installed OpenBSD as main OS. Most of the things will work out of the box. But still you have to configure some things.
+Lock screen on suspend/hibernate/resume Login as root and create /etc/apm directory if it isn&amp;rsquo;t there already.
+mkdir /etc/apm echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/suspend echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/resume echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/hibernate chmod +x /etc/apm/suspend chmod +x /etc/apm/hibernate chmod +x /etc/apm/resume On lid closure, machines mostly get suspended.</description>
+    </item>
+    
+  </channel>
+</rss>

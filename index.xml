@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abdullah Khabir</title>
+    <link>https://abdullah.solutions/</link>
+    <description>Recent content on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Jun 2022 18:07:52 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trigger a Jenkins Build on Every Code Push Event</title>
+      <link>https://abdullah.solutions/trigger-a-jenkins-build-on-every-code-push-event/</link>
+      <pubDate>Tue, 21 Jun 2022 18:07:52 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/trigger-a-jenkins-build-on-every-code-push-event/</guid>
+      <description>Configure GitHub project Go to your GitHub repository settings and click on Webhooks. Click on add a webhook.
+In payload URL, add your jenkins installation URL + &amp;lsquo;/github-webhook/&amp;rsquo;. For example if my jenkins is running at https://jenkins.example.com:8080 , I&amp;rsquo;ll add https://jenkins.example.com:8080/github-webhook/ . Disable SSL verification. Select send me everything or you can select only push events. and lastly check the box which says Active.
+Configure Jenkins project Go to your jenkins project configuration.</description>
+    </item>
+    
+    <item>
+      <title>Installing MPD on CentOS7</title>
+      <link>https://abdullah.solutions/install-mpd-on-centos7/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/install-mpd-on-centos7/</guid>
+      <description>Why CentOS7? Sometimes in production you have to use CentOS7 even if it has lost its life. Or you might be working with vagrant and only OS you have available is CentOS7.
+Installing packages from official repositories CentOS7 has very limited packages available in official repositories. So you have to install epel-release and nux-dextop packages to extend your packages list.
+Install epel-release By default, epel-release isn&amp;rsquo;t installed. So first step you have to install epel-release.</description>
+    </item>
+    
+    <item>
+      <title>Persistent Backdoor in Linux Environment</title>
+      <link>https://abdullah.solutions/persistent-backdoor-in-linux-environment/</link>
+      <pubDate>Thu, 18 Feb 2021 14:53:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/persistent-backdoor-in-linux-environment/</guid>
+      <description>So you have hacked a linux box. Next step should be leave a persistent backdoor so in case, it is rebooted, you have to repeat all those steps again and again.
+There are multiple methods available to create a persistent backdoor. Today I&amp;rsquo;m going to explain how you can create a backdoor in webservers.
+Tools needed socat weevely some common sense Installing Tools weevely Install weevely if you don&amp;rsquo;t have it.</description>
+    </item>
+    
+    <item>
+      <title>Things to Do After New OpenBSD Install</title>
+      <link>https://abdullah.solutions/things-to-do-after-new-openbsd-install/</link>
+      <pubDate>Wed, 10 Feb 2021 18:52:24 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/things-to-do-after-new-openbsd-install/</guid>
+      <description>So you have installed OpenBSD as main OS. Most of the things will work out of the box. But still you have to configure some things.
+Lock screen on suspend/hibernate/resume Login as root and create /etc/apm directory if it isn&amp;rsquo;t there already.
+mkdir /etc/apm echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/suspend echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/resume echo &amp;#34;pkill -USR1 xidle&amp;#34; &amp;gt; /etc/apm/hibernate chmod +x /etc/apm/suspend chmod +x /etc/apm/hibernate chmod +x /etc/apm/resume On lid closure, machines mostly get suspended.</description>
+    </item>
+    
+    <item>
+      <title>OpenBSD Encrypted Install</title>
+      <link>https://abdullah.solutions/openbsd-encrypted-install/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/openbsd-encrypted-install/</guid>
+      <description>So this is how you can have a fully encrypted OpenBSD installation.
+Getting OpenBSD Go to OpenBSD website and download the .img file for your hardware.
+Creating install media If you are on some linux or mac, you can use dd command to burn it to USB drive.
+Suppose your USB drive is appearing as /dev/sdb in lsblk&amp;rsquo;s output:
+dd if=install.img of=/dev/sdb bs=1M Boot from install media Plug the new install media and reboot the system.</description>
+    </item>
+    
+    <item>
+      <title>OpenBSD Dedicated Dotfiles</title>
+      <link>https://abdullah.solutions/openbsd-dedicated-dotfiles/</link>
+      <pubDate>Mon, 08 Feb 2021 11:37:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/openbsd-dedicated-dotfiles/</guid>
+      <description>OpenBSD as new OS I keep my dotfiles on Github/Gitlab. I had to configure many things so I started a dedicated repository .
+New Dotfiles I created a new directory dot in my home dir. And cherry picked some of my old dots. I have pushed my new dot directory to Git[hub,lab] as [Awan,Abdullah]/dot respectively.
+Old Linux dotfiles Linux users still can find my dotfiles on Github and Gitlab .</description>
+    </item>
+    
+    <item>
+      <title>Honda125 2021</title>
+      <link>https://abdullah.solutions/honda125-2021/</link>
+      <pubDate>Mon, 01 Feb 2021 19:41:58 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/honda125-2021/</guid>
+      <description>So here is new bike for 2021. Here are some pictures. I hope you&amp;rsquo;ll like them&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Linux Filesystem Directory Structure</title>
+      <link>https://abdullah.solutions/linux-filesystem-directory-structure/</link>
+      <pubDate>Thu, 17 Dec 2020 14:24:49 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/linux-filesystem-directory-structure/</guid>
+      <description>Unlike other operating systems, in linux everything starts from /. This is called root directory.
+You can use cd command to navigate in filesystem. If you&amp;rsquo;re inside some directory and you want to know where you&amp;rsquo;re inside the directory tree, just type pwd and it will show you the current working directory. pwd stands for print working directory.
+cd command needs some arguments if you want to visit some other directory.</description>
+    </item>
+    
+    <item>
+      <title>Send Mail Using Gmail using Command Line</title>
+      <link>https://abdullah.solutions/send-mail-using-gmail-from-terminal/</link>
+      <pubDate>Sun, 29 Nov 2020 07:32:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/send-mail-using-gmail-from-terminal/</guid>
+      <description>Yeah, you can send mail from your gmail account using command line.
+Requirements You have two options here.
+Gmail account settings Either enable less secure apps in your Google account or Generate an app password .
+Tools being used For Arch Linux:
+$ sudo pacman -S msmtp For Debian, Ubuntu and other Debian derived distributions:
+$ sudo apt install -y msmtp For Fedora, CentOS, Redhat etc:
+$ sudo dnf install msmtp Encrypt password Using gpg, we are going to encrypt our password.</description>
+    </item>
+    
+    <item>
+      <title>SSH Passwordless Authentication</title>
+      <link>https://abdullah.solutions/ssh-passwordless-authentication/</link>
+      <pubDate>Tue, 06 Oct 2020 13:45:06 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/ssh-passwordless-authentication/</guid>
+      <description>SSH login without password? Yeah you heard it right. Today I&amp;rsquo;m going to teach you how you can enable passwordless authentication in ssh.
+You can login to your linux servers without password. How? Keep reading&amp;hellip;
+Edit the SSH main configuration file.
+$ sudo vi /etc/ssh/sshd_config ... PubkeyAuthentication yes ... Edit this line. If you see no, change it to yes. If this line is commented out, uncomment it.
+Restart ssh.</description>
+    </item>
+    
+    <item>
+      <title>How to Share Android Screen</title>
+      <link>https://abdullah.solutions/how-to-share-android-screen/</link>
+      <pubDate>Tue, 15 Sep 2020 13:21:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/how-to-share-android-screen/</guid>
+      <description>There are times you want to share your android phone&amp;rsquo;s screen with your Linux/Windows desktop. Like if you have got broken screen or for some purpose.
+So this post may help you.
+Requirements Android phone ADB installed In Arch Linux, you can install ADB with:
+$ sudo pacman -S android-tools There is a program which is used to screen sharing. You can install it using AUR in Arch Linux, use apt if you are using Ubuntu/Debian.</description>
+    </item>
+    
+    <item>
+      <title>Kalilinux Persistence</title>
+      <link>https://abdullah.solutions/kalilinux-persistence/</link>
+      <pubDate>Tue, 14 Jul 2020 17:22:11 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/kalilinux-persistence/</guid>
+      <description>Getting Kalilinux image Go to Downloads and download latest live image. Make sure you don&amp;rsquo;t download the installer image.
+Make USB bootable Use dd to write the kali image to USB.
+In linux environment:
+# dd if=kali-linux-xxxx.x-live-amd64.iso of=/dev/sdX status=progress bs=4M Replace kali-linux-xxxx.x-live-amd64.iso with downloaded iso iamge path and /dev/sdX with path of your USB device. You can find USB path by running lsblk in terminal. Make sure you don&amp;rsquo;t select the existing linux installation drive.</description>
+    </item>
+    
+    <item>
+      <title>Git Initial Setup</title>
+      <link>https://abdullah.solutions/configure-git/</link>
+      <pubDate>Sun, 12 Jul 2020 18:58:13 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/configure-git/</guid>
+      <description>How to configure Git Git is a version control system by Linus Torvalds, same person who wrote linux kernel.
+Installation In Archlinux, you can install git by:
+$ sudo pacman -S git In Debian and derived distributions:
+$ sudo apt install -y git Configuration You have to tell git about the author who committed changes so lets do it.
+Name and Email Tell git about your name and email:
+$ git config --global user.</description>
+    </item>
+    
+    <item>
+      <title>How to set FQDN in Linux</title>
+      <link>https://abdullah.solutions/fqdn/</link>
+      <pubDate>Sun, 21 Jun 2020 13:26:14 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/fqdn/</guid>
+      <description>What is FQDN? FQDN stands for Fully Qualified Domain Name. It&amp;rsquo;s complete domain name for a computer or host on the internet. FQDN is made of two things: hostname and domain name.
+Let me give you an example for demonstration.
+FQDN for my mail server is myemailserver.abdullah.today.
+The hostname is myemailserver. The domain is abdullah.today.
+Requirements You will need:
+IP Address Hostname FQDN Edit hosts file Edit the /etc/hosts file and append this like this.</description>
+    </item>
+    
+    <item>
+      <title>TMUX</title>
+      <link>https://abdullah.solutions/tmux/</link>
+      <pubDate>Sat, 06 Jun 2020 18:13:35 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tmux/</guid>
+      <description>TMUX tmux is a terminal multiplexer. You can run programs inside a tmux session, detach session and continue running programs in background, reattach later.
+Installation tmux is available in all linux distributions. You can install it using your distribution&amp;rsquo;s package manager. In Arch Linux:
+$ sudo pacman -S tmux Start You can start tmux by invoking tmux command inside your terminal.
+Keybindings The default modifier key is Ctrl + b followed by a key.</description>
+    </item>
+    
+    <item>
+      <title>git Cherry Pick</title>
+      <link>https://abdullah.solutions/cherry-pick/</link>
+      <pubDate>Thu, 04 Jun 2020 14:25:08 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/cherry-pick/</guid>
+      <description>Git cherry-picking Aah picking cherries! ❤️
+I&amp;rsquo;m using git since I started using linux. Cherry-pick is one of those commands I do alot with git. Right now I&amp;rsquo;m preparing a new cherry and will pick it later. 😉
+What&amp;rsquo;s cherry-pick? According to man(1) git-cherry-pick:
+Given one or more existing commits, apply the change each one introduces, recording a new commit for each. This requires your working tree to be clean (no modifications from the HEAD commit).</description>
+    </item>
+    
+    <item>
+      <title>Multihead with BSPWM and Polybar</title>
+      <link>https://abdullah.solutions/multihead/</link>
+      <pubDate>Tue, 02 Jun 2020 10:52:37 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/multihead/</guid>
+      <description>Multihead A few days ago, I relocated myself to new room. Actually this room I use for summer as its way cooler than others. I have a wall-mounted LCD monitor here so today I thought I should share how I do multi screening.
+Hardware I have this lenovo X series machine which is my main machine I use. Its resolution is 1920x1080.
+The second one is a LCD monitor. And the resolution is 1280x1024.</description>
+    </item>
+    
+    <item>
+      <title>BSPWM</title>
+      <link>https://abdullah.solutions/bspwm/</link>
+      <pubDate>Mon, 01 Jun 2020 19:02:44 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/bspwm/</guid>
+      <description>BSPWM BSPWM is a tiling window manager that represents windows as the leaves of a full binary tree. It has support for EWMH and multihead.
+Installation bspwm is available in almost all major distributions. If you can&amp;rsquo;t find it in your OS, clone the repository and build it.
+Configuration bspwm uses sxhkd for keyboard shortcuts. It has no other way to handle with keyboard input and instead provides bspc program as its interface.</description>
+    </item>
+    
+    <item>
+      <title>Terminal Sharing service</title>
+      <link>https://abdullah.solutions/tmate/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tmate/</guid>
+      <description>What&amp;rsquo;s tmate? On *nix systems, sometimes we need support. And geeks don&amp;rsquo;t like GUI apps just to have your system in front of them, at least I don&amp;rsquo;t like that 😉
+tmate is terminal sharing software you can use it to connect with your friends and you both work from there. It&amp;rsquo;s available in many distributions repos and in case you aren&amp;rsquo;t lucky enough, you can compile it from source or there are pre-compiled binaries there in their Github page.</description>
+    </item>
+    
+    <item>
+      <title>CRUX</title>
+      <link>https://abdullah.solutions/crux/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/crux/</guid>
+      <description>CRUX is like a good looking, really good looking, gorgeous, hot girl without any cheap perfume or makeup, waiting for you to customize her in any way you see fit. On top of that, she is free, permanent and wont make absurd and disturbing demands.</description>
+    </item>
+    
+    <item>
+      <title>How to install CRUX with encryption</title>
+      <link>https://abdullah.solutions/encrypted-crux/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/encrypted-crux/</guid>
+      <description>How to install fully encrypted CRUX This post is for crux users who wanna secure their crux installation.
+Partitioning I&amp;rsquo;m gonna use two partitions. First boot partition will be unencrypted which holds kernel. I use secure boot with my own keys. You can find a post in my blog how to do that. and I have some ports too for secure boot. Unencrypted Boot Partition Create a partition more than 200 Mbs for boot ESP with gdisk code ef00.</description>
+    </item>
+    
+    <item>
+      <title>How to include a screenshot in Github README</title>
+      <link>https://abdullah.solutions/github-readme/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/github-readme/</guid>
+      <description>A picture is worth 1000 words. Working with github repos, sometimes you want to include a screenshot in your repos. Today I&amp;rsquo;ll help you getting this done in one step.
+Go to your repo page and click on issues.
+Click new issue
+Take a screenshot you wanna add and paste it there using Control + V or whatever you like.
+You will get a link once the screenshot is uploaded. Just copy it and paste it in your README.</description>
+    </item>
+    
+    <item>
+      <title>How to manage a website using git</title>
+      <link>https://abdullah.solutions/site-as-git-repo/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/site-as-git-repo/</guid>
+      <description>Git is another awesome tool developed and maintained by Linus Torvalds who wrote linux kernel. In this post I&amp;rsquo;ll explain how can we use it for our site maintenance. I have a vps on which my site is hosted along with a mail server, git server and a web server too. But I&amp;rsquo;m sure this guide can be used with shared hosting accounts with some modifications.
+Install git. Once installed, as root user, create git user and add it to www-data group.</description>
+    </item>
+    
+    <item>
+      <title>Create/paste snippets from Terminal</title>
+      <link>https://abdullah.solutions/gists/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/gists/</guid>
+      <description>What&amp;rsquo;s snippet/gist? gist is a piece of code or maybe some important text shared on Github or Gitlab . It&amp;rsquo;s actually a git repository so you can clone it, work on it locally and push changes.
+Share gists from Terminal There are multiple programs available in many distributions for this purpose. You just have to find it. On Arch Linux , you can install gist .
+Here is how it works in terminal.</description>
+    </item>
+    
+    <item>
+      <title>How to contribute to open source project</title>
+      <link>https://abdullah.solutions/contribution-with-git/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/contribution-with-git/</guid>
+      <description>So you want to contribute to some open source project which is hosted on git[hub,lab] or some other git website. Here is all you want to do.
+Fork the repository Create a personal fork. On github, visit the project repository and hit fork. It will fork the project in your personal account.
+Clone it Clone it in your local machine so you can work on it. Remember you are cloning the fork, and not the original project.</description>
+    </item>
+    
+    <item>
+      <title>Encrypted dotfiles with GnuPG</title>
+      <link>https://abdullah.solutions/encrypted-dotfiles/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/encrypted-dotfiles/</guid>
+      <description>What these dotfiles are? In unix world, most programs are configured command line and they save their configurations in homedir usually a file which names start with a dot. Thus dotfiles.
+Power users care about them alot. You can store your dotfiles on some git server like github or gitlab and many other options there like you can host them on your VPS as well. If you use git to store them and you don&amp;rsquo;t have a private repository, anybody can see them.</description>
+    </item>
+    
+    <item>
+      <title>Encrypted Arch Linux installation</title>
+      <link>https://abdullah.solutions/encrypted-archlinux/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/encrypted-archlinux/</guid>
+      <description>What&amp;rsquo;s Arch Linux? Arch Linux is a free and open source linux distribution based on the rule Keep it Simple.
+Installation Arch Linux has no graphical installer. You have to install using CLI.
+Installation media creation Go to Downloads page and select a nearby mirror. Download the iso file. If you&amp;rsquo;re on Windows, you can use rufus to create a bootable media.
+On linux, you can use dd:
+dd if=downloaded iso file of=/dev/sdX status=progress where X is your USB device&amp;rsquo;s ID.</description>
+    </item>
+    
+    <item>
+      <title>Polybar - A stylish bar</title>
+      <link>https://abdullah.solutions/polybar/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/polybar/</guid>
+      <description>I recently tried to compile polybar and used it with tiling window manager bspwm .
+Polybar Here is my bar configuration I have been using for over the years with i3, bspwm, dwm and many other window managers even with xfce4.
+$ cat $HOME/.config/polybar/config [colors] background = #FF000000 background-alt = ${xrdb:polybar*color8} foreground = ${xrdb:polybar*foreground} urgent = #B34747 foreground-alt = #555 primary = ${xrdb:polybar*color3} secondary = ${xrdb:polybar*color1} alert = ${xrdb:polybar*color13} [settings] screenchange-reload = true screenchange = true throttle-output = 5 throttle-output-for = 10 throttle-input-for = 30 compositing-background = source compositing-foreground = over compositing-overline = over compositing-underline = over compositing-border = over pseudo-transparency = true [global/wm] margin-top = 0 margin-bottom = 0 [bar/eDP-1] monitor = ${env:MONITOR:eDP-1} monitor-fallback = eDP1 bottom = false width = 100% height = 25 offset-x = 0 offset-y = 0 radius = 10 fixed-center = true background = ${colors.</description>
+    </item>
+    
+    <item>
+      <title>How to use vIM as IDE in Debian, Ubuntu, Mint</title>
+      <link>https://abdullah.solutions/vim-as-IDE/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/vim-as-IDE/</guid>
+      <description>Been using source based distributions for a long time. Source based distributions are cool for systems with limited resources. But what if you don&amp;rsquo;t have enough time?
+Debian is one of the oldest distribution there which is known for stability. Stability? Well that never had been a priority for me but for some reasons I came to it and now using it for some months. It&amp;rsquo;s a cool distribution.
+Well, that enough said, let&amp;rsquo;s come to the topic.</description>
+    </item>
+    
+    <item>
+      <title>Things to do after a new Debian installation</title>
+      <link>https://abdullah.solutions/debian-fresh-install/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/debian-fresh-install/</guid>
+      <description>So you have a new Debian installation? Maybe a minimal install like I do? Don&amp;rsquo;t worry, I have you covered what to do next.
+Setup a sudo user without password Go here .
+Install software Install software for daily use.
+$ sudo apt install build-essential \ git zsh mpv feh xss-lock urlview \ xbindkeys stow offlineimap mutt msmtp \ notmuch vim.nox rxvt-unicode -y Setup touchpad If you have a machine that supports multitouch, enabling tap to click is a good option.</description>
+    </item>
+    
+    <item>
+      <title>URXVT - Terminal for Geeks</title>
+      <link>https://abdullah.solutions/urxvt/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/urxvt/</guid>
+      <description>What&amp;rsquo;s URxvt? As a linux user, I spend most of my time in terminal emulators. There are alot of emulators available today but none can beat rxvt-unicode.
+The biggest problem most new linux users face is how to configure it. Today I&amp;rsquo;ll explain how you can use it to your needs.
+Most distributions package it with less features enabled. I always compile it from source. So let&amp;rsquo;s start and in the end you&amp;rsquo;ll end up with a perfect terminal emulator.</description>
+    </item>
+    
+    <item>
+      <title>How to install fonts in Linux</title>
+      <link>https://abdullah.solutions/fonts/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/fonts/</guid>
+      <description>I have been using different distributions in my machines. A term which is called in our linux community distrohopping. On different distributions/machines, it&amp;rsquo;s pain to collect packages you can&amp;rsquo;t live without. For me and maybe for you too, the fonts are the part of OS which at least I care about the most.
+Fonts path Different linux distributions package fonts in with different names. So I decided to add the fonts to my dotfiles.</description>
+    </item>
+    
+    <item>
+      <title>use sudo with no password</title>
+      <link>https://abdullah.solutions/enable%20sudo%20with%20no%20password/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/enable%20sudo%20with%20no%20password/</guid>
+      <description>In Unix world, we shouldn&amp;rsquo;t use administrator user without some important stuff which needs access to it. There is a utility sudo we can use to have administrator access. But everytime you invoke it, it asks for your user&amp;rsquo;s password.
+Today, I&amp;rsquo;m going to guide you, how you can use sudo without password.
+Once you install Debian, you get some option to create a user. And if you choose the option, &amp;ldquo;Don&amp;rsquo;t use root for login&amp;rdquo;, this new user becomes privileged user by default.</description>
+    </item>
+    
+    <item>
+      <title>My Email Setup</title>
+      <link>https://abdullah.solutions/mutt/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/mutt/</guid>
+      <description>why commandline? TL;DR
+powerful and efficient!
+I have been creating multiple accounts for email since 2009. Some of the accounts I still have them in 2019 and others I don&amp;rsquo;t have access to. I realized that having your own email server on your own domain is a good thing. So I started creating mail server. I did that well. Learned a lot.
+As you know I like things to keep minimalistic yet powerful than most written GUI apps.</description>
+    </item>
+    
+    <item>
+      <title>latest nodejs for debian and derived distributions</title>
+      <link>https://abdullah.solutions/latest-nodejs-in-debian/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/latest-nodejs-in-debian/</guid>
+      <description>latest NODE installation in debian $ echo &amp;#39;deb https://deb.nodesource.com/node_12.x sid main&amp;#39; | sudo tee -a /etc/apt/sources.list &amp;gt; /dev/null $ sudo apt update $ sudo apt install -y nodejs Enjoy using NODEjs!</description>
+    </item>
+    
+    <item>
+      <title>Google Chrome for deiban and derived distributions</title>
+      <link>https://abdullah.solutions/chrome/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/chrome/</guid>
+      <description>You&amp;rsquo;ll have to admit google chrome is super fast. Along with other plugins I love to use it as main browser. But unfortunately it isn&amp;rsquo;t in debian repositories.
+So how to install it? Here is the procedure you can follow to get latest chrome from google.
+$ echo &amp;#39;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&amp;#39; | sudo tee -a /etc/apt/sources.list &amp;gt; /dev/null $ sudo apt update $ sudo apt install -y google-chrome-stable Enjoy using Chrome.</description>
+    </item>
+    
+    <item>
+      <title>EFISTUB</title>
+      <link>https://abdullah.solutions/EFISTUB/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/EFISTUB/</guid>
+      <description>So in this post I&amp;rsquo;m gonna guide you how you can use efistub, a feature which you can use to boot the kernel without an extra boot manager(grub, systemd-boot, rEFInd etc.)
+Create a boot entry using efibootmgr.
+# efibootmgr --create --disk /dev/sda --part 1 --label Debian --loader /vmlinuz --unicode &amp;#34;root=/dev/sda2 rw initrd=\initrd.img&amp;#34; --verbose Explaination of the command.
+--create &amp;#39;creates a new boot entry&amp;#39; --disk &amp;#39;disk where you wanna create the boot entry&amp;#39; --part &amp;#39;partition number&amp;#39; --label &amp;#39;the label for new entry&amp;#39; --loader &amp;#39;loader to boot, it&amp;#39;s vmlinuz in this example&amp;#39; --unicode &amp;#39;kernel parameters you can define here like initrd, swap, encrypted container for root&amp;#39; --verbose &amp;#39;let it verbose&amp;#39; I have an encrypted installation on my machine so here is how I create an entry for me.</description>
+    </item>
+    
+    <item>
+      <title>dwm window manager</title>
+      <link>https://abdullah.solutions/dwm/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/dwm/</guid>
+      <description>What&amp;rsquo;s DWM? DWM is a Tiling window manager by Suckless community .
+Installation You can install dwm by using your distribution package maangers. But as dwm is configured by hand before compilation, so it&amp;rsquo;s recommended you clone its repository, configure and then compile it for your system. I have a fork which you may like.
+Configuration In the root directory, there is a file config.h. You can edit it how you like.</description>
+    </item>
+    
+    <item>
+      <title>Loving Dad</title>
+      <link>https://abdullah.solutions/baba/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/baba/</guid>
+      <description>Da satargo tor da zrha takor baba Khatam dy ma sha da zrha zor baba Sta dy wujood wona samsora ghuwaram Sta zindagi la Khudai nora ghuwaram Zaka zari minat o sawal koma Dua dy sta rogh sehat koma! </description>
+    </item>
+    
+    <item>
+      <title>Set time zone in Debian, Ubuntu, Raspberry Pi(Raspbian)</title>
+      <link>https://abdullah.solutions/tzdata/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/tzdata/</guid>
+      <description>Sometimes we install systems and don&amp;rsquo;t care about setting timezone. Or we travel to some other countries where timezone is different. So here is how you can change timezone in Debian, Ubuntu, Mint, Raspbian and almost all distributions derived from Debian.
+# dpkg-reconfigure tzdata You will see a dialog box opened.
+Select your continent.
+Hit enter after selecting your continent using arrow keys.
+Select your city and hit Enter. Voila, you are done!</description>
+    </item>
+    
+    <item>
+      <title>Automate the boring stuff of wallpapers with systemd</title>
+      <link>https://abdullah.solutions/wallpaper-automation/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/wallpaper-automation/</guid>
+      <description>So assuming you&amp;rsquo;re not using a DE and don&amp;rsquo;t wanna install a tool which comes with a lot of dependencies just to automate the boring stuf of changing wallpapers (root window of Xorg). I wrote a simple Python program which you can use as systemd unit too.
+Clone the repository or download/copy the beautify.py if you don&amp;rsquo;t want systemd part. I&amp;rsquo;d recommend ~/bin for such executable scripts. You can execute it from .</description>
+    </item>
+    
+  </channel>
+</rss>

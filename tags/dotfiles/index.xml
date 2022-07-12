@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dotfiles on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/dotfiles/</link>
+    <description>Recent content in dotfiles on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Feb 2021 11:37:18 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/dotfiles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenBSD Dedicated Dotfiles</title>
+      <link>https://abdullah.solutions/openbsd-dedicated-dotfiles/</link>
+      <pubDate>Mon, 08 Feb 2021 11:37:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/openbsd-dedicated-dotfiles/</guid>
+      <description>OpenBSD as new OS I keep my dotfiles on Github/Gitlab. I had to configure many things so I started a dedicated repository .
+New Dotfiles I created a new directory dot in my home dir. And cherry picked some of my old dots. I have pushed my new dot directory to Git[hub,lab] as [Awan,Abdullah]/dot respectively.
+Old Linux dotfiles Linux users still can find my dotfiles on Github and Gitlab .</description>
+    </item>
+    
+    <item>
+      <title>Encrypted dotfiles with GnuPG</title>
+      <link>https://abdullah.solutions/encrypted-dotfiles/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/encrypted-dotfiles/</guid>
+      <description>What these dotfiles are? In unix world, most programs are configured command line and they save their configurations in homedir usually a file which names start with a dot. Thus dotfiles.
+Power users care about them alot. You can store your dotfiles on some git server like github or gitlab and many other options there like you can host them on your VPS as well. If you use git to store them and you don&amp;rsquo;t have a private repository, anybody can see them.</description>
+    </item>
+    
+  </channel>
+</rss>

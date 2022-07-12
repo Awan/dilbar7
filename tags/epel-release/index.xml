@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>epel-release on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/epel-release/</link>
+    <description>Recent content in epel-release on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 19 Jun 2022 01:32:54 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/epel-release/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing MPD on CentOS7</title>
+      <link>https://abdullah.solutions/install-mpd-on-centos7/</link>
+      <pubDate>Sun, 19 Jun 2022 01:32:54 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/install-mpd-on-centos7/</guid>
+      <description>Why CentOS7? Sometimes in production you have to use CentOS7 even if it has lost its life. Or you might be working with vagrant and only OS you have available is CentOS7.
+Installing packages from official repositories CentOS7 has very limited packages available in official repositories. So you have to install epel-release and nux-dextop packages to extend your packages list.
+Install epel-release By default, epel-release isn&amp;rsquo;t installed. So first step you have to install epel-release.</description>
+    </item>
+    
+  </channel>
+</rss>

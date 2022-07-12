@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>encryption on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/encryption/</link>
+    <description>Recent content in encryption on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Feb 2021 20:12:36 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/encryption/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenBSD Encrypted Install</title>
+      <link>https://abdullah.solutions/openbsd-encrypted-install/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/openbsd-encrypted-install/</guid>
+      <description>So this is how you can have a fully encrypted OpenBSD installation.
+Getting OpenBSD Go to OpenBSD website and download the .img file for your hardware.
+Creating install media If you are on some linux or mac, you can use dd command to burn it to USB drive.
+Suppose your USB drive is appearing as /dev/sdb in lsblk&amp;rsquo;s output:
+dd if=install.img of=/dev/sdb bs=1M Boot from install media Plug the new install media and reboot the system.</description>
+    </item>
+    
+    <item>
+      <title>How to install CRUX with encryption</title>
+      <link>https://abdullah.solutions/encrypted-crux/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/encrypted-crux/</guid>
+      <description>How to install fully encrypted CRUX This post is for crux users who wanna secure their crux installation.
+Partitioning I&amp;rsquo;m gonna use two partitions. First boot partition will be unencrypted which holds kernel. I use secure boot with my own keys. You can find a post in my blog how to do that. and I have some ports too for secure boot. Unencrypted Boot Partition Create a partition more than 200 Mbs for boot ESP with gdisk code ef00.</description>
+    </item>
+    
+    <item>
+      <title>Encrypted dotfiles with GnuPG</title>
+      <link>https://abdullah.solutions/encrypted-dotfiles/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/encrypted-dotfiles/</guid>
+      <description>What these dotfiles are? In unix world, most programs are configured command line and they save their configurations in homedir usually a file which names start with a dot. Thus dotfiles.
+Power users care about them alot. You can store your dotfiles on some git server like github or gitlab and many other options there like you can host them on your VPS as well. If you use git to store them and you don&amp;rsquo;t have a private repository, anybody can see them.</description>
+    </item>
+    
+    <item>
+      <title>Encrypted Arch Linux installation</title>
+      <link>https://abdullah.solutions/encrypted-archlinux/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/encrypted-archlinux/</guid>
+      <description>What&amp;rsquo;s Arch Linux? Arch Linux is a free and open source linux distribution based on the rule Keep it Simple.
+Installation Arch Linux has no graphical installer. You have to install using CLI.
+Installation media creation Go to Downloads page and select a nearby mirror. Download the iso file. If you&amp;rsquo;re on Windows, you can use rufus to create a bootable media.
+On linux, you can use dd:
+dd if=downloaded iso file of=/dev/sdX status=progress where X is your USB device&amp;rsquo;s ID.</description>
+    </item>
+    
+  </channel>
+</rss>

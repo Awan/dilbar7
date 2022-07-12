@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>multiplexer on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/multiplexer/</link>
+    <description>Recent content in multiplexer on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 06 Jun 2020 18:13:35 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/multiplexer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TMUX</title>
+      <link>https://abdullah.solutions/tmux/</link>
+      <pubDate>Sat, 06 Jun 2020 18:13:35 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/tmux/</guid>
+      <description>TMUX tmux is a terminal multiplexer. You can run programs inside a tmux session, detach session and continue running programs in background, reattach later.
+Installation tmux is available in all linux distributions. You can install it using your distribution&amp;rsquo;s package manager. In Arch Linux:
+$ sudo pacman -S tmux Start You can start tmux by invoking tmux command inside your terminal.
+Keybindings The default modifier key is Ctrl + b followed by a key.</description>
+    </item>
+    
+  </channel>
+</rss>

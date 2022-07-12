@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fontset on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/fontset/</link>
+    <description>Recent content in fontset on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://abdullah.solutions/tags/fontset/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install fonts in Linux</title>
+      <link>https://abdullah.solutions/fonts/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://abdullah.solutions/fonts/</guid>
+      <description>I have been using different distributions in my machines. A term which is called in our linux community distrohopping. On different distributions/machines, it&amp;rsquo;s pain to collect packages you can&amp;rsquo;t live without. For me and maybe for you too, the fonts are the part of OS which at least I care about the most.
+Fonts path Different linux distributions package fonts in with different names. So I decided to add the fonts to my dotfiles.</description>
+    </item>
+    
+  </channel>
+</rss>

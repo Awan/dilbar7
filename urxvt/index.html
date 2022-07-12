@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Abdullah Khabir">
+    <meta name="description" content="AK Solutions">
+    <meta name="keywords" content="blog,developer,personal,ethical_hacking,code,devops,linux,archlinux,bspwm,bash,sh,debian">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="URXVT - Terminal for Geeks"/>
+<meta name="twitter:description" content="URXVT - Terminal for Geeks"/>
+
+    <meta property="og:title" content="URXVT - Terminal for Geeks" />
+<meta property="og:description" content="URXVT - Terminal for Geeks" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abdullah.solutions/urxvt/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-09-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-19T00:00:00+00:00" />
+
+
+
+    
+      <base href="https://abdullah.solutions/urxvt/">
+    
+    <title>
+  URXVT - Terminal for Geeks · Abdullah Khabir
+</title>
+
+    
+      <link rel="canonical" href="https://abdullah.solutions/urxvt/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://abdullah.solutions/css/coder.min.9f38ad26345e306650770a3b91475e09efa3026c59673a09eff165cfa8f1a30e.css" integrity="sha256-nzitJjReMGZQdwo7kUdeCe&#43;jAmxZZzoJ7/Flz6jxow4=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://abdullah.solutions/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://abdullah.solutions/">
+      Abdullah Khabir
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://abdullah.solutions/posts/">BLOG</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">URXVT - Terminal for Geeks</h1>
+        </div>
+        <div class="description">
+          <span class="title">URXVT - Terminal for Geeks</span>
+        </div>
+        <div class="post-meta">
+          
+          <div class="date">
+            <span class="posted-on">
+              <time datetime='2019-09-19T00:00:00Z'>
+                September 19, 2019
+              </time>
+            </span>
+          </br>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4 minutes
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <div>
+        
+        <h4 id="whats-urxvt">What&rsquo;s URxvt?</h4>
+<p>As a linux user, I spend most of my time in terminal emulators. There are alot of emulators available today but none can beat rxvt-unicode.</p>
+<p>The biggest problem most new linux users face is how to configure it. Today I&rsquo;ll explain how you can use it to your needs.</p>
+<p>Most distributions package it with less features enabled. I always compile it from source. So let&rsquo;s start and in the end you&rsquo;ll end up with a perfect terminal emulator.</p>
+<p>Get the source and compile it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ wget http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.22.tar.bz2
+</span></span><span style="display:flex;"><span>$ tar xvf rxvt-unicode-9.22.tar.bz2
+</span></span><span style="display:flex;"><span>$ cd rxvt-unicode-9.22
+</span></span><span style="display:flex;"><span>$ ./configure --enable-everything --enable-256-color
+</span></span><span style="display:flex;"><span>$ make
+</span></span><span style="display:flex;"><span># make install
+</span></span></code></pre></div><p>&ndash;enable-everything will compile all things for us except 256 color support. So keep that in mind.</p>
+<p>So now rxvt-unicode is installed, just execute it. You won&rsquo;t like it out of the box. We have to configure it.</p>
+<h4 id="configuration">Configuration</h4>
+<p>rxvt-unicode reads the configuration from two files, ~/.Xresources or ~/.Xdefaults. So here I&rsquo;m gonna put my ~/.Xdefaults, just copy it to your home directory as ~/.Xdefaults. You can always get the latest one <a href="https://gitlab.com/Abdullah/cfg/-/blob/master/etc/.Xresources" target="_blank" >here</a>
+.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ cat ~/.Xresources
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! In the name of Allah, the most Gracious, the most Merciful.
+</span></span><span style="display:flex;"><span>! 
+</span></span><span style="display:flex;"><span>!  ▓▓▓▓▓▓▓▓▓▓
+</span></span><span style="display:flex;"><span>! ░▓ Author ▓ Abdullah &lt;https://abdullah.today&gt;
+</span></span><span style="display:flex;"><span>! ░▓▓▓▓▓▓▓▓▓▓
+</span></span><span style="display:flex;"><span>! ░░░░░░░░░░
+</span></span><span style="display:flex;"><span>! 
+</span></span><span style="display:flex;"><span>! ░█░█░█▀▄░█▀▀░█▀▀░█▀█░█░█░█▀▄░█▀▀░█▀▀░█▀▀
+</span></span><span style="display:flex;"><span>! ░▄▀▄░█▀▄░█▀▀░▀▀█░█░█░█░█░█▀▄░█░░░█▀▀░▀▀█
+</span></span><span style="display:flex;"><span>! ░▀░▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! Colors
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>!black
+</span></span><span style="display:flex;"><span>*color0                    : #1C1C1C
+</span></span><span style="display:flex;"><span>*color8                    : #4d4d4d
+</span></span><span style="display:flex;"><span>!red
+</span></span><span style="display:flex;"><span>*color1                    : #D81860
+</span></span><span style="display:flex;"><span>*color9                    : #F00060
+</span></span><span style="display:flex;"><span>!green
+</span></span><span style="display:flex;"><span>*color2                    : #B7CE42
+</span></span><span style="display:flex;"><span>*color10                   : #BDE077
+</span></span><span style="display:flex;"><span>!yellow
+</span></span><span style="display:flex;"><span>*color3                    : #FEA63C
+</span></span><span style="display:flex;"><span>*color11                   : #FFE863
+</span></span><span style="display:flex;"><span>!blue
+</span></span><span style="display:flex;"><span>*color4                    : #66AABB
+</span></span><span style="display:flex;"><span>*color12                   : #AACCBB
+</span></span><span style="display:flex;"><span>!magenta
+</span></span><span style="display:flex;"><span>*color5                    : #B7416E
+</span></span><span style="display:flex;"><span>*color13                   : #BB4466
+</span></span><span style="display:flex;"><span>!cyan
+</span></span><span style="display:flex;"><span>*color6                    : #5E7175
+</span></span><span style="display:flex;"><span>*color14                   : #A3BABF
+</span></span><span style="display:flex;"><span>!white
+</span></span><span style="display:flex;"><span>*color7                    : #DDEEDD
+</span></span><span style="display:flex;"><span>*color15                   : #6C887A
+</span></span><span style="display:flex;"><span>*.foreground  : #fffaf4
+</span></span><span style="display:flex;"><span>*.background  : #0e1019
+</span></span><span style="display:flex;"><span>*.cursorColor : #ff0018
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! URxvt 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! if remote host is having problems with rxvt-unicode, copy
+</span></span><span style="display:flex;"><span>! /usr/share/terminfo/r/rxvt-unicode at hosts ~/.terminfo/r/rxvt-unicode
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>URxvt*font                 : xft:FantasqueSansMono Nerd Font:Italic:size=21,
+</span></span><span style="display:flex;"><span>xft:Fantasque Sans Mono:Italic:size=21, xft:DejaVu Sans Mono for
+</span></span><span style="display:flex;"><span>Powerline:size=21, xft:Segoe UI Emoji:size=21, xft:SimHei:size=21
+</span></span><span style="display:flex;"><span>URxvt*boldfont             : xft:Bitstream Vera Sans
+</span></span><span style="display:flex;"><span>Mono:Bold:size=17:antialias=true
+</span></span><span style="display:flex;"><span>URxvt*bolditalicfont       : xft:Bitstream Vera Sans
+</span></span><span style="display:flex;"><span>Mono:Bold:italic:size=17:antialias=true
+</span></span><span style="display:flex;"><span>URxvt*utf                  : 1
+</span></span><span style="display:flex;"><span>URxvt*locale               : 1
+</span></span><span style="display:flex;"><span>URxvt.imlocale             : en_US.UTF-8
+</span></span><span style="display:flex;"><span>URxvt*letterSpace          : 0
+</span></span><span style="display:flex;"><span>URxvt*termName             : rxvt-unicode-256color
+</span></span><span style="display:flex;"><span>URxvt*geometry             : 96x30
+</span></span><span style="display:flex;"><span>URxvt*background           : #1B2B34
+</span></span><span style="display:flex;"><span>URxvt*reverseVideo         : 0
+</span></span><span style="display:flex;"><span>URxvt*loginShell           : 0
+</span></span><span style="display:flex;"><span>URxvt*jumpScroll           : 1
+</span></span><span style="display:flex;"><span>URxvt*skipScroll           : 1
+</span></span><span style="display:flex;"><span>URxvt*pastableTabs         : 1
+</span></span><span style="display:flex;"><span>URxvt*scrollstyle          : plain
+</span></span><span style="display:flex;"><span>URxvt*scrollBar            : 0
+</span></span><span style="display:flex;"><span>URxvt*scrollBar_right      : 0
+</span></span><span style="display:flex;"><span>URxvt*scrollBar_floating   : 0
+</span></span><span style="display:flex;"><span>URxvt*scrollBar_align      : centre
+</span></span><span style="display:flex;"><span>URxvt*thickness            : 0
+</span></span><span style="display:flex;"><span>URxvt*scrollTtyOutput      : 0
+</span></span><span style="display:flex;"><span>URxvt*scrollTtyKeypress    : 1
+</span></span><span style="display:flex;"><span>URxvt*scrollWithBuffer     : 1
+</span></span><span style="display:flex;"><span>URxvt*inheritPixmap        : 0
+</span></span><span style="display:flex;"><span>URxvt*transparent          : 0
+</span></span><span style="display:flex;"><span>URxvt*tintColor            : #ffffff
+</span></span><span style="display:flex;"><span>URxvt*shading              : 145
+</span></span><span style="display:flex;"><span>URxvt*blurRadius           : 1x65
+</span></span><span style="display:flex;"><span>URxvt*fading               : 25
+</span></span><span style="display:flex;"><span>URxvt*fadeColor            : #008B8B
+</span></span><span style="display:flex;"><span>URxvt*utmpInhibit          : 1
+</span></span><span style="display:flex;"><span>URxvt*urgentOnBell         : 1
+</span></span><span style="display:flex;"><span>URxvt*visualBell           : 0
+</span></span><span style="display:flex;"><span>URxvt*mapAlert             : 0
+</span></span><span style="display:flex;"><span>URxvt*meta8                : 0
+</span></span><span style="display:flex;"><span>URxvt*mouseWheelScrollPage : 0
+</span></span><span style="display:flex;"><span>URxvt*tripleclickwords     : 0
+</span></span><span style="display:flex;"><span>URxvt*insecure             : 0
+</span></span><span style="display:flex;"><span>URxvt*cursorUnderline      : 1
+</span></span><span style="display:flex;"><span>URxvt*cursorBlink          : 0
+</span></span><span style="display:flex;"><span>URxvt*pointerBlank         : 1
+</span></span><span style="display:flex;"><span>URxvt*iconFile             :
+</span></span><span style="display:flex;"><span>/usr/share/icons/Adwaita/16x16/apps/utilities-terminal-symbolic.symbolic.png
+</span></span><span style="display:flex;"><span>URxvt*pointerShape         : ul_angle
+</span></span><span style="display:flex;"><span>URxvt*intensityStyles      : 1
+</span></span><span style="display:flex;"><span>URxvt*saveLines            : 9999
+</span></span><span style="display:flex;"><span>URxvt*buffered             : 1
+</span></span><span style="display:flex;"><span>URxvt*depth                : 32
+</span></span><span style="display:flex;"><span>URxvt*visual               : 0x16f
+</span></span><span style="display:flex;"><span>URxvt*override-redirect    : 0
+</span></span><span style="display:flex;"><span>URxvt*externalBorder       : 15
+</span></span><span style="display:flex;"><span>URxvt*internalBorder       : 15
+</span></span><span style="display:flex;"><span>URxvt*borderLess           : 0
+</span></span><span style="display:flex;"><span>URxvt*lineSpace            : 0
+</span></span><span style="display:flex;"><span>URxvt*skipBuiltinGlyphs    : 0
+</span></span><span style="display:flex;"><span>URxvt*pointerBlankDelay    : 1
+</span></span><span style="display:flex;"><span>URxvt*print-pipe           : cat &gt;  /tmp/$(echo urxvt.dump.$(date
+</span></span><span style="display:flex;"><span>+&#39;%Y%M%d%H%m%S&#39;))
+</span></span><span style="display:flex;"><span>URxvt*modifier             :
+</span></span><span style="display:flex;"><span>URxvt*cutchars             : BACKSLASH &#34; &#34;
+</span></span><span style="display:flex;"><span>&#39;&#34;&#39;&amp;()*,;&lt;=&gt;?@[]^{|}\&#34;()*,&lt;&gt;[]{}|&#39;&#39;&#34;\
+</span></span><span style="display:flex;"><span>URxvt*secondaryScreen      : 1
+</span></span><span style="display:flex;"><span>URxvt*secondaryScroll      : 0
+</span></span><span style="display:flex;"><span>URxvt*perl-lib             : /home/ak/.urxvt/ext
+</span></span><span style="display:flex;"><span>URxvt*iso14755             : 1
+</span></span><span style="display:flex;"><span>URxvt*iso14755_52          : 1
+</span></span><span style="display:flex;"><span>URxvt*matcher.button       : 2
+</span></span><span style="display:flex;"><span>URxvt*url-launcher         : /usr/bin/google-chrome-stable
+</span></span><span style="display:flex;"><span>URxvt*url-select.underline : 1
+</span></span><span style="display:flex;"><span>URxvt*matcher.rend.0       : Uline Bold fg5
+</span></span><span style="display:flex;"><span>URxvt*selection.pattern-0  : ([[                           : word
+</span></span><span style="display:flex;"><span>: ]]+)
+</span></span><span style="display:flex;"><span>URxvt*keysym.M-C-c         : selection                     : rot13
+</span></span><span style="display:flex;"><span>URxvt*perl-ext-common      : vim,default,matcher,font-size
+</span></span><span style="display:flex;"><span>URxvt*vim-scrollback       : M-s
+</span></span><span style="display:flex;"><span>URxvt*vim-scrollback-paste : M-p
+</span></span><span style="display:flex;"><span>URxvt*clipboard.copycmd    : xsel -ib
+</span></span><span style="display:flex;"><span>URxvt.keysym.C-Up:     font-size:increase
+</span></span><span style="display:flex;"><span>URxvt.keysym.C-Down:   font-size:decrease
+</span></span><span style="display:flex;"><span>URxvt.keysym.C-S-Up:   font-size:incglobal
+</span></span><span style="display:flex;"><span>URxvt.keysym.C-S-Down: font-size:decglobal
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! Polybar
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>polybar*background             : #24292A
+</span></span><span style="display:flex;"><span>polybar*foreground             : #ccd2be
+</span></span><span style="display:flex;"><span>polybar*fading                 : 15
+</span></span><span style="display:flex;"><span>polybar*fadeColor              : black
+</span></span><span style="display:flex;"><span>polybar*cursorColor            : #16A085
+</span></span><span style="display:flex;"><span>polybar*pointerColorBackground : #2B2C2B
+</span></span><span style="display:flex;"><span>polybar*pointerColorForeground : #16A085
+</span></span><span style="display:flex;"><span>polybar*urgent                 : #B34747
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! black dark/light
+</span></span><span style="display:flex;"><span>polybar*color0                 : #24292A
+</span></span><span style="display:flex;"><span>polybar*color8                 : #3c4140
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! red dark/light
+</span></span><span style="display:flex;"><span>polybar*color1                 : #ff8843
+</span></span><span style="display:flex;"><span>polybar*color9                 : #c48851
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! green dark/light
+</span></span><span style="display:flex;"><span>polybar*color2                 : #7a8d5c
+</span></span><span style="display:flex;"><span>polybar*color10                : #aec199
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! yellow dark/light
+</span></span><span style="display:flex;"><span>polybar*color3                 : #a69658
+</span></span><span style="display:flex;"><span>polybar*color11                : #c4b268
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! blue dark/light
+</span></span><span style="display:flex;"><span>polybar*color4                 : #7b90a9
+</span></span><span style="display:flex;"><span>polybar*color12                : #91aac7
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! magenta dark/light
+</span></span><span style="display:flex;"><span>polybar*color5                 : #aa6161
+</span></span><span style="display:flex;"><span>polybar*color13                : #e78484
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! cyan dark/light
+</span></span><span style="display:flex;"><span>polybar*color6                 : #698885
+</span></span><span style="display:flex;"><span>polybar*color14                : #83a5a1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! white dark/light
+</span></span><span style="display:flex;"><span>polybar*color7                 : #a8b298
+</span></span><span style="display:flex;"><span>polybar*color15                : #ccd2be
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! pink
+</span></span><span style="display:flex;"><span>polybar*color16                : #9181E7
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! purple
+</span></span><span style="display:flex;"><span>polybar*color17                : #D7AFF9
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! XTERM
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>XTerm.vt100.faceName         :Fantasque Sans
+</span></span><span style="display:flex;"><span>Mono:italic:size=15:antialias=true
+</span></span><span style="display:flex;"><span>XTerm.vt100.boldFont         :Fantasque Sans Mono:bold:italic:size=15
+</span></span><span style="display:flex;"><span>xterm.scaleHeight           : 1.01
+</span></span><span style="display:flex;"><span>xterm*termName              : xterm-256color
+</span></span><span style="display:flex;"><span>xterm*geometry              : 96x30
+</span></span><span style="display:flex;"><span>xterm*reverseVideo          : 0
+</span></span><span style="display:flex;"><span>xterm*loginShell            : 1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! Dmenu
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dmenu.selforeground:      #474c57
+</span></span><span style="display:flex;"><span>dmenu.background:         #ffffff
+</span></span><span style="display:flex;"><span>dmenu.selbackground:      #4ec2e8
+</span></span><span style="display:flex;"><span>dmenu.foreground:         #474c57
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! rofi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rofi.color-enabled: true
+</span></span><span style="display:flex;"><span>rofi.color-window: #ffffff, #ffffff, #ffffff
+</span></span><span style="display:flex;"><span>rofi.color-normal: #ffffff, #474c57, #ffffff, #ffffff, #4ec2e8
+</span></span><span style="display:flex;"><span>rofi.color-active: #ffffff, #fec7cd, #ffffff, #ffffff, #95c1c0
+</span></span><span style="display:flex;"><span>rofi.color-urgent: #ffffff, #f59335, #ffffff, #ffffff, #f59335  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! Cursor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Xcursor.size                : 16
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>! Xautolock
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Xautolock.locker            : &#34;/usr/bin/physlock -mp &#39;Aur tum apny Rab ki kon
+</span></span><span style="display:flex;"><span>kon c nematon ko jhutlawo gy?&#39;&#34;
+</span></span></code></pre></div><p>After saving the file, we have to load it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ xrdb -load ~/.Xdefaults
+</span></span></code></pre></div><p>Now execute it. You may not have the fonts I use so maybe you face some errors. Just install those fonts or change them.</p>
+<p>I also have written a post about <a href="https://abdullah.today/fonts.html" target="_blank" >fonts</a>
+.</p>
+<p>Still have problems? Just lemme know and I&rsquo;ll be happy to assist you.</p>
+<p>Here is a demonstration video.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/HxFL6HaDyIM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2022
+      
+       Abdullah Khabir 
+    
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

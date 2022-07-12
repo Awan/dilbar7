@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>full disk encryption on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/full-disk-encryption/</link>
+    <description>Recent content in full disk encryption on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Feb 2021 20:12:36 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/full-disk-encryption/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenBSD Encrypted Install</title>
+      <link>https://abdullah.solutions/openbsd-encrypted-install/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:36 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/openbsd-encrypted-install/</guid>
+      <description>So this is how you can have a fully encrypted OpenBSD installation.
+Getting OpenBSD Go to OpenBSD website and download the .img file for your hardware.
+Creating install media If you are on some linux or mac, you can use dd command to burn it to USB drive.
+Suppose your USB drive is appearing as /dev/sdb in lsblk&amp;rsquo;s output:
+dd if=install.img of=/dev/sdb bs=1M Boot from install media Plug the new install media and reboot the system.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bsd on Abdullah Khabir</title>
+    <link>https://abdullah.solutions/tags/bsd/</link>
+    <description>Recent content in bsd on Abdullah Khabir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Feb 2021 11:37:18 +0500</lastBuildDate><atom:link href="https://abdullah.solutions/tags/bsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenBSD Dedicated Dotfiles</title>
+      <link>https://abdullah.solutions/openbsd-dedicated-dotfiles/</link>
+      <pubDate>Mon, 08 Feb 2021 11:37:18 +0500</pubDate>
+      
+      <guid>https://abdullah.solutions/openbsd-dedicated-dotfiles/</guid>
+      <description>OpenBSD as new OS I keep my dotfiles on Github/Gitlab. I had to configure many things so I started a dedicated repository .
+New Dotfiles I created a new directory dot in my home dir. And cherry picked some of my old dots. I have pushed my new dot directory to Git[hub,lab] as [Awan,Abdullah]/dot respectively.
+Old Linux dotfiles Linux users still can find my dotfiles on Github and Gitlab .</description>
+    </item>
+    
+  </channel>
+</rss>
